@@ -49,7 +49,10 @@ export default function Home() {
                     href="https://www.youtube.com/channel/UCRpL41YulDOStKKsRk232QQ/playlists"
                     target="_blank"
                   >
-                    Cursos
+                    <div class="spinner-border spinner-border-sm" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <span className="ms-2">Cursos (En progreso ...)</span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -94,8 +97,12 @@ export default function Home() {
               necesario para enseñarte en mucho menos tiempo de lo que a mi me
               costó poder obtener los mismos resultados.
             </p>
-            <a class="btn btn-danger btn-lg" type="button" href="https://www.youtube.com/channel/UCRpL41YulDOStKKsRk232QQ"
-                    target="_blank">
+            <a
+              class="btn btn-danger btn-lg"
+              type="button"
+              href="https://www.youtube.com/channel/UCRpL41YulDOStKKsRk232QQ"
+              target="_blank"
+            >
               <i class="bi bi-youtube"></i> Youtube
             </a>
           </div>
