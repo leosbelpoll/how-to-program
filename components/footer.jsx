@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer cla ss="pt-lg-10 pt-5 footer bg-white">
+        <footer class="pt-lg-10 pt-5 footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12">

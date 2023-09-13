@@ -8,7 +8,7 @@ import Footer from './footer'
 
 function Layout({ children }) {
     return (
-        <>
+        <div className="text-bg-dark">
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link
@@ -26,10 +26,10 @@ function Layout({ children }) {
             />
             <Nav />
             <main>
-                <div class="container p-5">{children}</div>
+                {children}
             </main>
             <Footer />
-        </>
+        </div>
     )
 }
 

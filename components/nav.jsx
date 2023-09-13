@@ -2,7 +2,7 @@ import React from 'react'
 
 function Nav() {
     return (
-        <nav class="navbar-transparent navbar navbar-expand-lg navbar-light">
+        <nav class="navbar-transparent navbar navbar-expand-lg navbar-dark pt-4">
             <div className="container">
                 <div class="container-fluid">
                     <button
