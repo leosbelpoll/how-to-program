@@ -1,4 +1,5 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 import Head from "next/head";
 import Script from "next/script";
@@ -24,23 +25,8 @@ function Layout({ children }) {
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"
       />
-      <Script
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer', ${process.env.GOOGLE_ANALYTICS_CODE});`,
-        }}
-      ></Script>
       <body>
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.GOOGLE_ANALYTICS_CODE}"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        ></noscript>
+        <GoogleAnalytics trackPageViews />
         <Nav />
         <main>{children}</main>
         <Footer />
