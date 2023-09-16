@@ -3,11 +3,11 @@ import React from "react";
 
 function Nav() {
     return (
-        <nav class="navbar-transparent navbar navbar-expand-md pt-4">
+        <nav className="navbar-transparent navbar navbar-expand-md pt-4">
             <div className="container">
-                <div class="container-fluid">
+                <div className="container-fluid">
                     <button
-                        class="navbar-toggler btn btn-link"
+                        className="navbar-toggler btn btn-link"
                         style={{
                             marginTop: -5
                         }}
@@ -18,58 +18,58 @@ function Nav() {
                         aria-expanded="false"
                         aria-label="Toggle navigation"
                     >
-                        <span class="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"></span>
                     </button>
-                    <Link class="navbar-brand ms-2 d-md-none" href="/">
+                    <Link className="navbar-brand ms-2 d-md-none" href="/">
                         <img
                             src="/logo.png"
                             alt=""
-                            class="logo-inverse"
+                            className="logo-inverse"
                             height={40}
                         />
                     </Link>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <Link class="navbar-brand" href="/">
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <Link className="navbar-brand" href="/">
                                     <img
                                         src="/logo.png"
                                         alt=""
-                                        class="logo-inverse"
+                                        className="logo-inverse"
                                         height={40}
                                     />
                                 </Link>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <a
-                                    class="nav-link"
+                                    className="nav-link"
                                     aria-current="page"
                                     href="https://www.youtube.com/channel/UCRpL41YulDOStKKsRk232QQ/playlists"
                                     target="_blank"
                                 >
-                                    <i class="bi bi-grid-3x3-gap-fill"></i> Cursos
+                                    <i className="bi bi-grid-3x3-gap-fill"></i> Cursos
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <a
-                                    class="nav-link"
+                                    className="nav-link"
                                     href="https://www.youtube.com/channel/UCRpL41YulDOStKKsRk232QQ"
                                     target="_blank"
                                 >
-                                    <i class="bi bi-youtube"></i> Youtube
+                                    <i className="bi bi-youtube"></i> Youtube
                                 </a>
                             </li>
                         </ul>
                         <div>
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button">
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#" role="button">
                                         Es
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" role="button">
-                                        <i class="bi bi-brightness-high-fill"></i>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#" role="button">
+                                        <i className="bi bi-brightness-high-fill"></i>
                                     </a>
                                 </li>
                             </ul>

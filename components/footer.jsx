@@ -3,21 +3,21 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer class="pt-lg-10 pt-5 footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="mb-4">
-              <img src="/logo.png" alt="" class="logo-inverse" height={50} />
-              <div class="mt-4">
+    <footer className="pt-lg-10 pt-5 footer">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="mb-4">
+              <img src="/logo.png" alt="" className="logo-inverse" height={50} />
+              <div className="mt-4">
                 <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
                   molestias aliquam nihil voluptatibus cupiditate. Animi placeat
                   quisquam minus quis nobis.
                 </p>
-                <div class="fs-4 mt-4">
+                <div className="fs-4 mt-4">
                   <a
-                    class="mdi mdi-facebook text-muted me-2"
+                    className="mdi mdi-facebook text-muted me-2"
                     target="_blank"
                     href="https://www.facebook.com/comoprogramarde0a100"
                   >
@@ -33,7 +33,7 @@ function Footer() {
                     </svg>
                   </a>
                   <a
-                    class="mdi mdi-twitter text-muted me-2"
+                    className="mdi mdi-twitter text-muted me-2"
                     target="_blank"
                     href="/twitter-page"
                   >
@@ -49,7 +49,7 @@ function Footer() {
                     </svg>
                   </a>
                   <a
-                    class="mdi mdi-instagram text-muted "
+                    className="mdi mdi-instagram text-muted "
                     target="_blank"
                     href="/intagram-page"
                   >
@@ -68,64 +68,64 @@ function Footer() {
               </div>
             </div>
           </div>
-          {/* <div class="col-lg-2 col-md-3 col-sm-6 offset-lg-1">
-              <div class="mb-4">
-                <h3 class="fw-bold mb-3">Compañ</h3>
-                <ul class="nav nav-footer flex-column nav-x-0 list-unstyled">
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+          {/* <div className="col-lg-2 col-md-3 col-sm-6 offset-lg-1">
+              <div className="mb-4">
+                <h3 className="fw-bold mb-3">Compañ</h3>
+                <ul className="nav nav-footer flex-column nav-x-0 list-unstyled">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       About
                     </a>
                   </li>
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       Pricing
                     </a>
                   </li>
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       Blog
                     </a>
                   </li>
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       Careers
                     </a>
                   </li>
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       Contact
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-lg-2 col-md-3 col-sm-6">
-              <div class="mb-4">
-                <h3 class="fw-bold mb-3">Soporte</h3>
-                <ul class="nav nav-footer flex-column nav-x-0 list-unstyled">
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+            <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="mb-4">
+                <h3 className="fw-bold mb-3">Soporte</h3>
+                <ul className="nav nav-footer flex-column nav-x-0 list-unstyled">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       Help and Support
                     </a>
                   </li>
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       Become Instructor
                     </a>
                   </li>
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       Get the app
                     </a>
                   </li>
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       FAQ’s
                     </a>
                   </li>
-                  <li class=" ">
-                    <a class="nav-link" href="/marketing/help-center/">
+                  <li className=" ">
+                    <a className="nav-link" href="/marketing/help-center/">
                       Tutorial
                     </a>
                   </li>
@@ -133,51 +133,51 @@ function Footer() {
               </div>
             </div> */}
           {/* Remove next two layers once we have info to put on above commented layers */}
-          <div class="col-lg-2 col-md-3 col-sm-6 offset-lg-1"></div>
-          <div class="col-lg-2 col-md-3 col-sm-6"></div>
-          <div class="col-lg-3 col-md-12 col-sm-12">
-            <div class="mb-4">
-              <h3 class="fw-bold mb-3">Ponte en contacto</h3>
+          <div className="col-lg-2 col-md-3 col-sm-6 offset-lg-1"></div>
+          <div className="col-lg-2 col-md-3 col-sm-6"></div>
+          <div className="col-lg-3 col-md-12 col-sm-12">
+            <div className="mb-4">
+              <h3 className="fw-bold mb-3">Ponte en contacto</h3>
               {/* <p>339 McDermott Points Hettingerhaven, NV 15283</p> */}
-              <p class="mb-1">
+              <p className="mb-1">
                 <a href="mailto:leitopoll25@gmail.com">leitopoll25@gmail.com</a>
               </p>
               {/* <p>
                   Phone:{" "}
-                  <span class="fw-semi-bold">(000) 123 456 789</span>
+                  <span className="fw-semi-bold">(000) 123 456 789</span>
                 </p> */}
-              <div class="d-flex">
+              {/* <div className="d-flex">
                 <Link href="/marketing/help-center/">
                   <img
                     src="/static/media/appstore.b464860c93223b3fc15fc7d026bcdca0.svg"
                     alt=""
-                    class="img-fluid"
+                    className="img-fluid"
                   />
                 </Link>
-                <Link class="ms-2" href="/marketing/help-center/">
+                <Link className="ms-2" href="/marketing/help-center/">
                   <img
                     src="/static/media/playstore.f23c3dcbde32e767203274d4b1749cc7.svg"
                     alt=""
-                    class="img-fluid"
+                    className="img-fluid"
                   />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
-        <div class="align-items-center g-0 border-top py-2 mt-6 row">
-          <div class="col-lg-4 col-md-5 col-sm-12">
+        <div className="align-items-center g-0 border-top py-2 mt-6 row">
+          <div className="col-lg-4 col-md-5 col-sm-12">
             <span>© 2023 Aprende a Programar</span>
           </div>
-          <div class="d-md-flex justify-content-end col-lg-8 col-md-7 col-sm-12">
-            <nav class="nav nav-footer">
-              <Link class="nav-link ps-0" href="/private-policy">
+          <div className="d-md-flex justify-content-end col-lg-8 col-md-7 col-sm-12">
+            <nav className="nav nav-footer">
+              <Link className="nav-link ps-0" href="/private-policy">
                 Privacidad
               </Link>
-              {/* <a class="nav-link px-2 px-md-3" href="/marketing/help-center/">
+              {/* <a className="nav-link px-2 px-md-3" href="/marketing/help-center/">
                   Cookie Notice{" "}
                 </a> */}
-              <Link class="nav-link" href="/terms-of-use">
+              <Link className="nav-link" href="/terms-of-use">
                 Términos de uso
               </Link>
             </nav>

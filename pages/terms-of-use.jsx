@@ -5,7 +5,7 @@ function TermsOfUse() {
     return (
         <Layout>
             <div className="container">
-                <h1 class="text-center mt-5">Términos de Uso</h1>
+                <h1 className="text-center mt-5">Términos de Uso</h1>
                 <hr />
 
                 <h4 className='mt-4'>Introducción</h4>
@@ -26,7 +26,7 @@ function TermsOfUse() {
                 <h4 className='mt-4'>Contacto</h4>
                 <p>Si tienes alguna pregunta o comentario sobre nuestros términos de uso, por favor, contáctanos en <a href="mailto:info@tusitio.com">info@tusitio.com</a>.</p>
 
-                <p class="text-center">Última actualización: Septiembre de 2023</p>
+                <p className="text-center">Última actualización: Septiembre de 2023</p>
             </div>
         </Layout>
     )

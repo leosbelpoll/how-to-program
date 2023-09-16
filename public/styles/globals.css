@@ -1,0 +1,5 @@
+/* Normalize Bootstrap styles */
+
+.navbar-toggler {
+    border: none !important;
+}

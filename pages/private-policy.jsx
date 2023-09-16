@@ -6,7 +6,7 @@ function PrivatePolicy() {
     return (
         <Layout>
             <div className='container'>
-                <h1 class="text-center mt-5">Políticas de privacidad</h1>
+                <h1 className="text-center mt-5">Políticas de privacidad</h1>
                 <hr />
 
                 <p>
@@ -63,7 +63,7 @@ function PrivatePolicy() {
                     Si tienes alguna pregunta o preocupación sobre esta política de privacidad, por favor contáctanos en [tu dirección de correo electrónico de contacto].
                 </p>
 
-                <p class="text-center">Última actualización: Septiembre de 2023</p>
+                <p className="text-center">Última actualización: Septiembre de 2023</p>
             </div>
         </Layout>
     )
