@@ -1,5 +1,4 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { GoogleAnalytics } from "nextjs-google-analytics";
 
 import Head from "next/head";
 import Script from "next/script";
@@ -25,8 +24,25 @@ function Layout({ children }) {
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"
       />
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <body>
-        <GoogleAnalytics trackPageViews />
         <Nav />
         <main>{children}</main>
         <Footer />
