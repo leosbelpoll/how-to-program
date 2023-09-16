@@ -7,10 +7,8 @@ function Nav() {
             <div className="container">
                 <div className="container-fluid">
                     <button
-                        className="navbar-toggler btn btn-link"
-                        style={{
-                            marginTop: -5
-                        }}
+                        className="navbar-toggler"
+                       
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
