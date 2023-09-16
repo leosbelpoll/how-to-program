@@ -17,6 +17,7 @@ function Layout({ children }) {
                     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
                     crossorigin="anonymous"
                 ></link>
+                <link rel="stylesheet" href="/styles/globals.css" />
             </Head>
 
             <Script
@@ -26,7 +27,7 @@ function Layout({ children }) {
             />
             <Script
                 strategy="afterInteractive"
-                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
             />
             <Script
                 id="gtag-init"
@@ -36,7 +37,7 @@ function Layout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.GA_TRACKING_ID}', {
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
           `,

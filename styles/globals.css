@@ -41,3 +41,9 @@ button {
   padding: 0.5rem 1rem;
   font-weight: bold;
 }
+
+/* Normalize Bootstrap styles */
+
+.navbar-toggler {
+    border: none !important;
+}
