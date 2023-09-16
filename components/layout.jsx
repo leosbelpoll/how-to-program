@@ -1,6 +1,5 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import { Html } from "next/document";
 import Head from "next/head";
 import Script from "next/script";
 import React from "react";
@@ -9,7 +8,7 @@ import Footer from "./footer";
 
 function Layout({ children }) {
   return (
-    <Html>
+    <html>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
@@ -46,7 +45,7 @@ function Layout({ children }) {
         <main>{children}</main>
         <Footer />
       </body>
-    </Html>
+    </html>
   );
 }
 
