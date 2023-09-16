@@ -2,7 +2,7 @@ import React from "react";
 
 function Nav() {
   return (
-    <nav class="navbar-transparent navbar navbar-expand-lg pt-4">
+    <nav class="navbar-transparent navbar navbar-expand-md pt-4">
       <div className="container">
         <div class="container-fluid">
           <button
@@ -30,12 +30,12 @@ function Nav() {
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  class="nav-link"
                   aria-current="page"
                   href="https://www.youtube.com/channel/UCRpL41YulDOStKKsRk232QQ/playlists"
                   target="_blank"
                 >
-                  <span className="ms-2">Cursos (En progreso ...)</span>
+                  <i class="bi bi-grid-3x3-gap-fill"></i> Cursos
                 </a>
               </li>
               <li class="nav-item">
