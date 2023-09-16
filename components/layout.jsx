@@ -25,11 +25,13 @@ function Layout({ children }) {
                 integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
                 crossorigin="anonymous"
             />
-            <Script
+            {/* <Script
+                async
                 strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
             />
             <Script
+                async
                 id="gtag-init"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
@@ -42,7 +44,23 @@ function Layout({ children }) {
             });
           `,
                 }}
+            /> */}
+
+            <Script
+                strategy="lazyOnload"
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
             />
+
+            <Script strategy="lazyOnload">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+            </Script>
             <Nav />
             <main>{children}</main>
             <Footer />
