@@ -1,6 +1,6 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import Html from "next/html";
+import { Html } from "next/document";
 import Head from "next/head";
 import Script from "next/script";
 import React from "react";
