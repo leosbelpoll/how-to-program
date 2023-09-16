@@ -1,14 +1,17 @@
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
+import { DARK_THEME, ThemeContext } from "./layout";
 
 function Footer() {
+    const {theme} = useContext(ThemeContext)
+
   return (
     <footer className="pt-lg-10 pt-5 footer">
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="mb-4">
-              <img src="/logo.png" alt="" className="logo-inverse" height={50} />
+              <img src={theme === DARK_THEME ? "/images/logo-dark.png" : "/images/logo-light.png"} alt="" className="logo-inverse" height={50} />
               <div className="mt-4">
                 <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic

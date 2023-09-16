@@ -1,14 +1,18 @@
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
+
+import { DARK_THEME, LIGHT_THEME, ThemeContext } from "./layout";
 
 function Nav() {
+    const { theme, setTheme } = useContext(ThemeContext);
+
     return (
-        <nav className="navbar-transparent navbar navbar-expand-md pt-4">
+        <nav className="navbar-transparent navbar navbar-expand-md pt-4" data-bs-theme={theme === DARK_THEME ? "dark" : "light"}>
             <div className="container">
                 <div className="container-fluid">
                     <button
                         className="navbar-toggler"
-                       
+
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
@@ -20,7 +24,7 @@ function Nav() {
                     </button>
                     <Link className="navbar-brand ms-2 d-md-none" href="/">
                         <img
-                            src="/logo.png"
+                            src={theme === DARK_THEME ? "/images/logo-dark.png" : "/images/logo-light.png"}
                             alt=""
                             className="logo-inverse"
                             height={40}
@@ -29,9 +33,9 @@ function Nav() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="navbar-brand" href="/">
+                                <Link className="navbar-brand d-none d-md-inline-block" href="/">
                                     <img
-                                        src="/logo.png"
+                                        src={theme === DARK_THEME ? "/images/logo-dark.png" : "/images/logo-light.png"}
                                         alt=""
                                         className="logo-inverse"
                                         height={40}
@@ -66,9 +70,13 @@ function Nav() {
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" role="button">
+                                    {theme === LIGHT_THEME && (<a className="nav-link btn" href="#" role="button" onClick={() => setTheme(DARK_THEME)}>
+                                        <i className="bi bi-moon-stars-fill"></i>
+                                    </a>)}
+                                    {theme === DARK_THEME && (<a className="nav-link" href="#" role="button" onClick={() => setTheme(LIGHT_THEME)}>
                                         <i className="bi bi-brightness-high-fill"></i>
-                                    </a>
+                                    </a>)}
+
                                 </li>
                             </ul>
                         </div>

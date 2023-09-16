@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "title": "HTML",
+     "thumbnail": "html",
+    "description": "Esta es la descripción de HTML",
+    "background": "#ff6633",
+    "textColor": "white"
+  },
+  {
+    "id": 2,
+    "title": "CSS",
+     "thumbnail": "css",
+    "description": "Esta es la descripción de CSS",
+    "background": "#3399cc",
+    "textColor": "white"
+  },
+  {
+    "id": 3,
+    "title": "JavaScript",
+     "thumbnail": "javascript",
+    "description": "Esta es la descripción de JavaScript",
+    "background": "#f7df1e",
+    "textColor": "black"
+  },
+  {
+    "id": 4,
+    "title": "Bootstrap",
+     "thumbnail": "bootstrap",
+    "description": "Esta es la descripción de Bootstrap",
+    "background": "#7011f5",
+    "textColor": "white"
+  },
+  {
+    "id": 5,
+    "title": "React",
+     "thumbnail": "react",
+    "description": "Esta es la descripción de React",
+    "background": "#03c3f3",
+    "textColor": "white"
+  },
+  {
+    "id": 6,
+    "title": "Node",
+     "thumbnail": "node",
+    "description": "Esta es la descripción de Node"
+  }
+]
