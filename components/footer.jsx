@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Footer() {
@@ -146,20 +147,20 @@ function Footer() {
                   <span class="fw-semi-bold">(000) 123 456 789</span>
                 </p> */}
               <div class="d-flex">
-                <a href="/marketing/help-center/">
+                <Link href="/marketing/help-center/">
                   <img
                     src="/static/media/appstore.b464860c93223b3fc15fc7d026bcdca0.svg"
                     alt=""
                     class="img-fluid"
                   />
-                </a>
-                <a class="ms-2" href="/marketing/help-center/">
+                </Link>
+                <Link class="ms-2" href="/marketing/help-center/">
                   <img
                     src="/static/media/playstore.f23c3dcbde32e767203274d4b1749cc7.svg"
                     alt=""
                     class="img-fluid"
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -170,15 +171,15 @@ function Footer() {
           </div>
           <div class="d-md-flex justify-content-end col-lg-8 col-md-7 col-sm-12">
             <nav class="nav nav-footer">
-              <a class="nav-link ps-0" href="/private-policy">
+              <Link class="nav-link ps-0" href="/private-policy">
                 Privacidad
-              </a>
+              </Link>
               {/* <a class="nav-link px-2 px-md-3" href="/marketing/help-center/">
                   Cookie Notice{" "}
                 </a> */}
-              <a class="nav-link" href="/terms-of-use">
+              <Link class="nav-link" href="/terms-of-use">
                 Términos de uso
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

@@ -31,7 +31,7 @@ export default function Home() {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-md">
             <div class="card mb-3">
               <div class="card-header">Header</div>
               <div class="card-body">
@@ -63,7 +63,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col-md">
             <div class="card mb-3">
               <div class="card-header">Header</div>
               <div class="card-body">
@@ -95,7 +95,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col-md">
             <div class="card mb-3">
               <div class="card-header">Header</div>
               <div class="card-body">

@@ -5,8 +5,8 @@ import Layout from '../components/layout'
 function PrivatePolicy() {
     return (
         <Layout>
-            <div>
-                <h1 class="text-center">Políticas de privacidad</h1>
+            <div className='container'>
+                <h1 class="text-center mt-5">Políticas de privacidad</h1>
                 <hr />
 
                 <p>

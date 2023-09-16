@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Nav() {
@@ -19,14 +20,14 @@ function Nav() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="navbar-brand" href="/">
+                <Link class="navbar-brand" href="/">
                   <img
                     src="/logo.png"
                     alt=""
                     class="logo-inverse"
                     height={40}
                   />
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <a
