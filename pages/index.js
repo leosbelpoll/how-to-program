@@ -1,6 +1,24 @@
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+
 import Layout from "../components/layout";
+import * as gtag from "../utils/gtag";
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <Layout>
       <div class="container p-5">
