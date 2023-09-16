@@ -9,7 +9,9 @@ import Footer from "./footer";
 export const DARK_THEME = 'dark'
 export const LIGHT_THEME = 'light'
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext({
+    theme: ""
+});
 
 function Layout({ children }) {
     const [theme, setTheme] = useState(LIGHT_THEME);

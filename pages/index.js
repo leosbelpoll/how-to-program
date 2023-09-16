@@ -4,7 +4,10 @@ import Layout from "../components/layout";
 import CourseList from "./course-list";
 import Search from "../components/search";
 
-export const SearchContext = createContext();
+export const SearchContext = createContext({
+    search: "",
+    setSearch: (search) => { }
+});
 
 export default function Home() {
     const [search, setSearch] = useState("");
