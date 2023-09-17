@@ -30,6 +30,24 @@ function Nav() {
                             height={40}
                         />
                     </Link>
+                    <div className="d-md-none float-end pt-1">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#" role="button">
+                                    Es
+                                </a>
+                            </li>
+                            <li className="nav-item ms-3">
+                                {theme === LIGHT_THEME && (<a className="nav-link btn" href="#" role="button" onClick={() => setTheme(DARK_THEME)}>
+                                    <i className="bi bi-moon-stars-fill"></i>
+                                </a>)}
+                                {theme === DARK_THEME && (<a className="nav-link" href="#" role="button" onClick={() => setTheme(LIGHT_THEME)}>
+                                    <i className="bi bi-brightness-high-fill"></i>
+                                </a>)}
+
+                            </li>
+                        </ul>
+                    </div>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
@@ -42,6 +60,8 @@ function Nav() {
                                     />
                                 </Link>
                             </li>
+                        </ul>
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a
                                     className="nav-link"
@@ -62,8 +82,8 @@ function Nav() {
                                 </a>
                             </li>
                         </ul>
-                        <div>
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div className="d-none d-md-inline-block">
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 pt-1">
                                 <li className="nav-item">
                                     <a className="nav-link" href="#" role="button">
                                         Es

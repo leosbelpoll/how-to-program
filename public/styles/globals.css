@@ -1,5 +1,9 @@
+html {
+    background: rgb(33,37,41);
+}
+
 /* Normalize Bootstrap styles */
 
 .navbar-toggler {
-    border: none !important;
+    border: none;
 }
