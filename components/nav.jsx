@@ -2,9 +2,19 @@ import Link from "next/link";
 import React, { useContext } from "react";
 
 import { DARK_THEME, LIGHT_THEME, ThemeContext } from "./layout";
+import { LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LanguageContext } from "../pages";
 
 function Nav() {
     const { theme, setTheme } = useContext(ThemeContext);
+    const { language, setLanguage } = useContext(LanguageContext);
+
+    const flipLanguage = () => {
+        if (language === LANGUAGE_SPANISH) {
+            setLanguage(LANGUAGE_ENGLISH);
+        } else {
+            setLanguage(LANGUAGE_SPANISH);
+        }
+    }
 
     return (
         <nav className="navbar-transparent navbar navbar-expand-md pt-4" data-bs-theme={theme === DARK_THEME ? "dark" : "light"}>
@@ -33,9 +43,9 @@ function Nav() {
                     <div className="d-md-none float-end pt-1">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row">
                             <li className="nav-item">
-                                <a className="nav-link" href="#" role="button">
-                                    Es
-                                </a>
+                                <Link className="nav-link" href="#" role="button" onClick={flipLanguage}>
+                                    {language.toUpperCase()}
+                                </Link>
                             </li>
                             <li className="nav-item ms-3">
                                 {theme === LIGHT_THEME && (<a className="nav-link btn" href="#" role="button" onClick={() => setTheme(DARK_THEME)}>
@@ -62,32 +72,23 @@ function Nav() {
                             </li>
                         </ul>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a
-                                    className="nav-link"
-                                    aria-current="page"
-                                    href="https://www.youtube.com/channel/UCRpL41YulDOStKKsRk232QQ/playlists"
-                                    target="_blank"
-                                >
-                                    <i className="bi bi-grid-3x3-gap-fill"></i> Cursos
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Rutas de aprendizaje
                                 </a>
-                            </li>
-                            <li className="nav-item">
-                                <a
-                                    className="nav-link"
-                                    href="https://www.youtube.com/channel/UCRpL41YulDOStKKsRk232QQ"
-                                    target="_blank"
-                                >
-                                    <i className="bi bi-youtube"></i> Youtube
-                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><Link class="dropdown-item" href="/">Todas</Link></li>
+                                    <li><Link class="dropdown-item" href="/?search=frontend">FrontEnd</Link></li>
+                                    <li><Link class="dropdown-item" href="/?search=backend">BackEnd</Link></li>
+                                </ul>
                             </li>
                         </ul>
                         <div className="d-none d-md-inline-block">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 pt-1">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" role="button">
-                                        Es
-                                    </a>
+                                    <Link className="nav-link" href="#" role="button" onClick={flipLanguage}>
+                                        {language.toUpperCase()}
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
                                     {theme === LIGHT_THEME && (<a className="nav-link btn" href="#" role="button" onClick={() => setTheme(DARK_THEME)}>

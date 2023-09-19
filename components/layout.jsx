@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import classNames from "classnames";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -6,15 +6,22 @@ import Script from "next/script";
 import Nav from "./nav";
 import Footer from "./footer";
 
-export const DARK_THEME = 'dark'
-export const LIGHT_THEME = 'light'
+export const DARK_THEME = "dark";
+export const LIGHT_THEME = "light";
 
 export const ThemeContext = createContext({
-    theme: ""
+    theme: "",
 });
 
 function Layout({ children }) {
-    const [theme, setTheme] = useState(LIGHT_THEME);
+    const [theme, setTheme] = useState("");
+
+    useEffect(() => {
+        const initialTheme = localStorage.getItem("theme") ?? LIGHT_THEME;
+
+        setTheme(initialTheme);
+    }, []);
+
 
     return (
         <>
@@ -39,10 +46,20 @@ function Layout({ children }) {
                 `}
             </Script>
 
-            <ThemeContext.Provider value={{ theme, setTheme }}>
-                <div className={classNames({
-                    "text-bg-dark": theme === DARK_THEME
-                })}>
+            <ThemeContext.Provider
+                value={{
+                    theme,
+                    setTheme: (theme) => {
+                        localStorage.setItem("theme", theme);
+                        setTheme(theme);
+                    },
+                }}
+            >
+                <div
+                    className={classNames({
+                        "text-bg-dark": theme === DARK_THEME,
+                    })}
+                >
                     <Nav />
                     <main>{children}</main>
                     <Footer />

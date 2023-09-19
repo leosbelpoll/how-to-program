@@ -1,16 +1,18 @@
 import React, { useContext } from 'react'
 import { DARK_THEME, ThemeContext } from './layout'
-import { SearchContext } from '../pages'
+import { LanguageContext, SearchContext } from '../pages'
+import { getTranslation } from '../utils/i18n.utils'
 
 function Search() {
     const { theme } = useContext(ThemeContext)
     const { search, setSearch } = useContext(SearchContext)
+    const { language } = useContext(LanguageContext)
 
     return (
         <input
             className="form-control form-control-lg mb-4"
             type="text"
-            placeholder="Qué desea buscar?"
+            placeholder={getTranslation('SEARCH_FORM_PLACEHOLDER', language)}
             aria-label=".form-control-lg example"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
