@@ -39,7 +39,7 @@ function CourseDetails() {
                     />
                   </div> */}
                   <div className="col-md-12">
-                    <h1 class="display-1">{title[language]}</h1>
+                    <h1 className="display-1">{title[language]}</h1>
                   </div>
                   <div className="col-md-6">
                     <p>{description[language]}</p>

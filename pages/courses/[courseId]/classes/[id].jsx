@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 
 import courses from "../../../../data/courses.json";
@@ -7,22 +7,20 @@ import Layout, {
   LanguageContext,
   ThemeContext,
 } from "../../../../components/layout";
-import classNames from "classnames";
-import Link from "next/link";
 
 function CourseDetails() {
   const {
-    query: {courseId, id},
+    query: { courseId, id },
   } = useRouter();
 
   const course = courses.find((course) => course.id == courseId);
-  const clas = course?.classes?.find(clas => clas.id == id);
+  const clas = course?.classes?.find((clas) => clas.id == id);
 
   if (!clas) {
     return <h1>Clase no encontrada</h1>;
   }
 
-  const { title, video  } = clas;
+  const { title, video } = clas;
 
   return (
     <Layout>
@@ -40,10 +38,14 @@ function CourseDetails() {
                     />
                   </div> */}
                   <div className="col-12">
-                    <h1 class="display-1">{title[language]}</h1>
+                    <h1 className="display-1">{title[language]}</h1>
                   </div>
-                  <div className="col-6"  dangerouslySetInnerHTML={{__html: video[language]}}>
-                  </div>
+                  <div
+                    className="col-6"
+                    dangerouslySetInnerHTML={{
+                      __html: video[language],
+                    }}
+                  ></div>
                 </div>
               </div>
             )}
