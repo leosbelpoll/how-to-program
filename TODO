@@ -1,0 +1,2 @@
+- Create index page to explain what is Software Development and add links that will redirect to the different Paths, Courses, etc
+- Create Path component and route, it will render an explaination and at the end the courses in order to take

@@ -5,38 +5,65 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Script from "next/script";
 import Nav from "./nav";
 import Footer from "./footer";
+import { useSearchParams } from "next/navigation";
 
 export const DARK_THEME = "dark";
 export const LIGHT_THEME = "light";
 
 export const ThemeContext = createContext({
-    theme: "",
+  theme: "",
+});
+
+export const LANGUAGE_SPANISH = "es";
+export const LANGUAGE_ENGLISH = "en";
+
+const defaultLanguage = LANGUAGE_SPANISH;
+
+export const SearchContext = createContext({
+  search: "",
+  setSearch: (search) => {},
+});
+
+export const LanguageContext = createContext({
+  language: "",
+  setLanguage: (language) => {},
 });
 
 function Layout({ children }) {
-    const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("");
+  const [search, setSearch] = useState("");
+  const [language, setLanguage] = useState(defaultLanguage);
 
-    useEffect(() => {
-        const initialTheme = localStorage.getItem("theme") ?? LIGHT_THEME;
+  const searchParams = useSearchParams();
+  const querySearch = searchParams.get("search");
 
-        setTheme(initialTheme);
-    }, []);
+  useEffect(() => {
+    setSearch(querySearch || "");
+    const storedLanguage = localStorage.getItem("language");
 
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
 
-    return (
-        <>
-            <Script
-                src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-                crossOrigin="anonymous"
-            />
+    const initialTheme = localStorage.getItem("theme") ?? LIGHT_THEME;
 
-            <Script
-                strategy="afterInteractive"
-                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-                {`
+    setTheme(initialTheme);
+  }, [querySearch]);
+
+  return (
+    <>
+      <Script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossOrigin="anonymous"
+      />
+
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
@@ -44,29 +71,41 @@ function Layout({ children }) {
                     page_path: window.location.pathname,
                     });
                 `}
-            </Script>
+      </Script>
 
-            <ThemeContext.Provider
-                value={{
-                    theme,
-                    setTheme: (theme) => {
-                        localStorage.setItem("theme", theme);
-                        setTheme(theme);
-                    },
-                }}
+      <SearchContext.Provider value={{ search, setSearch }}>
+        <LanguageContext.Provider
+          value={{
+            language,
+            setLanguage: (language) => {
+              localStorage.setItem("language", language);
+              setLanguage(language);
+            },
+          }}
+        >
+          <ThemeContext.Provider
+            value={{
+              theme,
+              setTheme: (theme) => {
+                localStorage.setItem("theme", theme);
+                setTheme(theme);
+              },
+            }}
+          >
+            <div
+              className={classNames({
+                "text-bg-dark": theme === DARK_THEME,
+              })}
             >
-                <div
-                    className={classNames({
-                        "text-bg-dark": theme === DARK_THEME,
-                    })}
-                >
-                    <Nav />
-                    <main>{children}</main>
-                    <Footer />
-                </div>
-            </ThemeContext.Provider>
-        </>
-    );
+              <Nav />
+              <main>{children}</main>
+              <Footer />
+            </div>
+          </ThemeContext.Provider>
+        </LanguageContext.Provider>
+      </SearchContext.Provider>
+    </>
+  );
 }
 
 export default Layout;

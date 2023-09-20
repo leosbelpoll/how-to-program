@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
-import { DARK_THEME, ThemeContext } from './layout'
-import { LanguageContext, SearchContext } from '../pages'
+import { DARK_THEME, ThemeContext, LanguageContext, SearchContext  } from './layout'
 import { getTranslation } from '../utils/i18n.utils'
 
 function Search() {

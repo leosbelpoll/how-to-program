@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React, { useContext } from "react";
 
-import { DARK_THEME, LIGHT_THEME, ThemeContext } from "./layout";
-import { LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LanguageContext } from "../pages";
+import { DARK_THEME, LIGHT_THEME, ThemeContext, LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LanguageContext } from "./layout";
+import { getTranslation } from "../utils/i18n.utils";
 
 function Nav() {
     const { theme, setTheme } = useContext(ThemeContext);
@@ -44,7 +44,7 @@ function Nav() {
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row">
                             <li className="nav-item">
                                 <Link className="nav-link" href="#" role="button" onClick={flipLanguage}>
-                                    {language.toUpperCase()}
+                                    {language === LANGUAGE_ENGLISH ? 'Es' : 'En'}
                                 </Link>
                             </li>
                             <li className="nav-item ms-3">
@@ -72,14 +72,14 @@ function Nav() {
                             </li>
                         </ul>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Rutas de aprendizaje
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {getTranslation('LEARNING_PATHS', language)}
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><Link class="dropdown-item" href="/">Todas</Link></li>
-                                    <li><Link class="dropdown-item" href="/?search=frontend">FrontEnd</Link></li>
-                                    <li><Link class="dropdown-item" href="/?search=backend">BackEnd</Link></li>
+                                <ul className="dropdown-menu">
+                                    <li><Link className="dropdown-item" href="/">{getTranslation('LEARNING_PATHS.ALL', language)}</Link></li>
+                                    <li><Link className="dropdown-item" href="/?search=frontend">FrontEnd</Link></li>
+                                    <li><Link className="dropdown-item" href="/?search=backend">BackEnd</Link></li>
                                 </ul>
                             </li>
                         </ul>
@@ -87,7 +87,7 @@ function Nav() {
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 pt-1">
                                 <li className="nav-item">
                                     <Link className="nav-link" href="#" role="button" onClick={flipLanguage}>
-                                        {language.toUpperCase()}
+                                        {language === LANGUAGE_ENGLISH ? 'Es' : 'En'}
                                     </Link>
                                 </li>
                                 <li className="nav-item">
