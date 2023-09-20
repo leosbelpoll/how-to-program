@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import courses from "../../../../data/courses.json";
 import Layout, {
   DARK_THEME,
+  LANGUAGE_SPANISH,
   LanguageContext,
   ThemeContext,
 } from "../../../../components/layout";
@@ -43,7 +44,8 @@ function CourseDetails() {
                   <div
                     className="col-6"
                     dangerouslySetInnerHTML={{
-                      __html: video[language],
+                      // TODO: Update this when we have English videos
+                      __html: video[LANGUAGE_SPANISH],
                     }}
                   ></div>
                 </div>
