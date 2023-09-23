@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import courses from "../../../data/courses.json";
 import Layout, {
   DARK_THEME,
+  LANGUAGE_SPANISH,
   LanguageContext,
   ThemeContext,
 } from "../../../components/layout";
@@ -21,7 +22,7 @@ function CourseDetails() {
     return <h1>Curso no encontrado</h1>;
   }
 
-  const { thumbnail, title, description, classes } = course;
+  const { thumbnail, title, description, classes, embedVideoIntro } = course;
 
   return (
     <Layout>
@@ -44,17 +45,19 @@ function CourseDetails() {
                   <div className="col-md-6">
                     <p>{description[language]}</p>
                   </div>
-                  <div className="col-md-6">
-                    <iframe
-                      width="560"
-                      height="315"
-                      src="https://www.youtube.com/embed/zJTjsLCKzio?si=3nIfoX0-kad7mbL3"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
+                  {embedVideoIntro && embedVideoIntro[LANGUAGE_SPANISH] && (
+                    <div className="col-md-6">
+                      <iframe
+                        width="560"
+                        height="315"
+                        src={embedVideoIntro[LANGUAGE_SPANISH]}
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  )}
                 </div>
                 <div className="row mt-5">
                   <div className="col-md-6">

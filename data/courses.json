@@ -10,6 +10,9 @@
       "es": "¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.",
       "en": "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development."
     },
+    "embedVideoIntro": {
+      "es": "https://www.youtube.com/embed/zJTjsLCKzio?si=3nIfoX0-kad7mbL3"
+    },
     "background": "#ff6633",
     "textColor": "white",
     "tags": ["html", "frontend"],
@@ -103,6 +106,9 @@
       "en": "CSS"
     },
     "thumbnail": "css",
+    "embedVideoIntro": {
+      "es": "https://www.youtube.com/embed/D5VzGWgF_zk?si=aynQktIMxDzRpbM3"
+    },
     "description": {
       "es": "Explora el mundo del diseño web con nuestro curso de CSS. CSS, o Cascading Style Sheets, es la herramienta esencial para dar vida a tus páginas web y hacerlas visualmente atractivas. En este curso, aprenderás a controlar la presentación y el estilo de tus sitios web, desde la selección de colores y fuentes hasta el diseño de diseños responsivos. Adquiere las habilidades necesarias para convertir tus proyectos web en experiencias visuales cautivadoras y profesionales.",
       "en": "Explore the world of web design with our CSS course. CSS, or Cascading Style Sheets, is the essential tool to bring your web pages to life and make them visually appealing. In this course, you will learn how to control the presentation and style of your websites, from selecting colors and fonts to designing responsive layouts. Gain the skills needed to turn your web projects into captivating and professional visual experiences."

@@ -14,6 +14,10 @@ const translations = {
   READ_MORE: {
     es: "Leer más",
     en: "Read more",
+  },
+  APP_TITLE: {
+    es: "Como Programar",
+    en: "How to Code",
   }
 };
 

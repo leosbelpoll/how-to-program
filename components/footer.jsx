@@ -1,9 +1,17 @@
 import Link from "next/link";
 import React, { useContext } from "react";
-import { DARK_THEME, ThemeContext } from "./layout";
+import {
+  DARK_THEME,
+  LANGUAGE_ENGLISH,
+  LANGUAGE_SPANISH,
+  LanguageContext,
+  ThemeContext,
+} from "./layout";
+import { getTranslation } from "../utils/i18n.utils";
 
 function Footer() {
-    const {theme} = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
+  const { language } = useContext(LanguageContext);
 
   return (
     <footer className="pt-lg-10 pt-5 footer">
@@ -11,7 +19,31 @@ function Footer() {
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="mb-4">
-              <img src={theme === DARK_THEME ? "/images/logo-dark.png" : "/images/logo-light.png"} alt="" className="logo-inverse" height={50} />
+              {language === LANGUAGE_ENGLISH && (
+                <img
+                  src={
+                    theme === DARK_THEME
+                      ? "/images/en-logo-dark.png"
+                      : "/images/en-logo-light.png"
+                  }
+                  alt=""
+                  className="logo-inverse"
+                  height={50}
+                />
+              )}
+
+              {language === LANGUAGE_SPANISH && (
+                <img
+                  src={
+                    theme === DARK_THEME
+                      ? "/images/logo-dark.png"
+                      : "/images/logo-light.png"
+                  }
+                  alt=""
+                  className="logo-inverse"
+                  height={50}
+                />
+              )}
               <div className="mt-4">
                 <p>
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic
@@ -170,7 +202,7 @@ function Footer() {
         </div>
         <div className="align-items-center g-0 border-top py-2 mt-6 row">
           <div className="col-lg-4 col-md-5 col-sm-12">
-            <span>© 2023 Aprende a Programar</span>
+            <span>© 2023 {getTranslation('APP_TITLE', language)}</span>
           </div>
           <div className="d-md-flex justify-content-end col-lg-8 col-md-7 col-sm-12">
             <nav className="nav nav-footer">
