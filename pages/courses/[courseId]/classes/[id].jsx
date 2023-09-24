@@ -8,6 +8,8 @@ import Layout, {
   LanguageContext,
   ThemeContext,
 } from "../../../../components/layout";
+import Link from "next/link";
+import { getTranslation } from "../../../../utils/i18n.utils";
 
 function CourseDetails() {
   const {
@@ -22,6 +24,7 @@ function CourseDetails() {
   }
 
   const { title, video } = clas;
+  const { title: courseTitle } = course;
 
   return (
     <Layout>
@@ -39,15 +42,26 @@ function CourseDetails() {
                     />
                   </div> */}
                   <div className="col-12">
-                    <h1 className="display-1">{title[language]}</h1>
+                    <Link href={`/courses/${courseId}`}>
+                      <h1 className="display-4">{courseTitle[language]}</h1>
+                    </Link>
                   </div>
-                  <div
-                    className="col-6"
-                    dangerouslySetInnerHTML={{
-                      // TODO: Update this when we have English videos
-                      __html: video[LANGUAGE_SPANISH],
-                    }}
-                  ></div>
+                  <div className="col-12">
+                    <h1 className="display-6"><strong>{getTranslation('TOPIC', language)}:</strong> {title[language]}</h1>
+                  </div>
+                  {video && (
+                    <div className="col-12">
+                      <iframe
+                        width="560"
+                        height="315"
+                        src={video[LANGUAGE_SPANISH]}
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  )}
                 </div>
               </div>
             )}

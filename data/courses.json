@@ -24,7 +24,7 @@
           "en": "Development environment"
         },
         "video": {
-          "es": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ZwnAuRC1FtA?si=opSz5IRSdNsV43mT\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+          "es": "https://www.youtube.com/embed/ZwnAuRC1FtA?si=opSz5IRSdNsV43mT"
         }
       },
       {
@@ -32,6 +32,9 @@
         "title": {
           "es": "Estructura básica",
           "en": "Basic structure"
+        },
+        "video": {
+          "es": "https://www.youtube.com/embed/1L_ZrxDami4?si=paaLhJzGi-408Oqr"
         }
       },
       {
@@ -39,6 +42,9 @@
         "title": {
           "es": "Herramienta de desarrolladores",
           "en": "DevOps tools"
+        },
+        "video":{
+            "es": "https://www.youtube.com/embed/X9ngOAyNjCA?si=TxUgRznxaPeMJInV"
         }
       },
       {
@@ -46,6 +52,9 @@
         "title": {
           "es": "Textos",
           "en": "Text"
+        },
+        "video": {
+            "es": "https://www.youtube.com/embed/Ta7JUgMfcr0?si=bF-SPd73IV3mXlc6"
         }
       },
       {
@@ -53,6 +62,9 @@
         "title": {
           "es": "Listas",
           "en": "List"
+        },
+        "video":{
+            "es": "https://www.youtube.com/embed/0a8kjLjNfh4?si=Q9GODj7ncU3RhPuX"
         }
       },
       {
@@ -60,6 +72,9 @@
         "title": {
           "es": "Navegación",
           "en": "Navigation"
+        },
+        "video": {
+            "es": "https://www.youtube.com/embed/4BiyEG_OWsE?si=jITsFhhGh5sit5OP"
         }
       },
       {
@@ -67,6 +82,9 @@
         "title": {
           "es": "Imágenes",
           "en": "Images"
+        },
+        "video": {
+            "es": "https://www.youtube.com/embed/5fPZRK6WauE?si=OH89Fd4supajTdxC"
         }
       },
       {
@@ -74,6 +92,9 @@
         "title": {
           "es": "Tablas",
           "en": "Tables"
+        },
+        "video": {
+            "es": "https://www.youtube.com/embed/l3CLCfyHAWg?si=9dwcA-ddjHo6_Ur"
         }
       },
       {
@@ -81,6 +102,9 @@
         "title": {
           "es": "Formularios",
           "en": "Forms"
+        },
+        "video": {
+            "es": "https://www.youtube.com/embed/-Il58AlPvs0?si=2rlmZ-p6s6OrvtmQ"
         }
       },
       {
@@ -88,6 +112,9 @@
         "title": {
           "es": "HTML 5",
           "en": "HTML 5"
+        },
+        "video": {
+            "es": "https://www.youtube.com/embed/1YoGeG7ikuY?si=_4YyAlrXszGadwiu"
         }
       },
       {
@@ -95,6 +122,9 @@
         "title": {
           "es": "Que sigue?",
           "en": "What's next?"
+        },
+        "video": {
+            "es": "https://www.youtube.com/embed/9KF4ZzL4_qw?si=Qt01b39_Mvfk5qah"
         }
       }
     ]

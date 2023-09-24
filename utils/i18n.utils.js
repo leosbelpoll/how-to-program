@@ -1,4 +1,8 @@
 const translations = {
+    APP_TITLE: {
+        es: "Como Programar",
+        en: "How to Code",
+      },
   SEARCH_FORM_PLACEHOLDER: {
     es: "Qué desea buscar?",
     en: "What would you like to search?",
@@ -15,9 +19,9 @@ const translations = {
     es: "Leer más",
     en: "Read more",
   },
-  APP_TITLE: {
-    es: "Como Programar",
-    en: "How to Code",
+  TOPIC: {
+    es: 'Tema',
+    en: 'Topic',
   }
 };
 

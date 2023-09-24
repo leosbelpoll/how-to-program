@@ -40,27 +40,23 @@ function CourseDetails() {
                     />
                   </div> */}
                   <div className="col-md-12">
-                    <h1 className="display-1">{title[language]}</h1>
+                    <h1 className="display-4">{title[language]}</h1>
                   </div>
                   <div className="col-md-6">
                     <p>{description[language]}</p>
-                  </div>
-                  {embedVideoIntro && embedVideoIntro[LANGUAGE_SPANISH] && (
-                    <div className="col-md-6">
-                      <iframe
-                        width="560"
-                        height="315"
-                        src={embedVideoIntro[LANGUAGE_SPANISH]}
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                      ></iframe>
-                    </div>
-                  )}
-                </div>
-                <div className="row mt-5">
-                  <div className="col-md-6">
+                    {embedVideoIntro && embedVideoIntro[LANGUAGE_SPANISH] && (
+                      <div className="col-md-6 d-inline d-md-none">
+                        <iframe
+                          width="560"
+                          height="315"
+                          src={embedVideoIntro[LANGUAGE_SPANISH]}
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    )}
                     {classes && (
                       <ul className="list-group list-group-flush">
                         {classes.map((clas) => (
@@ -82,7 +78,19 @@ function CourseDetails() {
                       </ul>
                     )}
                   </div>
-                  <div className="col-md-6"></div>
+                  {embedVideoIntro && embedVideoIntro[LANGUAGE_SPANISH] && (
+                    <div className="col-md-6 d-none d-md-inline">
+                      <iframe
+                        width="560"
+                        height="315"
+                        src={embedVideoIntro[LANGUAGE_SPANISH]}
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                  )}
                 </div>
               </div>
             )}
