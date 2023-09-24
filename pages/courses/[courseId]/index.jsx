@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
 
-import courses from "../../../data/courses.json";
+import { courses } from "../../../data/courses";
 import Layout, {
   DARK_THEME,
   LANGUAGE_SPANISH,
@@ -51,9 +51,8 @@ function CourseDetails() {
                           height="315"
                           src={embedVideoIntro[LANGUAGE_SPANISH]}
                           title="YouTube video player"
-                          frameborder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowfullscreen
+                          allowFullScreen
                         ></iframe>
                       </div>
                     )}
@@ -64,6 +63,7 @@ function CourseDetails() {
                             className={classNames("list-group-item", {
                               "text-bg-dark": theme === DARK_THEME,
                             })}
+                            key={clas.id}
                           >
                             <Link
                               href={`/courses/${course.id}/classes/${clas.id}`}
@@ -85,9 +85,8 @@ function CourseDetails() {
                         height="315"
                         src={embedVideoIntro[LANGUAGE_SPANISH]}
                         title="YouTube video player"
-                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
+                        allowFullScreen
                       ></iframe>
                     </div>
                   )}

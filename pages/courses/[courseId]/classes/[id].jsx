@@ -1,7 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-import courses from "../../../../data/courses.json";
+import { courses } from "../../../../data/courses";
 import Layout, {
   DARK_THEME,
   LANGUAGE_SPANISH,
@@ -10,6 +12,7 @@ import Layout, {
 } from "../../../../components/layout";
 import Link from "next/link";
 import { getTranslation } from "../../../../utils/i18n.utils";
+import { normalizeStringLiteral } from "../../../../utils/string";
 
 function CourseDetails() {
   const {
@@ -23,7 +26,7 @@ function CourseDetails() {
     return <h1>Clase no encontrada</h1>;
   }
 
-  const { title, video } = clas;
+  const { title, video, content } = clas;
   const { title: courseTitle } = course;
 
   return (
@@ -47,19 +50,29 @@ function CourseDetails() {
                     </Link>
                   </div>
                   <div className="col-12">
-                    <h1 className="display-6"><strong>{getTranslation('TOPIC', language)}:</strong> {title[language]}</h1>
+                    <h1 className="display-6">
+                      <strong>{getTranslation("TOPIC", language)}:</strong>{" "}
+                      {title[language]}
+                    </h1>
                   </div>
                   {video && (
-                    <div className="col-12">
+                    <div className="col-12 mt-5">
                       <iframe
                         width="560"
                         height="315"
                         src={video[LANGUAGE_SPANISH]}
                         title="YouTube video player"
-                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
+                        allowFullScreen
                       ></iframe>
+                    </div>
+                  )}
+                  {content && (
+                    <div className="col-12 mt-5">
+                      <ReactMarkdown
+                        children={normalizeStringLiteral(content[language])}
+                        remarkPlugins={[remarkGfm]}
+                      />
                     </div>
                   )}
                 </div>

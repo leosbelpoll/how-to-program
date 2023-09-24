@@ -2,8 +2,13 @@ import React, { useContext } from "react";
 import classNames from "classnames";
 import Link from "next/link";
 
-import courses from "../data/courses.json";
-import { DARK_THEME, ThemeContext, LanguageContext, SearchContext } from "./layout";
+import { courses } from "../data/courses";
+import {
+  DARK_THEME,
+  ThemeContext,
+  LanguageContext,
+  SearchContext,
+} from "./layout";
 import { getTranslation } from "../utils/i18n.utils";
 
 function CourseList() {
@@ -46,7 +51,11 @@ function CourseList() {
                       </p>
                     </div>
                     <div className="d-grid">
-                      <Link href={`/courses/${id    }`} className="btn btn-primary" type="button">
+                      <Link
+                        href={`/courses/${id}`}
+                        className="btn btn-primary"
+                        type="button"
+                      >
                         {getTranslation("READ_MORE", language)}
                       </Link>
                     </div>
