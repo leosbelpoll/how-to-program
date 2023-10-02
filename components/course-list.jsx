@@ -8,6 +8,7 @@ import {
   ThemeContext,
   LanguageContext,
   SearchContext,
+  LANGUAGE_SPANISH,
 } from "./layout";
 import { getTranslation } from "../utils/i18n.utils";
 
@@ -27,7 +28,7 @@ function CourseList() {
   return (
     <>
       {foundCourses.length ? (
-        <div className="row  row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <div>
           {foundCourses.map(
             ({ id, title, description, thumbnail, background, textColor }) => (
               <div className="col mb-4" key={id}>
@@ -38,26 +39,23 @@ function CourseList() {
                     "text-white": theme === DARK_THEME,
                   })}
                 >
-                  <img
-                    src={`/images/courses/${thumbnail}-thumbnail.jpg`}
-                    className="card-img-top"
-                    alt="..."
-                  />
-                  <div className="card-body d-flex flex-column justify-content-between">
-                    <div className="mb-4">
-                      <h5 className="card-title">{title[language]}</h5>
-                      <p className="card-text text-secondary">
-                        <small>{description[language].slice(0, 100)}... </small>
-                      </p>
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img
+                        src={`/images/courses/${thumbnail}-thumbnail.jpg`}
+                        className="img-fluid rounded full-image"
+                        alt="..."
+                      />
                     </div>
-                    <div className="d-grid">
-                      <Link
-                        href={`/courses/${id}`}
-                        className="btn btn-primary"
-                        type="button"
-                      >
-                        {getTranslation("READ_MORE", language)}
-                      </Link>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <strong>
+                          <p class="card-title">{title[language]}</p>
+                        </strong>
+                        <small class="card-text text-secondary">
+                          {description[language].slice(0, 50)} ...
+                        </small>
+                      </div>
                     </div>
                   </div>
                 </div>

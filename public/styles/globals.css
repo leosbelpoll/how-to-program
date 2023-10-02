@@ -1,9 +1,76 @@
 html {
-    background: rgb(33,37,41);
+  background: rgb(230, 230, 230);
 }
 
-/* Normalize Bootstrap styles */
+/* Override bootstrap */
 
 .navbar-toggler {
-    border: none;
+  border: none;
+}
+
+.main-menu {
+  border-radius: 0;
+  color: rgb(79, 79, 79);
+}
+
+.main-menu .list-group-item {
+  border-radius: 5px;
+  border: none;
+  padding: 20px 30px;
+}
+
+.main-menu .list-group-item.active {
+  background: rgba(226, 226, 226, 0.588);
+  font-weight: bolder;
+  color: rgb(41, 41, 41);
+}
+
+.main-menu .list-group-item-dark {
+  background: none;
+  color: white;
+}
+
+.main-menu .nav-link {
+    display: inline-block;
+}
+
+.card {
+  border: none;
+}
+
+.card .full-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+.card .card-body {
+  padding: 10px;
+  padding-right: 0;
+}
+
+.card .card-body .card-title {
+  font-size: 16px;
+}
+
+.ratings .rating-star {
+  color: rgb(255, 190, 12);
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 0px;
+  margin-right: 2px;
+}
+
+.ratings .rating-points {
+  margin: 0 7px;
+}
+
+.categories span {
+  margin-right: 7px;
+}
+
+.next-suggestions li {
+  padding-left: 0;
+}
+
+input.bg-dark::placeholder {
+  color: grey !important;
+  opacity: 1;
 }

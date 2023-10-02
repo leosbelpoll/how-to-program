@@ -97,9 +97,9 @@ function Layout({ children }) {
                 "text-bg-dark": theme === DARK_THEME,
               })}
             >
-              <Nav />
+              {/* <Nav /> */}
               <main>{children}</main>
-              <Footer />
+              {/* <Footer /> */}
             </div>
           </ThemeContext.Provider>
         </LanguageContext.Provider>
