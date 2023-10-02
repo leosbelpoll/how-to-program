@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import Search from "../../../../components/search";
 import Layout, {
+    LANGUAGE_SPANISH,
   LanguageContext,
   ThemeContext,
 } from "../../../../components/layout";
@@ -69,7 +70,7 @@ function ClassDetails() {
                   className="rounded"
                   width="100%"
                   height="270px"
-                  src={video[language]}
+                  src={video[LANGUAGE_SPANISH]}
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
