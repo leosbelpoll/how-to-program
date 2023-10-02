@@ -1,3 +1,181 @@
+export const learningPaths = [
+  {
+    id: 1,
+    title: {
+      es: "Frontend",
+      en: "Frontend",
+    },
+    description: {
+      es: "¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.",
+      en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
+    },
+    thumbnail: "react",
+    courses: [1, 2, 3, 4, 5],
+  },
+  {
+    id: 2,
+    title: {
+      es: "Backend",
+      en: "Backend",
+    },
+    description: {
+      es: "¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.",
+      en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
+    },
+    thumbnail: "node",
+    courses: [6],
+  },
+];
+
+export const classes = [
+  {
+    id: 1,
+    courseId: 1,
+    title: {
+      es: "Entorno de desarrollo",
+      en: "Development environment",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/ZwnAuRC1FtA?si=opSz5IRSdNsV43mT",
+    },
+    content: {
+      es: `
+          slfj sldfj sldkfj slkdfjklsdjf lskdjflskdjf slkdfjskldfj skld fjlskdjf slkdjfslkdjf slkdf jskldfj skldfj slkdfjklsdjf
+
+          - hola 1
+          - hola 2
+          - hola 3
+          - [este link](https://www.google.com)
+
+          \`\`\`ts
+              const name = "leo";
+          \`\`\`
+        `,
+
+      en: `
+         Hello
+
+          - what's up 1
+          - [this link](https://www.google.com)
+
+          \`\`\`ts
+              const name = "leo";
+          \`\`\`
+        `,
+    },
+  },
+  {
+    id: 2,
+    courseId: 1,
+    title: {
+      es: "Estructura básica",
+      en: "Basic structure",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/1L_ZrxDami4?si=paaLhJzGi-408Oqr",
+    },
+  },
+  {
+    id: 3,
+    courseId: 1,
+    title: {
+      es: "Herramienta de desarrolladores",
+      en: "DevOps tools",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/X9ngOAyNjCA?si=TxUgRznxaPeMJInV",
+    },
+  },
+  {
+    id: 4,
+    courseId: 1,
+    title: {
+      es: "Textos",
+      en: "Text",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/Ta7JUgMfcr0?si=bF-SPd73IV3mXlc6",
+    },
+  },
+  {
+    id: 5,
+    courseId: 1,
+    title: {
+      es: "Listas",
+      en: "List",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/0a8kjLjNfh4?si=Q9GODj7ncU3RhPuX",
+    },
+  },
+  {
+    id: 6,
+    courseId: 1,
+    title: {
+      es: "Navegación",
+      en: "Navigation",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/4BiyEG_OWsE?si=jITsFhhGh5sit5OP",
+    },
+  },
+  {
+    id: 7,
+    courseId: 1,
+    title: {
+      es: "Imágenes",
+      en: "Images",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/5fPZRK6WauE?si=OH89Fd4supajTdxC",
+    },
+  },
+  {
+    id: 8,
+    courseId: 1,
+    title: {
+      es: "Tablas",
+      en: "Tables",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/l3CLCfyHAWg?si=9dwcA-ddjHo6_Ur",
+    },
+  },
+  {
+    id: 9,
+    courseId: 1,
+    title: {
+      es: "Formularios",
+      en: "Forms",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/-Il58AlPvs0?si=2rlmZ-p6s6OrvtmQ",
+    },
+  },
+  {
+    id: 10,
+    courseId: 1,
+    title: {
+      es: "HTML 5",
+      en: "HTML 5",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/1YoGeG7ikuY?si=_4YyAlrXszGadwiu",
+    },
+  },
+  {
+    id: 11,
+    courseId: 1,
+    title: {
+      es: "Que sigue?",
+      en: "What's next?",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/9KF4ZzL4_qw?si=Qt01b39_Mvfk5qah",
+    },
+  },
+];
+
 export const courses = [
   {
     id: 1,
@@ -10,149 +188,12 @@ export const courses = [
       es: "¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.",
       en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
     },
-    embedVideoIntro: {
+    video: {
       es: "https://www.youtube.com/embed/zJTjsLCKzio?si=3nIfoX0-kad7mbL3",
     },
     background: "#ff6633",
     textColor: "white",
     tags: ["html", "frontend"],
-    classes: [
-      {
-        id: 1,
-        title: {
-          es: "Entorno de desarrollo",
-          en: "Development environment",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/ZwnAuRC1FtA?si=opSz5IRSdNsV43mT",
-        },
-        content: {
-          es: `
-            slfj sldfj sldkfj slkdfjklsdjf lskdjflskdjf slkdfjskldfj skld fjlskdjf slkdjfslkdjf slkdf jskldfj skldfj slkdfjklsdjf
-
-            - hola 1
-            - hola 2
-            - hola 3
-            - [este link](https://www.google.com)
-
-            \`\`\`ts
-                const name = "leo";
-            \`\`\`
-          `,
-
-          en: `
-           Hello
-
-            - what's up 1
-            - [this link](https://www.google.com)
-
-            \`\`\`ts
-                const name = "leo";
-            \`\`\`
-          `,
-        },
-      },
-      {
-        id: 2,
-        title: {
-          es: "Estructura básica",
-          en: "Basic structure",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/1L_ZrxDami4?si=paaLhJzGi-408Oqr",
-        },
-      },
-      {
-        id: 3,
-        title: {
-          es: "Herramienta de desarrolladores",
-          en: "DevOps tools",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/X9ngOAyNjCA?si=TxUgRznxaPeMJInV",
-        },
-      },
-      {
-        id: 4,
-        title: {
-          es: "Textos",
-          en: "Text",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/Ta7JUgMfcr0?si=bF-SPd73IV3mXlc6",
-        },
-      },
-      {
-        id: 5,
-        title: {
-          es: "Listas",
-          en: "List",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/0a8kjLjNfh4?si=Q9GODj7ncU3RhPuX",
-        },
-      },
-      {
-        id: 6,
-        title: {
-          es: "Navegación",
-          en: "Navigation",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/4BiyEG_OWsE?si=jITsFhhGh5sit5OP",
-        },
-      },
-      {
-        id: 7,
-        title: {
-          es: "Imágenes",
-          en: "Images",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/5fPZRK6WauE?si=OH89Fd4supajTdxC",
-        },
-      },
-      {
-        id: 8,
-        title: {
-          es: "Tablas",
-          en: "Tables",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/l3CLCfyHAWg?si=9dwcA-ddjHo6_Ur",
-        },
-      },
-      {
-        id: 9,
-        title: {
-          es: "Formularios",
-          en: "Forms",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/-Il58AlPvs0?si=2rlmZ-p6s6OrvtmQ",
-        },
-      },
-      {
-        id: 10,
-        title: {
-          es: "HTML 5",
-          en: "HTML 5",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/1YoGeG7ikuY?si=_4YyAlrXszGadwiu",
-        },
-      },
-      {
-        id: 11,
-        title: {
-          es: "Que sigue?",
-          en: "What's next?",
-        },
-        video: {
-          es: "https://www.youtube.com/embed/9KF4ZzL4_qw?si=Qt01b39_Mvfk5qah",
-        },
-      },
-    ],
   },
   {
     id: 2,
@@ -161,7 +202,7 @@ export const courses = [
       en: "CSS",
     },
     thumbnail: "css",
-    embedVideoIntro: {
+    video: {
       es: "https://www.youtube.com/embed/D5VzGWgF_zk?si=aynQktIMxDzRpbM3",
     },
     description: {

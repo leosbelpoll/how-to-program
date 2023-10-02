@@ -1,8 +1,11 @@
-html {
-  background: rgb(230, 230, 230);
+.full-heigh {
+  min-height: 100vh;
 }
 
-/* Override bootstrap */
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .navbar-toggler {
   border: none;
@@ -11,6 +14,13 @@ html {
 .main-menu {
   border-radius: 0;
   color: rgb(79, 79, 79);
+  position: fixed;
+  height: 100%;
+}
+
+.main-menu .bottom-option {
+  position: absolute;
+  bottom: 0;
 }
 
 .main-menu .list-group-item {
@@ -31,7 +41,7 @@ html {
 }
 
 .main-menu .nav-link {
-    display: inline-block;
+  display: inline-block;
 }
 
 .card {
@@ -45,7 +55,6 @@ html {
 
 .card .card-body {
   padding: 10px;
-  padding-right: 0;
 }
 
 .card .card-body .card-title {
@@ -73,4 +82,17 @@ html {
 input.bg-dark::placeholder {
   color: grey !important;
   opacity: 1;
+}
+
+.card.active {
+  background: #eeeeee !important;
+}
+
+.card.bg-dark.active {
+  background: #939496 !important;
+  color: #292929 !important;
+}
+
+.card.bg-dark.active .text-secondary {
+  color: #292929 !important;
 }

@@ -1,103 +1,91 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
-
-import { courses } from "../../../data/courses";
+import classNames from "classnames";
+import CourseList from "../../../components/course-list";
+import Search from "../../../components/search";
 import Layout, {
-  DARK_THEME,
-  LANGUAGE_SPANISH,
   LanguageContext,
   ThemeContext,
 } from "../../../components/layout";
-import classNames from "classnames";
-import Link from "next/link";
+import { MainMenu } from "../../../components/main-menu";
+import { classes, courses } from "../../../data/data";
+import { HorizontalCard } from "../../../components/horizontal-card";
 
-function CourseDetails() {
+function Courses() {
+  const { language } = useContext(LanguageContext);
+  const { theme } = useContext(ThemeContext);
+
+  const router = useRouter();
+
   const {
     query: { courseId },
-  } = useRouter();
+  } = router;
 
-  const course = courses.find((course) => course.id == courseId);
+  const id = Number(courseId);
 
-  if (!course) {
-    return <h1>Curso no encontrado</h1>;
-  }
+  const currentCourse = courses.find((course) => course.id === id);
 
-  const { thumbnail, title, description, classes, embedVideoIntro } = course;
+  if (!currentCourse) return <h3>Invalid course id: {id}</h3>;
+
+  const { video, title, description } = currentCourse;
 
   return (
     <Layout>
       <LanguageContext.Consumer>
         {({ language }) => (
-          <ThemeContext.Consumer>
-            {({ theme }) => (
-              <div className="container mt-5 mb-5">
-                <div className="row">
-                  {/* <div className="col-md-6">
-                    <img
-                      src={`/images/courses/${thumbnail}-thumbnail.jpg`}
-                      className="h-50"
-                      alt="..."
-                    />
-                  </div> */}
-                  <div className="col-md-12">
-                    <h1 className="display-4">{title[language]}</h1>
+          <div className="px-4">
+            <div className="row">
+              <div className="col-3 position-relative">
+                <MainMenu />
+              </div>
+              <div className="col-4 pt-4">
+                <Search />
+                <CourseList currentCourseId={id} />
+              </div>
+              <div className="col-5 pt-5 mt-5 text-secondary">
+                <div className="mt-5">
+                  <iframe
+                    className="rounded"
+                    width="100%"
+                    height="270px"
+                    src={video[language]}
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe>
+
+                  <h2 className="mt-3">
+                    <strong>{title[language]} Curso</strong>
+                  </h2>
+                  <div className="categories">
+                    <span className="badge text-bg-primary">Primary</span>
+                    <span className="badge text-bg-info">Info</span>
+                    <span className="badge text-bg-dark">Dark</span>
                   </div>
-                  <div className="col-md-6">
-                    <p>{description[language]}</p>
-                    {embedVideoIntro && embedVideoIntro[LANGUAGE_SPANISH] && (
-                      <div className="col-md-6 d-inline d-md-none">
-                        <iframe
-                          width="560"
-                          height="315"
-                          src={embedVideoIntro[LANGUAGE_SPANISH]}
-                          title="YouTube video player"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                        ></iframe>
+
+                  <p className="text-secondary mt-4">{description[language]}</p>
+
+                  <h4 className="mt-4">Clases:</h4>
+                  {classes
+                    .filter((clas) => clas.courseId === id)
+                    .map(({ title, description, thumbnail, id: classId }) => (
+                      <div className="mb-4">
+                        <HorizontalCard
+                          title={title[language]}
+                          description={""}
+                          thumbnail={thumbnail || currentCourse.thumbnail}
+                          link={`/courses/${id}/classes/${classId}`}
+                        />
                       </div>
-                    )}
-                    {classes && (
-                      <ul className="list-group list-group-flush">
-                        {classes.map((clas) => (
-                          <li
-                            className={classNames("list-group-item", {
-                              "text-bg-dark": theme === DARK_THEME,
-                            })}
-                            key={clas.id}
-                          >
-                            <Link
-                              href={`/courses/${course.id}/classes/${clas.id}`}
-                              className={classNames({
-                                "text-info": theme === DARK_THEME,
-                              })}
-                            >
-                              {clas.title[language]}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                  {embedVideoIntro && embedVideoIntro[LANGUAGE_SPANISH] && (
-                    <div className="col-md-6 d-none d-md-inline">
-                      <iframe
-                        width="560"
-                        height="315"
-                        src={embedVideoIntro[LANGUAGE_SPANISH]}
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
-                  )}
+                    ))}
                 </div>
               </div>
-            )}
-          </ThemeContext.Consumer>
+            </div>
+          </div>
         )}
       </LanguageContext.Consumer>
     </Layout>
   );
 }
 
-export default CourseDetails;
+export default Courses;

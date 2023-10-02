@@ -31,9 +31,9 @@ const translations = {
     es: "Rutas de aprendizaje",
     en: "Learning paths",
   },
-  MENU_CLASSES: {
-    es: "Clases",
-    en: "Classes",
+  MENU_COURSES: {
+    es: "Cursos",
+    en: "Courses",
   },
   MENU_RESOURCES: {
     es: "Recursos",

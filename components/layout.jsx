@@ -94,7 +94,7 @@ function Layout({ children }) {
           >
             <div
               className={classNames({
-                "text-bg-dark": theme === DARK_THEME,
+                "text-bg-dark full-heigh": theme === DARK_THEME,
               })}
             >
               {/* <Nav /> */}

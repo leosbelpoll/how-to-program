@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import classNames from "classnames";
 import Link from "next/link";
 
-import { courses } from "../data/data";
+import { courses, learningPaths } from "../data/data";
 import {
   DARK_THEME,
   ThemeContext,
@@ -13,14 +13,14 @@ import {
 import { getTranslation } from "../utils/i18n.utils";
 import { HorizontalCard } from "./horizontal-card";
 
-function CourseList({ currentCourseId }) {
+function LearningPathList({currentLearningPathId}) {
   const { search = "" } = useContext(SearchContext);
   const { theme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
   const lowercaseSearch = search.toLowerCase();
 
-  const foundCourses = courses.filter(
-    ({ title, description, tags }) =>
+  const foundLearningPaths = learningPaths.filter(
+    ({ title, description, tags = [] }) =>
       title[language].toLowerCase().includes(lowercaseSearch) ||
       description[language].toLowerCase().includes(lowercaseSearch) ||
       tags.some((tag) => tag.toLowerCase().includes(lowercaseSearch))
@@ -28,18 +28,12 @@ function CourseList({ currentCourseId }) {
 
   return (
     <>
-      {foundCourses.length ? (
+      {foundLearningPaths.length ? (
         <div>
-          {foundCourses.map(
+          {foundLearningPaths.map(
             ({ id, title, description, thumbnail, background, textColor }) => (
               <div className="col mb-4" key={id}>
-                <HorizontalCard
-                  thumbnail={thumbnail}
-                  title={title[language]}
-                  description={description[language]}
-                  link={`/courses/${id}`}
-                  active={id === currentCourseId}
-                />
+               <HorizontalCard thumbnail={thumbnail} title={title[language]} description={description[language]} link={`/learning-paths/${id}`} active={currentLearningPathId === id} />
               </div>
             )
           )}
@@ -58,4 +52,4 @@ function CourseList({ currentCourseId }) {
   );
 }
 
-export default CourseList;
+export default LearningPathList;
