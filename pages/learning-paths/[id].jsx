@@ -47,7 +47,7 @@ function LearningPath() {
                   <LearningPathList currentLearningPathId={id} />
                 </div>
               </div>
-              <div className="col-5 pt-5 mt-5 text-secondary">
+              <div className="col-5 pt-5 mt-5">
                 {relatedCourses.map(({ id, title, description, thumbnail }) => (
                   <div className="col mb-4" key={id}>
                     <HorizontalCard

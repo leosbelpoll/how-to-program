@@ -43,7 +43,7 @@ function Courses() {
                 <Search />
                 <CourseList currentCourseId={id} />
               </div>
-              <div className="col-5 mt-4 mb-3 text-secondary">
+              <div className="col-5 mt-4 mb-3">
                 <iframe
                   className="rounded"
                   width="100%"
@@ -63,7 +63,7 @@ function Courses() {
                   ))}
                 </div>
 
-                <p className="text-secondary mt-4">{description[language]}</p>
+                <p className="mt-4">{description[language]}</p>
 
                 <h4 className="mt-4">Clases:</h4>
                 {classes
