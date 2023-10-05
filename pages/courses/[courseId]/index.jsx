@@ -4,7 +4,7 @@ import classNames from "classnames";
 import CourseList from "../../../components/course-list";
 import Search from "../../../components/search";
 import Layout, {
-    LANGUAGE_SPANISH,
+  LANGUAGE_SPANISH,
   LanguageContext,
   ThemeContext,
 } from "../../../components/layout";
@@ -28,7 +28,7 @@ function Courses() {
 
   if (!currentCourse) return <h3>Invalid course id: {id}</h3>;
 
-  const { video, title, description } = currentCourse;
+  const { video, title, description, tags } = currentCourse;
 
   return (
     <Layout>
@@ -43,43 +43,39 @@ function Courses() {
                 <Search />
                 <CourseList currentCourseId={id} />
               </div>
-              <div className="col-5 pt-5 mt-5 text-secondary">
-                <div className="mt-5">
-                  <iframe
-                    className="rounded"
-                    width="100%"
-                    height="270px"
-                    src={video[LANGUAGE_SPANISH]}
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
+              <div className="col-5 mt-4 mb-3 text-secondary">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="270px"
+                  src={video[LANGUAGE_SPANISH]}
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
 
-                  <h2 className="mt-3">
-                    <strong>{title[language]} Curso</strong>
-                  </h2>
-                  <div className="categories">
-                    <span className="badge text-bg-primary">Primary</span>
-                    <span className="badge text-bg-info">Info</span>
-                    <span className="badge text-bg-dark">Dark</span>
-                  </div>
-
-                  <p className="text-secondary mt-4">{description[language]}</p>
-
-                  <h4 className="mt-4">Clases:</h4>
-                  {classes
-                    .filter((clas) => clas.courseId === id)
-                    .map(({ title, description, thumbnail, id: classId }) => (
-                      <div className="mb-4">
-                        <HorizontalCard
-                          title={title[language]}
-                          description={""}
-                          thumbnail={thumbnail || currentCourse.thumbnail}
-                          link={`/courses/${id}/classes/${classId}`}
-                        />
-                      </div>
-                    ))}
+                <h2 className="mt-3">
+                  <strong>{title[language]} Curso</strong>
+                </h2>
+                <div className="categories">
+                  {tags.map(tag => (
+                    <span className="badge text-bg-secondary">{tag}</span>
+                  ))}
                 </div>
+
+                <p className="text-secondary mt-4">{description[language]}</p>
+
+                <h4 className="mt-4">Clases:</h4>
+                {classes
+                  .filter((clas) => clas.courseId === id)
+                  .map(({ title, description, thumbnail, id: classId }) => (
+                    <div className="mb-2">
+                      <i class="bi bi-file-earmark-play me-2"></i>
+                      <a href={`/courses/${id}/classes/${classId}`}>
+                        {title[language]}
+                      </a>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>

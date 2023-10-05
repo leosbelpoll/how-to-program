@@ -60,7 +60,7 @@ export function MainMenu() {
           )}
         </Link>
       </li>
-      <li
+      {/* <li
         className={classNames("list-group-item", {
           "list-group-item-dark": theme === DARK_THEME,
           active: router.pathname === "/",
@@ -71,7 +71,7 @@ export function MainMenu() {
           <i className="bi bi-grid-1x2-fill me-3"></i>{" "}
           {getTranslation("MENU_HOME", language)}
         </Link>
-      </li>
+      </li> */}
       <li
         className={classNames("list-group-item", {
           "list-group-item-dark": theme === DARK_THEME,
@@ -94,7 +94,7 @@ export function MainMenu() {
           {getTranslation("MENU_COURSES", language)}
         </Link>
       </li>
-      <li
+      {/* <li
         className={classNames("list-group-item", {
           "list-group-item-dark": theme === DARK_THEME,
         })}
@@ -103,8 +103,8 @@ export function MainMenu() {
           <i className="bi bi-file-earmark-text-fill me-3"></i>{" "}
           {getTranslation("MENU_RESOURCES", language)}
         </Link>
-      </li>
-      <li
+      </li> */}
+      {/* <li
         className={classNames("list-group-item", {
           "list-group-item-dark": theme === DARK_THEME,
         })}
@@ -113,7 +113,7 @@ export function MainMenu() {
           <i className="bi bi-bookmarks-fill me-3"></i>{" "}
           {getTranslation("MENU_BOOKMARKERS", language)}
         </Link>
-      </li>
+      </li> */}
       <li
         className={classNames("list-group-item mt-5 bottom-option", {
           "list-group-item-dark": theme === DARK_THEME,
@@ -139,14 +139,14 @@ export function MainMenu() {
             <i className="bi bi-brightness-high-fill"></i>
           </a>
         )}
-        <a
+        {/* <a
           className="nav-link ms-4"
           href="#"
           role="button"
           onClick={flipLanguage}
         >
           {language === LANGUAGE_ENGLISH ? "Es" : "En"}
-        </a>
+        </a> */}
       </li>
     </ul>
   );

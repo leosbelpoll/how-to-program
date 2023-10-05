@@ -96,3 +96,13 @@ input.bg-dark::placeholder {
 .card.bg-dark.active .text-secondary {
   color: #292929 !important;
 }
+
+.main-class-list-item {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.main-class-list-item.active {
+    background: #eeeeee !important;
+    color: #292929;
+}
