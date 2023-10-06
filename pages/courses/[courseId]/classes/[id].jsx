@@ -70,7 +70,7 @@ function ClassDetails() {
             data-bs-toggle="modal"
             data-bs-target="#fullScreenClassModal"
           >
-            <i class="bi bi-arrows-fullscreen"></i>
+            <i className="bi bi-arrows-fullscreen"></i>
           </button>
         )}
       </div>
@@ -119,7 +119,7 @@ function ClassDetails() {
                                   active: classId === pClassId,
                                 })}
                               >
-                                <i class="bi bi-file-earmark-play me-2"></i>
+                                <i className="bi bi-file-earmark-play me-2"></i>
                                 <a
                                   href={`/courses/${courseId}/classes/${classId}`}
                                 >
@@ -142,8 +142,8 @@ function ClassDetails() {
                           aria-labelledby="fullScreenClassModalLabel"
                           aria-hidden="true"
                         >
-                          <div class="modal-dialog modal-dialog-scrollable modal-fullscreen">
-                            <div class="modal-content">
+                          <div className="modal-dialog modal-dialog-scrollable modal-fullscreen">
+                            <div className="modal-content">
                               <div
                                 className={classNames("modal-header", {
                                   "text-bg-dark": theme === DARK_THEME,
@@ -158,7 +158,7 @@ function ClassDetails() {
                                   data-bs-dismiss="modal"
                                   aria-label="Close"
                                 >
-                                  <i class="bi bi-x-lg"></i>
+                                  <i className="bi bi-x-lg"></i>
                                 </button>
                               </div>
                               <div

@@ -70,7 +70,7 @@ function Courses() {
                   .filter((clas) => clas.courseId === id)
                   .map(({ title, description, thumbnail, id: classId }) => (
                     <div className="mb-2">
-                      <i class="bi bi-file-earmark-play me-2"></i>
+                      <i className="bi bi-file-earmark-play me-2"></i>
                       <a href={`/courses/${id}/classes/${classId}`}>
                         {title[language]}
                       </a>
