@@ -1,19 +1,16 @@
 import React, { useContext } from "react";
 import classNames from "classnames";
-import Link from "next/link";
 
-import { courses, learningPaths } from "../data/data";
+import { learningPaths } from "../data/data";
 import {
   DARK_THEME,
   ThemeContext,
   LanguageContext,
   SearchContext,
-  LANGUAGE_SPANISH,
 } from "./layout";
-import { getTranslation } from "../utils/i18n.utils";
 import { HorizontalCard } from "./horizontal-card";
 
-function LearningPathList({currentLearningPathId}) {
+function LearningPathList({ currentLearningPathId }) {
   const { search = "" } = useContext(SearchContext);
   const { theme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
@@ -33,7 +30,13 @@ function LearningPathList({currentLearningPathId}) {
           {foundLearningPaths.map(
             ({ id, title, description, thumbnail, background, textColor }) => (
               <div className="col mb-4" key={id}>
-               <HorizontalCard thumbnail={thumbnail} title={title[language]} description={description[language]} link={`/learning-paths/${id}`} active={currentLearningPathId === id} />
+                <HorizontalCard
+                  thumbnail={thumbnail}
+                  title={title}
+                  description={description}
+                  link={`/learning-paths/${id}`}
+                  active={currentLearningPathId === id}
+                />
               </div>
             )
           )}

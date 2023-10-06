@@ -25,7 +25,7 @@ export const SearchContext = createContext({
 });
 
 export const LanguageContext = createContext({
-  language: "",
+  language: defaultLanguage,
   setLanguage: (language) => {},
 });
 

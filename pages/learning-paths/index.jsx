@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { MainMenu } from "../../components/main-menu";
-import classNames from "classnames";
-import Layout, { DARK_THEME, ThemeContext } from "../../components/layout";
+import Layout, { ThemeContext } from "../../components/layout";
 import Search from "../../components/search";
 import LearningPathList from "../../components/learning-path-list";
 

@@ -1,19 +1,10 @@
-import React, { useContext } from "react";
-import { classes, courses } from "../../data/data";
-import Layout, {
-  DARK_THEME,
-  LanguageContext,
-  ThemeContext,
-} from "../../components/layout";
+import React from "react";
+import Layout from "../../components/layout";
 import { MainMenu } from "../../components/main-menu";
-import classNames from "classnames";
 import CourseList from "../../components/course-list";
 import Search from "../../components/search";
 
 function Courses() {
-  const { language } = useContext(LanguageContext);
-  const { theme } = useContext(ThemeContext);
-
   return (
     <Layout>
       <div className="px-4">

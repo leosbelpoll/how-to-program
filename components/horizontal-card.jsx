@@ -1,9 +1,10 @@
 import classNames from "classnames";
 import React, { useContext } from "react";
-import { DARK_THEME, ThemeContext } from "./layout";
+import { DARK_THEME, LanguageContext, ThemeContext } from "./layout";
 import Link from "next/link";
 
 export function HorizontalCard({ thumbnail, title, description, link, active }) {
+  const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -27,10 +28,10 @@ export function HorizontalCard({ thumbnail, title, description, link, active }) 
           <div className="col-md-8">
             <div className="card-body">
               <strong>
-                <p className="card-title">{title}</p>
+                <p className="card-title">{title[language]}</p>
               </strong>
               <small className="card-text text-secondary">
-                {description.slice(0, 50)} ...
+                {description[language].slice(0, 50)} ...
               </small>
             </div>
           </div>

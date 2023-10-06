@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import classNames from "classnames";
-import Link from "next/link";
 
 import { courses } from "../data/data";
 import {
@@ -8,9 +7,7 @@ import {
   ThemeContext,
   LanguageContext,
   SearchContext,
-  LANGUAGE_SPANISH,
 } from "./layout";
-import { getTranslation } from "../utils/i18n.utils";
 import { HorizontalCard } from "./horizontal-card";
 
 function CourseList({ currentCourseId }) {
@@ -35,8 +32,8 @@ function CourseList({ currentCourseId }) {
               <div className="col mb-4" key={id}>
                 <HorizontalCard
                   thumbnail={thumbnail}
-                  title={title[language]}
-                  description={description[language]}
+                  title={title}
+                  description={description}
                   link={`/courses/${id}`}
                   active={id === currentCourseId}
                 />
