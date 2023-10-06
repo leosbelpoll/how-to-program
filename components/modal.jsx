@@ -2,30 +2,35 @@ import React, { useContext } from "react";
 import { DARK_THEME, LanguageContext, ThemeContext } from "./layout";
 import classNames from "classnames";
 
-export function Modal({ children, title }) {
-    const { language } = useContext(LanguageContext);
-    const { theme } = useContext(ThemeContext);
+export function Modal({ children, title, id, scrollable, fullscreen }) {
+  const { language } = useContext(LanguageContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div
       className={classNames("modal fade", {
         "text-bg-dark": theme === DARK_THEME,
       })}
-      id="fullScreenClassModal"
+      id={id}
       tabindex="-1"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
-      aria-labelledby="fullScreenClassModalLabel"
+      aria-labelledby={`${id}Label`}
       aria-hidden="true"
     >
-      <div className="modal-dialog modal-dialog-scrollable modal-fullscreen">
+      <div
+        className={classNames("modal-dialog", {
+          "modal-fullscreen": fullscreen,
+          "modal-dialog-scrollable": scrollable,
+        })}
+      >
         <div className="modal-content">
           <div
             className={classNames("modal-header", {
               "text-bg-dark": theme === DARK_THEME,
             })}
           >
-            <h2>{title[language]}</h2>
+            <h4>{title[language]}</h4>
             <button
               type="button"
               className={classNames("btn btn-light", {

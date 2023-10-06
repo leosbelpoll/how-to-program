@@ -28,7 +28,7 @@ function LearningPathList({ currentLearningPathId }) {
       {foundLearningPaths.length ? (
         <div>
           {foundLearningPaths.map(
-            ({ id, title, description, thumbnail, background, textColor }) => (
+            ({ id, title, description, thumbnail, showSubscription }) => (
               <div className="col mb-4" key={id}>
                 <HorizontalCard
                   thumbnail={thumbnail}
@@ -36,6 +36,7 @@ function LearningPathList({ currentLearningPathId }) {
                   description={description}
                   link={`/learning-paths/${id}`}
                   active={currentLearningPathId === id}
+                  showSubscription={showSubscription}
                 />
               </div>
             )

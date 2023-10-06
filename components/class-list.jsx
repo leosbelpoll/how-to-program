@@ -24,18 +24,35 @@ export function ClassList({ classes }) {
             .toLowerCase()
             .includes(search.toLocaleLowerCase())
         )
-        .map(({ title, description, thumbnail, id: classId, content }) => (
-          <div
-            className={classNames("main-class-list-item", {
-              active: classId === pClassId,
-            })}
-          >
-            <i className="bi bi-file-earmark-play me-2"></i>
-            <a href={`/courses/${courseId}/classes/${classId}`}>
-              {title[language]}
-            </a>
-          </div>
-        ))}
+        .map(
+          ({
+            title,
+            description,
+            thumbnail,
+            id: classId,
+            content,
+            showSubscription,
+          }) => (
+            <div
+              className={classNames("main-class-list-item", {
+                active: classId === pClassId,
+              })}
+              data-bs-toggle={showSubscription ? "modal" : ""}
+              data-bs-target="#subscriptionModal"
+            >
+              <i className="bi bi-file-earmark-play me-2"></i>
+              <a
+                href={
+                  !showSubscription
+                    ? `/courses/${courseId}/classes/${classId}`
+                    : "#"
+                }
+              >
+                {title[language]}
+              </a>
+            </div>
+          )
+        )}
     </>
   );
 }

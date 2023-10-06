@@ -24,6 +24,21 @@ export const learningPaths = [
     },
     thumbnail: "node",
     courses: [6],
+    showSubscription: true,
+  },
+  {
+    id: 3,
+    title: {
+      es: "DevOps",
+      en: "DevOps",
+    },
+    description: {
+      es: "Domina la cultura, prácticas y herramientas de DevOps. Aprende a acelerar el desarrollo de software, mejorar la colaboración entre equipos y automatizar despliegues. Obtén las habilidades clave para llevar tus proyectos al siguiente nivel y alcanzar la eficiencia operativa que tu empresa necesita. ¡Únete a nosotros y conviértete en un experto en DevOps!",
+      en: "Master the culture, practices, and tools of DevOps. Learn to accelerate software development, enhance team collaboration, and automate deployments. Gain the key skills to take your projects to the next level and achieve the operational efficiency your company needs. Join us and become a DevOps expert!",
+    },
+    thumbnail: "devops",
+    courses: [],
+    showSubscription: true,
   },
 ];
 
@@ -227,6 +242,7 @@ export const courses = [
     background: "#f7df1e",
     textColor: "black",
     tags: ["javascript", "js", "frontend"],
+    showSubscription: true,
   },
   {
     id: 4,
@@ -242,6 +258,7 @@ export const courses = [
     background: "#7011f5",
     textColor: "white",
     tags: ["bootstrap", "css", "framework", "libreria", "frontend"],
+    showSubscription: true,
   },
   {
     id: 5,
@@ -257,6 +274,7 @@ export const courses = [
     background: "#03c3f3",
     textColor: "white",
     tags: ["react", "framework", "libreria", "frontend"],
+    showSubscription: true,
   },
   {
     id: 6,
@@ -270,5 +288,6 @@ export const courses = [
       en: "Explore the fascinating world of server-side application development with our Node.js course. Node.js is a JavaScript runtime environment that allows you to create scalable and high-performance applications. In this course, you will delve into the fundamentals of Node.js, learn to build web servers, manipulate databases, and develop real-time applications. Get ready to acquire the skills needed to build robust and efficient server-side applications with Node.js.",
     },
     tags: ["nodejs", "runtime", "javascript", "js", "backend"],
+    showSubscription: true,
   },
 ];

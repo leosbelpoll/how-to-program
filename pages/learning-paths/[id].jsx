@@ -40,13 +40,14 @@ function LearningPath() {
             </div>
           </div>
           <div className="col-5 pt-5 mt-5">
-            {relatedCourses.map(({ id, title, description, thumbnail }) => (
+            {relatedCourses.map(({ id, title, description, thumbnail, showSubscription }) => (
               <div className="col mb-4" key={id}>
                 <HorizontalCard
                   thumbnail={thumbnail}
                   title={title}
                   description={description}
                   link={`/courses/${id}`}
+                  showSubscription={showSubscription}
                 />
               </div>
             ))}

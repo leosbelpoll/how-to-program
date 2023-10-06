@@ -22,7 +22,7 @@ function LearningPaths() {
           </div>
           <div className="col-5 pt-5 mt-5 text-center text-secondary">
             <div className="mt-5">
-              <h4>Seleccione algún curso</h4>
+              <h4>Seleccione alguna ruta</h4>
             </div>
           </div>
         </div>

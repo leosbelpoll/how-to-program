@@ -45,12 +45,30 @@ export function CourseDetails({ course }) {
       <h4 className="mt-4">Clases:</h4>
       {classes
         .filter((clas) => clas.courseId === id)
-        .map(({ title, description, thumbnail, id: classId }) => (
-          <div className="mb-2">
-            <i className="bi bi-file-earmark-play me-2"></i>
-            <a href={`/courses/${id}/classes/${classId}`}>{title[language]}</a>
-          </div>
-        ))}
+        .map(
+          ({
+            title,
+            description,
+            thumbnail,
+            id: classId,
+            showSubscription,
+          }) => (
+            <div
+              className="mb-2"
+              data-bs-toggle={showSubscription ? "modal" : ""}
+              data-bs-target="#subscriptionModal"
+            >
+              <i className="bi bi-file-earmark-play me-2"></i>
+              <a
+                href={
+                  !showSubscription ? `/courses/${id}/classes/${classId}` : "#"
+                }
+              >
+                {title[language]}
+              </a>
+            </div>
+          )
+        )}
     </>
   );
 }

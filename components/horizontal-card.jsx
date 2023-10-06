@@ -3,19 +3,28 @@ import React, { useContext } from "react";
 import { DARK_THEME, LanguageContext, ThemeContext } from "./layout";
 import Link from "next/link";
 
-export function HorizontalCard({ thumbnail, title, description, link, active }) {
+export function HorizontalCard({
+  thumbnail,
+  title,
+  description,
+  link,
+  active,
+  showSubscription,
+}) {
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
 
   return (
-    <Link href={link}>
+    <Link href={!showSubscription ? link : "#"}>
       <div
         className={classNames("card h-100", {
           "bg-dark": theme === DARK_THEME,
           "border-light": theme === DARK_THEME,
           "text-white": theme === DARK_THEME,
-          "active": active
+          active: active,
         })}
+        data-bs-toggle={showSubscription ? "modal" : ""}
+        data-bs-target="#subscriptionModal"
       >
         <div className="row g-0">
           <div className="col-md-4">
@@ -37,6 +46,6 @@ export function HorizontalCard({ thumbnail, title, description, link, active }) 
           </div>
         </div>
       </div>
-    </Link> 
+    </Link>
   );
 }

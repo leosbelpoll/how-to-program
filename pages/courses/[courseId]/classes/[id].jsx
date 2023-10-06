@@ -45,7 +45,7 @@ function ClassPage() {
           </div>
           <div className="col-5 mt-4">
             <ClassDetails content={content} title={title} video={video} />
-            <Modal title={title}>
+            <Modal title={title} id="fullScreenClassModal" fullscreen scrollable>
               <ClassDetails
                 content={content}
                 title={title}

@@ -28,7 +28,7 @@ function CourseList({ currentCourseId }) {
       {foundCourses.length ? (
         <div>
           {foundCourses.map(
-            ({ id, title, description, thumbnail, background, textColor }) => (
+            ({ id, title, description, thumbnail, showSubscription }) => (
               <div className="col mb-4" key={id}>
                 <HorizontalCard
                   thumbnail={thumbnail}
@@ -36,6 +36,7 @@ function CourseList({ currentCourseId }) {
                   description={description}
                   link={`/courses/${id}`}
                   active={id === currentCourseId}
+                  showSubscription={showSubscription}
                 />
               </div>
             )
