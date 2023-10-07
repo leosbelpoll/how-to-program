@@ -105,14 +105,49 @@ export const classes = [
         `,
 
       en: `
-         Hello
+            We are going to need two tools. A code editor and a browser to view our web pages. As a code editor we will be using Visual Studio Code or better known as VS Code and as a browser you can use one that is already installed on your computer, but currently most web programmers use [Chrome](https://www.google.com/intl/en/chrome/).
 
-          - what's up 1
-          - [this link](https://www.google.com)
+            ### VSCode
+            ---
 
-          \`\`\`ts
-              const name = "leo";
-          \`\`\`
+            #### What is Visual Studio Code for?
+
+            Visual Studio Code is a versatile tool that can be used to develop a wide variety of applications and projects. Some of its most notable features and uses include:
+
+            1. **Multi-language support**: VS Code supports a wide range of programming languages, from JavaScript and Python to C# and Java. This makes it suitable for a variety of projects.
+            2. **Extensions and customization**: VS Code has an extensive library of extensions that allow you to customize your development environment. You can add extensions to improve functionality, such as code debugging, integration with version control systems, and more.
+            3. **Integrated Debugging**: Visual Studio Code offers powerful debugging capabilities that will help you identify and fix errors in your code efficiently.
+            4. **Version Control**: Easily integrate version control tools like Git into your workflow, making it easy to collaborate and track changes to your projects.
+            5. **Built-in Terminal**: VS Code includes a built-in terminal that allows you to run commands directly from the editor, making tasks like installing packages or running scripts easier.
+
+            #### How to install Visual Studio Code
+
+            Visual Studio Code is easy to install and is available for Windows, macOS, and Linux. Follow these steps to install it:
+
+            1. **Download**: Visit the [official website](https://code.visualstudio.com/) of Visual Studio Code and select the appropriate version for your operating system.
+            2. **Run installer**: Run the downloaded file and follow the installer instructions.
+            3. **Initial setup**: Once installed, when you open Visual Studio Code, you will find a clean and minimalist interface. You can further customize the editor by installing extensions and setting preferences according to your needs.
+
+
+            To see the first steps, in [this video](https://youtu.be/ZwnAuRC1FtA?t=102) I show you.
+
+            ### Web navigator
+            ---
+
+            #### What are web browsers?
+
+            A web browser is an application that allows you to view and access web pages on the Internet. Its main function is to interpret and display the content of web pages, which can contain text, images, videos, forms, and more. Web browsers also allow interaction with links and navigation between pages.
+
+            #### The Main Web Browsers
+
+            There are numerous web browsers available, but some of the most popular ones include:
+
+            1. **Google Chrome**: With a simple interface and high performance, [Google Chrome](https://www.google.com/intl/en/chrome/) is one of the most used browsers in the entire world. world. It offers a wide range of extensions that allow you to personalize your browsing experience.
+            2. **Mozilla Firefox**: [Firefox](https://www.mozilla.org/en-US/firefox/new/) is known for its focus on privacy and personalization. It is also open source, meaning its source code is available for anyone to inspect or modify.
+            3. **Microsoft Edge**: Edge is Microsoft's web browser and comes preinstalled on Windows. It offers a fast and efficient browsing experience, as well as strong integration with other Microsoft products.
+            4. **Safari**: Safari is Apple's exclusive web browser and is found on Mac and iOS devices. It offers fast performance and seamless integration with other Apple products.
+
+            To see the first steps, in [this video](https://youtu.be/ZwnAuRC1FtA?t=256) I show you.
         `,
     },
   },
