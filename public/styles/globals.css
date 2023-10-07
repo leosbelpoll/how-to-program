@@ -106,3 +106,8 @@ input.bg-dark::placeholder {
     background: #eeeeee !important;
     color: #292929;
 }
+
+.class-details a {
+    color: rgb(0, 162, 255);
+    text-decoration: underline;
+}

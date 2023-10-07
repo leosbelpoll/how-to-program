@@ -30,7 +30,9 @@ function ClassPage() {
 
   if (!currentClass) return <h3>No classe with id: {pClassId}</h3>;
 
-  const { video, content, title } = currentClass;
+  const { video, content, title, description } = currentClass;
+
+  const nextRecommendedClass = foundClasses.find((clas) => clas.id === pClassId + 1);
 
   return (
     <Layout>
@@ -44,13 +46,15 @@ function ClassPage() {
             <ClassList classes={foundClasses} />
           </div>
           <div className="col-5 mt-4">
-            <ClassDetails content={content} title={title} video={video} />
+            <ClassDetails content={content} title={title} video={video} description={description} nextRecommendedClass={nextRecommendedClass} />
             <Modal title={title} id="fullScreenClassModal" fullscreen scrollable>
               <ClassDetails
                 content={content}
                 title={title}
+                description={description}
                 video={video}
                 isFullScreen
+                nextRecommendedClass={nextRecommendedClass}
               />
             </Modal>
           </div>

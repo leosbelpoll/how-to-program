@@ -40,7 +40,7 @@ export function HorizontalCard({
                 <p className="card-title">{title[language]}</p>
               </strong>
               <small className="card-text text-secondary">
-                {description[language].slice(0, 50)} ...
+                {description[language]?.slice(0, 50)} ...
               </small>
             </div>
           </div>

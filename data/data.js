@@ -50,21 +50,58 @@ export const classes = [
       es: "Entorno de desarrollo",
       en: "Development environment",
     },
+    description: {
+      es: "¿Quieres adentrarte en el mundo del desarrollo web y crear tus propias páginas HTML? Aquí te guio paso a paso a través del proceso de configuración del entorno de desarrollo HTML utilizando las herramientas escenciales.",
+      en: "Do you want to enter the world of web development and create your own HTML pages? Here I guide you step by step through the process of setting up the HTML development environment using the essential tools.",
+    },
     video: {
       es: "https://www.youtube.com/embed/ZwnAuRC1FtA?si=opSz5IRSdNsV43mT",
     },
     content: {
       es: `
-          slfj sldfj sldkfj slkdfjklsdjf lskdjflskdjf slkdfjskldfj skld fjlskdjf slkdjfslkdjf slkdf jskldfj skldfj slkdfjklsdjf
+          Vamos a necesitar dos herramientas. Un editor de código y un navegador para visualizar nuestras páginas web. Como editor de código vamos a estar usand Visual Studio Code o más conocido como VS Code y como navegador puedes usar alguno que ya esté instalado en tu computadora, pero actualmente la mayoría de programadores web usan el [Chrome](https://www.google.com/intl/es_es/chrome/).
 
-          - hola 1
-          - hola 2
-          - hola 3
-          - [este link](https://www.google.com)
+          ### VS Code
+          ---
 
-          \`\`\`ts
-              const name = "leo";
-          \`\`\`
+          #### ¿Para qué sirve Visual Studio Code?
+
+          Visual Studio Code es una herramienta versátil que puede utilizarse para desarrollar una amplia variedad de aplicaciones y proyectos. Algunas de sus características y usos más destacados incluyen:
+
+          1. **Soporte para múltiples lenguajes**: VS Code es compatible con una amplia gama de lenguajes de programación, desde JavaScript y Python hasta C# y Java. Esto lo hace adecuado para una variedad de proyectos.
+          2. **Extensiones y personalización**: VS Code cuenta con una amplia biblioteca de extensiones que te permiten personalizar tu entorno de desarrollo. Puedes agregar extensiones para mejorar la funcionalidad, como la depuración de código, la integración con sistemas de control de versiones y mucho más.
+          3. **Depuración integrada**: Visual Studio Code ofrece potentes capacidades de depuración que te ayudarán a identificar y corregir errores en tu código de manera eficiente.
+          4. **Control de versiones**: Integra fácilmente herramientas de control de versiones como Git en tu flujo de trabajo, lo que facilita la colaboración y el seguimiento de cambios en tus proyectos.
+          5. **Terminal integrada**: VS Code incluye una terminal integrada que te permite ejecutar comandos directamente desde el editor, lo que facilita tareas como la instalación de paquetes o la ejecución de scripts.
+
+          #### Cómo instalar Visual Studio Code
+
+          La instalación de Visual Studio Code es sencilla y está disponible para Windows, macOS y Linux. Sigue estos pasos para instalarlo:
+
+          1. **Descarga**: Visita el [sitio web oficial](https://code.visualstudio.com/) de Visual Studio Code y selecciona la versión adecuada para tu sistema operativo.
+          2. **Ejecución de instalador**: Ejecuta el archivo descargado y sigue las instrucciones del instalador.
+          3. **Configuración inicial**: Una vez instalado, al abrir Visual Studio Code, encontrarás una interfaz limpia y minimalista. Puedes personalizar aún más el editor instalando extensiones y configurando preferencias según tus necesidades.
+
+
+          Para ver los primeros pasos, en [este video](https://youtu.be/ZwnAuRC1FtA?t=102) te muestro.
+
+          ### Navegador WEB
+          ---
+
+          #### ¿Qué son los navegadores web?
+
+          Un navegador web es una aplicación que te permite visualizar y acceder a páginas web en Internet. Su función principal es interpretar y mostrar el contenido de las páginas web, que pueden contener texto, imágenes, videos, formularios y más. Los navegadores web también permiten la interacción con enlaces y la navegación entre páginas.
+
+          #### Los Principales Navegadores Web
+
+          Existen numerosos navegadores web disponibles, pero algunos de los más populares incluyen:
+
+          1. **Google Chrome**:  Con una interfaz sencilla y un alto rendimiento, [Google Chrome](https://www.google.com/intl/es_es/chrome/) es uno de los navegadores más utilizados en todo el mundo. Ofrece una amplia gama de extensiones que permiten personalizar tu experiencia de navegación.
+          2. **Mozilla Firefox**: [Firefox](https://www.mozilla.org/es-ES/firefox/new/) es conocido por su enfoque en la privacidad y la personalización. También es de código abierto, lo que significa que su código fuente está disponible para que cualquiera lo inspeccione o modifique.
+          3. **Microsoft Edge**: Edge es el navegador web de Microsoft y viene preinstalado en Windows. Ofrece una experiencia de navegación rápida y eficiente, así como una integración sólida con otros productos de Microsoft.
+          4. **Safari**: Safari es el navegador web exclusivo de Apple y se encuentra en dispositivos Mac y iOS. Ofrece un rendimiento rápido y una integración perfecta con otros productos de Apple.
+
+          Para ver los primeros pasos, en [este video](https://youtu.be/ZwnAuRC1FtA?t=256) te muestro.
         `,
 
       en: `
@@ -86,6 +123,10 @@ export const classes = [
       es: "Estructura básica",
       en: "Basic structure",
     },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
+    },
     video: {
       es: "https://www.youtube.com/embed/1L_ZrxDami4?si=paaLhJzGi-408Oqr",
     },
@@ -96,6 +137,10 @@ export const classes = [
     title: {
       es: "Herramienta de desarrolladores",
       en: "DevOps tools",
+    },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
     },
     video: {
       es: "https://www.youtube.com/embed/X9ngOAyNjCA?si=TxUgRznxaPeMJInV",
@@ -108,6 +153,10 @@ export const classes = [
       es: "Textos",
       en: "Text",
     },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
+    },
     video: {
       es: "https://www.youtube.com/embed/Ta7JUgMfcr0?si=bF-SPd73IV3mXlc6",
     },
@@ -118,6 +167,10 @@ export const classes = [
     title: {
       es: "Listas",
       en: "List",
+    },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
     },
     video: {
       es: "https://www.youtube.com/embed/0a8kjLjNfh4?si=Q9GODj7ncU3RhPuX",
@@ -130,6 +183,10 @@ export const classes = [
       es: "Navegación",
       en: "Navigation",
     },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
+    },
     video: {
       es: "https://www.youtube.com/embed/4BiyEG_OWsE?si=jITsFhhGh5sit5OP",
     },
@@ -140,6 +197,10 @@ export const classes = [
     title: {
       es: "Imágenes",
       en: "Images",
+    },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
     },
     video: {
       es: "https://www.youtube.com/embed/5fPZRK6WauE?si=OH89Fd4supajTdxC",
@@ -152,6 +213,10 @@ export const classes = [
       es: "Tablas",
       en: "Tables",
     },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
+    },
     video: {
       es: "https://www.youtube.com/embed/l3CLCfyHAWg?si=9dwcA-ddjHo6_Ur",
     },
@@ -162,6 +227,10 @@ export const classes = [
     title: {
       es: "Formularios",
       en: "Forms",
+    },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
     },
     video: {
       es: "https://www.youtube.com/embed/-Il58AlPvs0?si=2rlmZ-p6s6OrvtmQ",
@@ -174,6 +243,10 @@ export const classes = [
       es: "HTML 5",
       en: "HTML 5",
     },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
+    },
     video: {
       es: "https://www.youtube.com/embed/1YoGeG7ikuY?si=_4YyAlrXszGadwiu",
     },
@@ -184,6 +257,10 @@ export const classes = [
     title: {
       es: "Que sigue?",
       en: "What's next?",
+    },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
     },
     video: {
       es: "https://www.youtube.com/embed/9KF4ZzL4_qw?si=Qt01b39_Mvfk5qah",

@@ -30,7 +30,16 @@ export function Modal({ children, title, id, scrollable, fullscreen }) {
               "text-bg-dark": theme === DARK_THEME,
             })}
           >
-            <h4>{title[language]}</h4>
+            {fullscreen ? (
+              <div className="container">
+                <h4>{title[language]}</h4>
+              </div>
+            ) : (
+              <>
+                <h4>{title[language]}</h4>
+              </>
+            )}
+
             <button
               type="button"
               className={classNames("btn btn-light", {
@@ -47,7 +56,11 @@ export function Modal({ children, title, id, scrollable, fullscreen }) {
               "text-bg-dark": theme === DARK_THEME,
             })}
           >
-            {children}
+            {fullscreen ? (
+              <div className="container">{children}</div>
+            ) : (
+              <>{children}</>
+            )}
           </div>
         </div>
       </div>

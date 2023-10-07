@@ -28,35 +28,33 @@ function Classes() {
   const { video, title, description } = currentCourse;
 
   return (
-    <Layout>
-      <div className="px-4">
-        <div className="row">
-          <div className="col-3 position-relative">
-            <MainMenu />
-          </div>
-          <div className="col-4 pt-4">
-            <Search />
-            {classes
-              .filter((clas) => clas.courseId === id)
-              .map(({ title, thumbnail, id: classId }) => (
-                <div className="mb-4">
-                  <HorizontalCard
-                    title={title}
-                    description={""}
-                    thumbnail={thumbnail || currentCourse.thumbnail}
-                    link={`/courses/${id}/classes/${classId}`}
-                  />
-                </div>
-              ))}
-          </div>
-          <div className="col-5 pt-5 mt-5 text-secondary">
-            <div className="mt-5 text-center">
-              <h4>Seleccione algúna clase</h4>
-            </div>
+    <div className="px-4">
+      <div className="row">
+        <div className="col-3 position-relative">
+          <MainMenu />
+        </div>
+        <div className="col-4 pt-4">
+          <Search />
+          {classes
+            .filter((clas) => clas.courseId === id)
+            .map(({ title, description, thumbnail, id: classId }) => (
+              <div className="mb-4">
+                <HorizontalCard
+                  title={title}
+                  description={description}
+                  thumbnail={thumbnail || currentCourse.thumbnail}
+                  link={`/courses/${id}/classes/${classId}`}
+                />
+              </div>
+            ))}
+        </div>
+        <div className="col-5 pt-5 mt-5 text-secondary">
+          <div className="mt-5 text-center">
+            <h4>Seleccione algúna clase</h4>
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
 

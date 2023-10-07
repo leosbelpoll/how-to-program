@@ -1,16 +1,37 @@
 import React, { useContext } from "react";
-import { DARK_THEME, LANGUAGE_SPANISH, LanguageContext, ThemeContext } from "./layout";
+import {
+  DARK_THEME,
+  LANGUAGE_SPANISH,
+  LanguageContext,
+  ThemeContext,
+} from "./layout";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import classNames from "classnames";
 import { normalizeStringLiteral } from "../utils/string";
+import { courses } from "../data/data";
 
-export function ClassDetails({ isFullScreen, title, video, content }) {
-    const { language } = useContext(LanguageContext);
-    const { theme } = useContext(ThemeContext);
+export function ClassDetails({
+  isFullScreen,
+  title,
+  description,
+  video,
+  content,
+  nextRecommendedClass,
+}) {
+  const { language } = useContext(LanguageContext);
+  const { theme } = useContext(ThemeContext);
+
+  let nextRecommendedCourse;
+
+  if (nextRecommendedClass) {
+    nextRecommendedCourse = courses.find(
+      (course) => course.id === nextRecommendedClass.courseId
+    );
+  }
 
   return (
-    <>
+    <div className="class-details mb-3">
       {!isFullScreen && (
         <iframe
           className="rounded"
@@ -44,13 +65,28 @@ export function ClassDetails({ isFullScreen, title, video, content }) {
         )}
       </div>
       <div className="mt-3">
+        <p>{description[language]}</p>
+      </div>
+      <div className="mt-2">
         {content && (
           <ReactMarkdown
             children={normalizeStringLiteral(content[language])}
             remarkPlugins={[remarkGfm]}
           />
         )}
+        {nextRecommendedClass && (
+          <>
+            <hr />
+            <strong>Próxima clase recomendada:</strong>{" "}
+            <a
+              href={`/courses/${nextRecommendedClass.courseId}/classes/${nextRecommendedClass.id}`}
+            >
+              {nextRecommendedCourse.title[language]} -{" "}
+              {nextRecommendedClass.title[language]}
+            </a>
+          </>
+        )}
       </div>
-    </>
+    </div>
   );
 }
