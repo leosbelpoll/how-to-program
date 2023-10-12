@@ -301,6 +301,66 @@ export const classes = [
       es: "https://www.youtube.com/embed/9KF4ZzL4_qw?si=Qt01b39_Mvfk5qah",
     },
   },
+  {
+    id: 12,
+    courseId: 2,
+    title: {
+      es: "Incluyendo estilos",
+      en: "Including styles",
+    },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
+    },
+    video: {
+      es: "https://youtu.be/ELvgd1jAHvs?si=JHASn34qWfnzxszu",
+    },
+  },
+  {
+    id: 13,
+    courseId: 2,
+    title: {
+      es: "Selectores CSS",
+      en: "CSS Selectors",
+    },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
+    },
+    video: {
+      es: "https://youtu.be/rXuB6a56DR8?si=Y8pv2G1JPM3Wfnz1",
+    },
+  },
+  {
+    id: 14,
+    courseId: 2,
+    title: {
+      es: "Colores",
+      en: "Colors",
+    },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
+    },
+    video: {
+      es: "https://youtu.be/bI4Zc9dDRMI?si=eL8mEs6S819Jdmbp",
+    },
+  },
+  {
+    id: 15,
+    courseId: 2,
+    title: {
+      es: "Modelo de Cajas",
+      en: "Box Model",
+    },
+    description: {
+      es: "Esta es mi descripcion",
+      en: "This is my description",
+    },
+    video: {
+      es: "https://youtu.be/vBC0O7R-ge0?si=wtEMd-1q0dCYoRt2",
+    },
+  },
 ];
 
 export const courses = [
