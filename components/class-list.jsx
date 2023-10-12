@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { LanguageContext, SearchContext } from "./layout";
 import classNames from "classnames";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 export function ClassList({ classes }) {
   const { search = "" } = useContext(SearchContext);
@@ -33,24 +34,24 @@ export function ClassList({ classes }) {
             content,
             showSubscription,
           }) => (
-            <div
-              className={classNames("main-class-list-item", {
-                active: classId === pClassId,
-              })}
-              data-bs-toggle={showSubscription ? "modal" : ""}
-              data-bs-target="#subscriptionModal"
+            <Link
+              href={
+                !showSubscription
+                  ? `/courses/${courseId}/classes/${classId}`
+                  : "#"
+              }
             >
-              <i className="bi bi-file-earmark-play me-2"></i>
-              <a
-                href={
-                  !showSubscription
-                    ? `/courses/${courseId}/classes/${classId}`
-                    : "#"
-                }
+              <div
+                className={classNames("main-class-list-item", {
+                  active: classId === pClassId,
+                })}
+                data-bs-toggle={showSubscription ? "modal" : ""}
+                data-bs-target="#subscriptionModal"
               >
+                <i className="bi bi-file-earmark-play me-2"></i>
                 {title[language]}
-              </a>
-            </div>
+              </div>
+            </Link>
           )
         )}
     </>
