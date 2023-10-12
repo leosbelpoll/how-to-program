@@ -20,12 +20,12 @@ export const LANGUAGE_ENGLISH = "en";
 const defaultLanguage = LANGUAGE_SPANISH;
 
 export const SearchContext = createContext({
-  search: "",
+  search: defaultLanguage,
   setSearch: (search) => {},
 });
 
 export const LanguageContext = createContext({
-  language: defaultLanguage,
+  language: "",
   setLanguage: (language) => {},
 });
 
@@ -39,7 +39,7 @@ function Layout({ children }) {
 
   useEffect(() => {
     setSearch(querySearch || "");
-    const storedLanguage = localStorage.getItem("language");
+    const storedLanguage = localStorage.getItem("language") ?? defaultLanguage;
 
     if (storedLanguage) {
       setLanguage(storedLanguage);

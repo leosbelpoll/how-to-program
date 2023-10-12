@@ -9,19 +9,41 @@ import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import classNames from "classnames";
 import { normalizeStringLiteral, slugify } from "../utils/string";
-import { courses } from "../data/data";
+import { classes, courses } from "../data/data";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-export function ClassDetails({
-  isFullScreen,
-  title,
-  description,
-  video,
-  content,
-  nextRecommendedClass,
-}) {
+export function ClassDetails({ isFullScreen }) {
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
+
+  const router = useRouter();
+
+  let {
+    query: { courseSlug, classSlug },
+  } = router;
+
+  const currentCourse = courses.find(
+    (course) => slugify(course.title[language]) === courseSlug
+  );
+
+  if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
+
+  const foundClasses = classes.filter(
+    (clas) => clas.courseId === currentCourse.id
+  );
+
+  if (!foundClasses) return <h3>No classes for course: {courseSlug}</h3>;
+
+  const currentClass = foundClasses.find(
+    (clas) => slugify(clas.title[language]) === classSlug
+  );
+
+  if (!currentClass) return <h3>No classe with slug: {classSlug}</h3>;
+
+  const nextRecommendedClass = foundClasses.find(
+    (clas) => clas.id === currentClass.id + 1
+  );
 
   let nextRecommendedCourse;
 
@@ -30,6 +52,8 @@ export function ClassDetails({
       (course) => course.id === nextRecommendedClass.courseId
     );
   }
+
+  const {video, title, description, content} = currentClass;
 
   return (
     <div className="class-details mb-3">
@@ -78,7 +102,9 @@ export function ClassDetails({
             <hr />
             <strong>Próxima clase recomendada:</strong>{" "}
             <Link
-              href={`/courses/${slugify(nextRecommendedCourse.title[language])}/classes/${slugify(nextRecommendedClass.title[language])}`}
+              href={`/courses/${slugify(
+                nextRecommendedCourse.title[language]
+              )}/classes/${slugify(nextRecommendedClass.title[language])}`}
             >
               {nextRecommendedCourse.title[language]} -{" "}
               {nextRecommendedClass.title[language]}

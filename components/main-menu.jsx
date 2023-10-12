@@ -94,9 +94,7 @@ export function MainMenu() {
           {getTranslation("MENU_COURSES", language)}
         </li>
       </Link>
-      {/* 
-      
-      <Link className="navbar-brand" href="/resources">
+      {/* <Link className="navbar-brand" href="/resources">
       <li
         className={classNames("list-group-item", {
           "list-group-item-dark": theme === DARK_THEME,
@@ -115,8 +113,7 @@ export function MainMenu() {
           <i className="bi bi-bookmarks-fill me-3"></i>{" "}
           {getTranslation("MENU_BOOKMARKERS", language)}
           </li>
-        </Link>
-      */}
+        </Link> */}
       <li
         className={classNames("list-group-item mt-5 bottom-option", {
           "list-group-item-dark": theme === DARK_THEME,

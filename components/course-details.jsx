@@ -9,7 +9,15 @@ export function CourseDetails({ course }) {
   const router = useRouter();
   const { language } = useContext(LanguageContext);
 
-  const { id, video, title, description, tags } = course;
+  const {
+    query: { courseSlug },
+  } = router;
+
+  const currentCourse = courses.find((course) => slugify(course.title[language]) === courseSlug);
+
+  if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
+
+  const { id, video, title, description, tags } = currentCourse;
 
   return (
     <>
@@ -53,7 +61,7 @@ export function CourseDetails({ course }) {
               <i className="bi bi-file-earmark-play me-2"></i>
               <Link
                 href={
-                  !showSubscription ? `/courses/${slugify(course.title[language])}/classes/${slugify(title[language])}` : "#"
+                  !showSubscription ? `/courses/${slugify(currentCourse.title[language])}/classes/${slugify(title[language])}` : "#"
                 }
               >
                 {title[language]}

@@ -4,25 +4,39 @@ import classNames from "classnames";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { slugify } from "../utils/string";
-import { courses } from "../data/data";
+import { classes, courses } from "../data/data";
 
-export function ClassList({ classes }) {
+export function ClassList() {
   const { search = "" } = useContext(SearchContext);
   const { language } = useContext(LanguageContext);
 
   const router = useRouter();
 
   let {
-    query: { courseSlug, id: pClassId },
+    query: { courseSlug, classSlug },
   } = router;
 
-  pClassId = Number(pClassId);
+  const currentCourse = courses.find(
+    (course) => slugify(course.title[language]) === courseSlug
+  );
 
-  const currentCourse = courses.find((course) => slugify(course.title[language]) === courseSlug);
+  if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
+
+  const foundClasses = classes.filter(
+    (clas) => clas.courseId === currentCourse.id
+  );
+
+  if (!foundClasses) return <h3>No classes for course: {courseSlug}</h3>;
+
+  const currentClass = foundClasses.find(
+    (clas) => slugify(clas.title[language]) === classSlug
+  );
+
+  if (!currentClass) return <h3>No classe with slug: {classSlug}</h3>;
 
   return (
     <>
-      {classes
+      {foundClasses
         .filter((clas) =>
           clas.title[language]
             .toLowerCase()
@@ -48,7 +62,7 @@ export function ClassList({ classes }) {
             >
               <div
                 className={classNames("main-class-list-item", {
-                  active: classId === pClassId,
+                  active: slugify(title[language]) === classSlug,
                 })}
                 data-bs-toggle={showSubscription ? "modal" : ""}
                 data-bs-target="#subscriptionModal"

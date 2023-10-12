@@ -10,8 +10,9 @@ import {
 } from "./layout";
 import { HorizontalCard } from "./horizontal-card";
 import { slugify } from "../utils/string";
+import { useRouter } from "next/router";
 
-function CourseList({ currentCourseId }) {
+function CourseList() {
   const { search = "" } = useContext(SearchContext);
   const { theme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
@@ -23,6 +24,12 @@ function CourseList({ currentCourseId }) {
       description[language].toLowerCase().includes(lowercaseSearch) ||
       tags.some((tag) => tag.toLowerCase().includes(lowercaseSearch))
   );
+
+  const router = useRouter();
+
+  const {
+    query: { courseSlug },
+  } = router;
 
   return (
     <>
@@ -36,7 +43,7 @@ function CourseList({ currentCourseId }) {
                   title={title}
                   description={description}
                   link={`/courses/${slugify(title[language])}`}
-                  active={id === currentCourseId}
+                  active={slugify(title[language]) === courseSlug}
                   showSubscription={showSubscription}
                 />
               </div>
