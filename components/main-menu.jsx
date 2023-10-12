@@ -72,48 +72,51 @@ export function MainMenu() {
           {getTranslation("MENU_HOME", language)}
         </Link>
       </li> */}
-      <li
-        className={classNames("list-group-item", {
-          "list-group-item-dark": theme === DARK_THEME,
-          active: router.pathname.startsWith("/learning-paths"),
-        })}
-      >
-        <Link className="navbar-brand" href="/learning-paths">
+      <Link className="navbar-brand" href="/learning-paths">
+        <li
+          className={classNames("list-group-item", {
+            "list-group-item-dark": theme === DARK_THEME,
+            active: router.pathname.startsWith("/learning-paths"),
+          })}
+        >
           <i className="bi bi-calendar2-minus-fill me-3"></i>{" "}
           {getTranslation("MENU_LEARNING_PATHS", language)}
-        </Link>
-      </li>
+        </li>
+      </Link>
+      <Link className="navbar-brand" href="/courses">
+        <li
+          className={classNames("list-group-item", {
+            "list-group-item-dark": theme === DARK_THEME,
+            active: router.pathname.startsWith("/courses"),
+          })}
+        >
+          <i className="bi bi-rocket-takeoff-fill me-3"></i>{" "}
+          {getTranslation("MENU_COURSES", language)}
+        </li>
+      </Link>
+      {/* 
+      
+      <Link className="navbar-brand" href="/resources">
       <li
         className={classNames("list-group-item", {
           "list-group-item-dark": theme === DARK_THEME,
-          active: router.pathname.startsWith("/courses"),
         })}
       >
-        <Link className="navbar-brand" href="/courses">
-          <i className="bi bi-rocket-takeoff-fill me-3"></i>{" "}
-          {getTranslation("MENU_COURSES", language)}
-        </Link>
-      </li>
-      {/* <li
-        className={classNames("list-group-item", {
-          "list-group-item-dark": theme === DARK_THEME,
-        })}
-      >
-        <Link className="navbar-brand" href="/resources">
           <i className="bi bi-file-earmark-text-fill me-3"></i>{" "}
           {getTranslation("MENU_RESOURCES", language)}
-        </Link>
-      </li> */}
-      {/* <li
+          </li> 
+    </Link>
+    <Link className="navbar-brand" href="/bookmarkers">
+      <li
         className={classNames("list-group-item", {
           "list-group-item-dark": theme === DARK_THEME,
         })}
       >
-        <Link className="navbar-brand" href="/bookmarkers">
           <i className="bi bi-bookmarks-fill me-3"></i>{" "}
           {getTranslation("MENU_BOOKMARKERS", language)}
+          </li>
         </Link>
-      </li> */}
+      */}
       <li
         className={classNames("list-group-item mt-5 bottom-option", {
           "list-group-item-dark": theme === DARK_THEME,
