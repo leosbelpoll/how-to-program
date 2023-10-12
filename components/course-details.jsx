@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import React, { useContext } from "react";
 import { classes, courses } from "../data/data";
 import { LANGUAGE_SPANISH, LanguageContext } from "./layout";
+import Link from "next/link";
 
 export function CourseDetails({ course }) {
   const router = useRouter();
@@ -59,13 +60,13 @@ export function CourseDetails({ course }) {
               data-bs-target="#subscriptionModal"
             >
               <i className="bi bi-file-earmark-play me-2"></i>
-              <a
+              <Link
                 href={
                   !showSubscription ? `/courses/${id}/classes/${classId}` : "#"
                 }
               >
                 {title[language]}
-              </a>
+              </Link>
             </div>
           )
         )}

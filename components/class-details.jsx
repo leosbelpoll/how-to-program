@@ -10,6 +10,7 @@ import ReactMarkdown from "react-markdown";
 import classNames from "classnames";
 import { normalizeStringLiteral } from "../utils/string";
 import { courses } from "../data/data";
+import Link from "next/link";
 
 export function ClassDetails({
   isFullScreen,
@@ -78,12 +79,12 @@ export function ClassDetails({
           <>
             <hr />
             <strong>Próxima clase recomendada:</strong>{" "}
-            <a
+            <Link
               href={`/courses/${nextRecommendedClass.courseId}/classes/${nextRecommendedClass.id}`}
             >
               {nextRecommendedCourse.title[language]} -{" "}
               {nextRecommendedClass.title[language]}
-            </a>
+            </Link>
           </>
         )}
       </div>
