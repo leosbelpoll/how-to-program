@@ -65,6 +65,7 @@ export default function Document() {
         ></link>
         <link rel="stylesheet" href="/styles/globals.css" />
 
+        <link rel="icon" type="image/x-icon" href="/icon.png" />
         <title>Como Programar?</title>
       </Head>
       <body>
