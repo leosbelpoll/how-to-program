@@ -1,39 +1,39 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import Search from "../../../../components/search";
-import Layout from "../../../../components/layout";
+import Layout, { LanguageContext } from "../../../../components/layout";
 import { MainMenu } from "../../../../components/main-menu";
 import { classes, courses } from "../../../../data/data";
 import { ClassList } from "../../../../components/class-list";
 import { ClassDetails } from "../../../../components/class-details";
 import { Modal } from "../../../../components/modal";
+import { slugify } from "../../../../utils/string";
 
 function ClassPage() {
   const router = useRouter();
 
+  const { language } = useContext(LanguageContext);
+
   let {
-    query: { courseId, id: pClassId },
+    query: { courseSlug, classSlug },
   } = router;
 
-  courseId = Number(courseId);
-  pClassId = Number(pClassId);
+  const currentCourse = courses.find((course) => slugify(course.title[language]) === courseSlug);
 
-  const currentCourse = courses.find((course) => course.id === courseId);
+  if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
 
-  if (!currentCourse) return <h3>Invalid course id: {courseId}</h3>;
+  const foundClasses = classes.filter((clas) => clas.courseId === currentCourse.id);
 
-  const foundClasses = classes.filter((clas) => clas.courseId === courseId);
+  if (!foundClasses) return <h3>No classes for course: {courseSlug}</h3>;
 
-  if (!foundClasses) return <h3>No classes for course: {courseId}</h3>;
+  const currentClass = foundClasses.find((clas) => slugify(clas.title[language]) === classSlug);
 
-  const currentClass = foundClasses.find((clas) => clas.id === pClassId);
-
-  if (!currentClass) return <h3>No classe with id: {pClassId}</h3>;
+  if (!currentClass) return <h3>No classe with slug: {classSlug}</h3>;
 
   const { video, content, title, description } = currentClass;
 
   const nextRecommendedClass = foundClasses.find(
-    (clas) => clas.id === pClassId + 1
+    (clas) => clas.id === classSlug + 1
   );
 
   return (

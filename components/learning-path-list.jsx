@@ -9,6 +9,7 @@ import {
   SearchContext,
 } from "./layout";
 import { HorizontalCard } from "./horizontal-card";
+import { slugify } from "../utils/string";
 
 function LearningPathList({ currentLearningPathId }) {
   const { search = "" } = useContext(SearchContext);
@@ -34,7 +35,7 @@ function LearningPathList({ currentLearningPathId }) {
                   thumbnail={thumbnail}
                   title={title}
                   description={description}
-                  link={`/learning-paths/${id}`}
+                  link={`/learning-paths/${slugify(title[language])}`}
                   active={currentLearningPathId === id}
                   showSubscription={showSubscription}
                 />

@@ -1,24 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import CourseList from "../../../components/course-list";
 import Search from "../../../components/search";
-import Layout from "../../../components/layout";
+import Layout, { LanguageContext } from "../../../components/layout";
 import { MainMenu } from "../../../components/main-menu";
 import { courses } from "../../../data/data";
 import { CourseDetails } from "../../../components/course-details";
+import { slugify } from "../../../utils/string";
 
 function Courses() {
   const router = useRouter();
 
+  const { language } = useContext(LanguageContext);
+
   const {
-    query: { courseId },
+    query: { courseSlug },
   } = router;
 
-  const id = Number(courseId);
+  const currentCourse = courses.find((course) => slugify(course.title[language]) === courseSlug);
 
-  const currentCourse = courses.find((course) => course.id === id);
-
-  if (!currentCourse) return <h3>Invalid course id: {id}</h3>;
+  if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
 
   return (
     <Layout>
@@ -29,7 +30,7 @@ function Courses() {
           </div>
           <div className="col-3 pt-4">
             <Search />
-            <CourseList currentCourseId={id} />
+            <CourseList currentCourseId={currentCourse.id} />
           </div>
           <div className="col-7 pt-4 pb-3 vh-100 overflow-scroll">
             <CourseDetails course={currentCourse} />

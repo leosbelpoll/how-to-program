@@ -1,12 +1,10 @@
 import React, { useContext } from "react";
 import { MainMenu } from "../../components/main-menu";
-import Layout, { ThemeContext } from "../../components/layout";
+import Layout from "../../components/layout";
 import Search from "../../components/search";
 import LearningPathList from "../../components/learning-path-list";
 
 function LearningPaths() {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <Layout>
       <div className="px-4">

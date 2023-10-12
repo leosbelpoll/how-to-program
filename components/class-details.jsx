@@ -8,7 +8,7 @@ import {
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import classNames from "classnames";
-import { normalizeStringLiteral } from "../utils/string";
+import { normalizeStringLiteral, slugify } from "../utils/string";
 import { courses } from "../data/data";
 import Link from "next/link";
 
@@ -33,17 +33,15 @@ export function ClassDetails({
 
   return (
     <div className="class-details mb-3">
-      {!isFullScreen && (
-        <iframe
-          className="rounded"
-          width="100%"
-          height="270px"
-          src={video[LANGUAGE_SPANISH]}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      )}
+      <iframe
+        className="rounded"
+        width={600}
+        height={330}
+        src={video[LANGUAGE_SPANISH]}
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
 
       {!isFullScreen && (
         <h2 className="mt-3">
@@ -80,7 +78,7 @@ export function ClassDetails({
             <hr />
             <strong>Próxima clase recomendada:</strong>{" "}
             <Link
-              href={`/courses/${nextRecommendedClass.courseId}/classes/${nextRecommendedClass.id}`}
+              href={`/courses/${slugify(nextRecommendedCourse.title[language])}/classes/${slugify(nextRecommendedClass.title[language])}`}
             >
               {nextRecommendedCourse.title[language]} -{" "}
               {nextRecommendedClass.title[language]}

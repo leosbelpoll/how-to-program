@@ -3,6 +3,8 @@ import { LanguageContext, SearchContext } from "./layout";
 import classNames from "classnames";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { slugify } from "../utils/string";
+import { courses } from "../data/data";
 
 export function ClassList({ classes }) {
   const { search = "" } = useContext(SearchContext);
@@ -11,11 +13,12 @@ export function ClassList({ classes }) {
   const router = useRouter();
 
   let {
-    query: { courseId, id: pClassId },
+    query: { courseSlug, id: pClassId },
   } = router;
 
-  courseId = Number(courseId);
   pClassId = Number(pClassId);
+
+  const currentCourse = courses.find((course) => slugify(course.title[language]) === courseSlug);
 
   return (
     <>
@@ -37,7 +40,9 @@ export function ClassList({ classes }) {
             <Link
               href={
                 !showSubscription
-                  ? `/courses/${courseId}/classes/${classId}`
+                  ? `/courses/${slugify(
+                      currentCourse.title[language]
+                    )}/classes/${slugify(title[language])}`
                   : "#"
               }
             >

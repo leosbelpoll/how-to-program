@@ -9,6 +9,7 @@ import {
   SearchContext,
 } from "./layout";
 import { HorizontalCard } from "./horizontal-card";
+import { slugify } from "../utils/string";
 
 function CourseList({ currentCourseId }) {
   const { search = "" } = useContext(SearchContext);
@@ -34,7 +35,7 @@ function CourseList({ currentCourseId }) {
                   thumbnail={thumbnail}
                   title={title}
                   description={description}
-                  link={`/courses/${id}`}
+                  link={`/courses/${slugify(title[language])}`}
                   active={id === currentCourseId}
                   showSubscription={showSubscription}
                 />

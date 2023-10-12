@@ -3,29 +3,20 @@ import React, { useContext } from "react";
 import { classes, courses } from "../data/data";
 import { LANGUAGE_SPANISH, LanguageContext } from "./layout";
 import Link from "next/link";
+import { slugify } from "../utils/string";
 
 export function CourseDetails({ course }) {
   const router = useRouter();
   const { language } = useContext(LanguageContext);
 
-  const {
-    query: { courseId },
-  } = router;
-
-  const id = Number(courseId);
-
-  const currentCourse = courses.find((course) => course.id === id);
-
-  if (!currentCourse) return <h3>Invalid course id: {id}</h3>;
-
-  const { video, title, description, tags } = course;
+  const { id, video, title, description, tags } = course;
 
   return (
     <>
       <iframe
         className="rounded"
-        width="100%"
-        height="270px"
+        width={600}
+        height={330}
         src={video[LANGUAGE_SPANISH]}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -62,7 +53,7 @@ export function CourseDetails({ course }) {
               <i className="bi bi-file-earmark-play me-2"></i>
               <Link
                 href={
-                  !showSubscription ? `/courses/${id}/classes/${classId}` : "#"
+                  !showSubscription ? `/courses/${slugify(course.title[language])}/classes/${slugify(title[language])}` : "#"
                 }
               >
                 {title[language]}

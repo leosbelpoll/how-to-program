@@ -1,31 +1,26 @@
 import React, { useContext } from "react";
 import { useRouter } from "next/router";
 import Search from "../../../../components/search";
-import Layout, {
-  LanguageContext,
-  ThemeContext,
-} from "../../../../components/layout";
+import { LanguageContext } from "../../../../components/layout";
 import { MainMenu } from "../../../../components/main-menu";
 import { classes, courses } from "../../../../data/data";
 import { HorizontalCard } from "../../../../components/horizontal-card";
+import { slugify } from "../../../../utils/string";
 
 function Classes() {
   const { language } = useContext(LanguageContext);
-  const { theme } = useContext(ThemeContext);
 
   const router = useRouter();
 
   const {
-    query: { courseId },
+    query: { courseSlug },
   } = router;
 
-  const id = Number(courseId);
+  const currentCourse = courses.find(
+    (course) => slugify(course.title[language]) === courseSlug
+  );
 
-  const currentCourse = courses.find((course) => course.id === id);
-
-  if (!currentCourse) return <h3>Invalid course id: {id}</h3>;
-
-  const { video, title, description } = currentCourse;
+  if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
 
   return (
     <div className="px-4">
@@ -36,14 +31,16 @@ function Classes() {
         <div className="col-4 pt-4">
           <Search />
           {classes
-            .filter((clas) => clas.courseId === id)
-            .map(({ title, description, thumbnail, id: classId }) => (
+            .filter((clas) => clas.courseId === courseSlug)
+            .map(({ title, description, thumbnail }) => (
               <div className="mb-4">
                 <HorizontalCard
                   title={title}
                   description={description}
                   thumbnail={thumbnail || currentCourse.thumbnail}
-                  link={`/courses/${id}/classes/${classId}`}
+                  link={`/courses/${courseSlug}/classes/${slugify(
+                    title[language]
+                  )}`}
                 />
               </div>
             ))}
