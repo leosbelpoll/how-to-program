@@ -17,12 +17,16 @@ export function Modal({ children, title, id, scrollable, fullscreen }) {
       aria-hidden="true"
     >
       <div
-        className={classNames("modal-dialog", {
+        className={classNames("modal-dialog rounded", {
           "modal-fullscreen": fullscreen,
           "modal-dialog-scrollable": scrollable,
         })}
       >
-        <div className="modal-content">
+        <div
+          className={classNames("modal-content", {
+            "text-bg-dark": theme === DARK_THEME,
+          })}
+        >
           <div
             className={classNames("modal-header", {
               "text-bg-dark": theme === DARK_THEME,
@@ -50,7 +54,7 @@ export function Modal({ children, title, id, scrollable, fullscreen }) {
             </button>
           </div>
           <div
-            className={classNames("modal-body rounded", {
+            className={classNames("modal-body", {
               "text-bg-dark": theme === DARK_THEME,
             })}
           >
