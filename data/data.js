@@ -313,7 +313,7 @@ export const classes = [
       en: "This is my description",
     },
     video: {
-      es: "https://youtu.be/ELvgd1jAHvs?si=JHASn34qWfnzxszu",
+      es: "https://www.youtube.com/embed/ELvgd1jAHvs?si=JHASn34qWfnzxszu",
     },
   },
   {
@@ -328,7 +328,7 @@ export const classes = [
       en: "This is my description",
     },
     video: {
-      es: "https://youtu.be/rXuB6a56DR8?si=Y8pv2G1JPM3Wfnz1",
+      es: "https://www.youtube.com/embed/rXuB6a56DR8?si=Y8pv2G1JPM3Wfnz1",
     },
   },
   {
@@ -343,7 +343,7 @@ export const classes = [
       en: "This is my description",
     },
     video: {
-      es: "https://youtu.be/bI4Zc9dDRMI?si=eL8mEs6S819Jdmbp",
+      es: "https://www.youtube.com/embed/bI4Zc9dDRMI?si=eL8mEs6S819Jdmbp",
     },
   },
   {
@@ -358,7 +358,7 @@ export const classes = [
       en: "This is my description",
     },
     video: {
-      es: "https://youtu.be/vBC0O7R-ge0?si=wtEMd-1q0dCYoRt2",
+      es: "https://www.youtube.com/embed/vBC0O7R-ge0?si=wtEMd-1q0dCYoRt2",
     },
   },
 ];
