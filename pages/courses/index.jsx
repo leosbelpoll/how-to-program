@@ -9,7 +9,7 @@ function Courses() {
     <Layout>
       <div className="px-4">
         <div className="row">
-          <div className="col-3 position-relative">
+          <div className="col-2 position-relative">
             <MainMenu />
           </div>
           <div className="col-4 pt-4">
@@ -17,7 +17,7 @@ function Courses() {
             <CourseList />
           </div>
           <div className="col-5 pt-5 mt-5 text-center text-secondary">
-            <div className="mt-5">
+            <div className="pt-5">
               <h4>Seleccione algún curso</h4>
             </div>
           </div>

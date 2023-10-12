@@ -30,7 +30,7 @@ function LearningPath() {
     <Layout>
       <div className="px-4">
         <div className="row">
-          <div className="col-3 position-relative">
+          <div className="col-2 position-relative">
             <MainMenu />
           </div>
           <div className="col-4 pt-4">

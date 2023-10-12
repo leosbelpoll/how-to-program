@@ -24,14 +24,14 @@ function Courses() {
     <Layout>
       <div className="px-4">
         <div className="row">
-          <div className="col-3 position-relative">
+          <div className="col-2 position-relative">
             <MainMenu />
           </div>
-          <div className="col-4 pt-4">
+          <div className="col-3 pt-4">
             <Search />
             <CourseList currentCourseId={id} />
           </div>
-          <div className="col-5 mt-4 mb-3">
+          <div className="col-7 pt-4 pb-3 vh-100 overflow-scroll">
             <CourseDetails course={currentCourse} />
           </div>
         </div>

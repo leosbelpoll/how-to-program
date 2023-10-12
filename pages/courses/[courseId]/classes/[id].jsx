@@ -32,22 +32,35 @@ function ClassPage() {
 
   const { video, content, title, description } = currentClass;
 
-  const nextRecommendedClass = foundClasses.find((clas) => clas.id === pClassId + 1);
+  const nextRecommendedClass = foundClasses.find(
+    (clas) => clas.id === pClassId + 1
+  );
 
   return (
     <Layout>
       <div className="px-4">
         <div className="row">
-          <div className="col-3 position-relative">
+          <div className="col-2 position-relative">
             <MainMenu />
           </div>
-          <div className="col-4 pt-4">
+          <div className="col-3 pt-4">
             <Search />
             <ClassList classes={foundClasses} />
           </div>
-          <div className="col-5 mt-4">
-            <ClassDetails content={content} title={title} video={video} description={description} nextRecommendedClass={nextRecommendedClass} />
-            <Modal title={title} id="fullScreenClassModal" fullscreen scrollable>
+          <div className="col-7 pt-4 vh-100 overflow-scroll">
+            <ClassDetails
+              content={content}
+              title={title}
+              video={video}
+              description={description}
+              nextRecommendedClass={nextRecommendedClass}
+            />
+            <Modal
+              title={title}
+              id="fullScreenClassModal"
+              fullscreen
+              scrollable
+            >
               <ClassDetails
                 content={content}
                 title={title}
