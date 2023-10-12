@@ -12,48 +12,18 @@ import { normalizeStringLiteral, slugify } from "../utils/string";
 import { classes, courses } from "../data/data";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { Modal } from "./modal";
 
-export function ClassDetails({ isFullScreen }) {
+function ClassDetailsInternal({
+  isFullScreen,
+  clas,
+  nextRecommendedClass,
+  nextRecommendedCourse,
+}) {
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
 
-  const router = useRouter();
-
-  let {
-    query: { courseSlug, classSlug },
-  } = router;
-
-  const currentCourse = courses.find(
-    (course) => slugify(course.title[language]) === courseSlug
-  );
-
-  if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
-
-  const foundClasses = classes.filter(
-    (clas) => clas.courseId === currentCourse.id
-  );
-
-  if (!foundClasses) return <h3>No classes for course: {courseSlug}</h3>;
-
-  const currentClass = foundClasses.find(
-    (clas) => slugify(clas.title[language]) === classSlug
-  );
-
-  if (!currentClass) return <h3>No classe with slug: {classSlug}</h3>;
-
-  const nextRecommendedClass = foundClasses.find(
-    (clas) => clas.id === currentClass.id + 1
-  );
-
-  let nextRecommendedCourse;
-
-  if (nextRecommendedClass) {
-    nextRecommendedCourse = courses.find(
-      (course) => course.id === nextRecommendedClass.courseId
-    );
-  }
-
-  const {video, title, description, content} = currentClass;
+  const { video, title, description, content } = clas;
 
   return (
     <div className="class-details mb-3">
@@ -113,5 +83,65 @@ export function ClassDetails({ isFullScreen }) {
         )}
       </div>
     </div>
+  );
+}
+
+export function ClassDetails() {
+  const { language } = useContext(LanguageContext);
+
+  const router = useRouter();
+
+  let {
+    query: { courseSlug, classSlug },
+  } = router;
+
+  const currentCourse = courses.find(
+    (course) => slugify(course.title[language]) === courseSlug
+  );
+
+  if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
+
+  const foundClasses = classes.filter(
+    (clas) => clas.courseId === currentCourse.id
+  );
+
+  if (!foundClasses) return <h3>No classes for course: {courseSlug}</h3>;
+
+  const currentClass = foundClasses.find(
+    (clas) => slugify(clas.title[language]) === classSlug
+  );
+
+  if (!currentClass) return <h3>No classe with slug: {classSlug}</h3>;
+
+  const nextRecommendedClass = foundClasses.find(
+    (clas) => clas.id === currentClass.id + 1
+  );
+
+  let nextRecommendedCourse;
+
+  if (nextRecommendedClass) {
+    nextRecommendedCourse = courses.find(
+      (course) => course.id === nextRecommendedClass.courseId
+    );
+  }
+
+  const { title } = currentClass;
+
+  return (
+    <>
+      <ClassDetailsInternal
+        clas={currentClass}
+        nextRecommendedClass={nextRecommendedClass}
+        nextRecommendedCourse={nextRecommendedCourse}
+      />
+      <Modal title={title} id="fullScreenClassModal" fullscreen scrollable>
+        <ClassDetailsInternal
+          isFullScreen
+          clas={currentClass}
+          nextRecommendedClass={nextRecommendedClass}
+          nextRecommendedCourse={nextRecommendedCourse}
+        />
+      </Modal>
+    </>
   );
 }

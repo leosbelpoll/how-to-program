@@ -6,6 +6,7 @@ import Script from "next/script";
 import Nav from "./nav";
 import Footer from "./footer";
 import { useSearchParams } from "next/navigation";
+import { Subscription } from "./subscription";
 
 export const DARK_THEME = "dark";
 export const LIGHT_THEME = "light";
@@ -99,8 +100,10 @@ function Layout({ children }) {
             >
               {/* <Nav /> */}
               <main>{children}</main>
+
               {/* <Footer /> */}
             </div>
+            <Subscription />
           </ThemeContext.Provider>
         </LanguageContext.Provider>
       </SearchContext.Provider>

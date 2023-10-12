@@ -2,7 +2,6 @@ import { Html, Head, Main, NextScript } from "next/document";
 import { getAnalytics } from "firebase/analytics";
 import { useEffect } from "react";
 import { app } from "../utils/firebase";
-import { Subscription } from "../components/subscription";
 
 export default function Document() {
   useEffect(() => {
@@ -71,7 +70,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Subscription />
       </body>
     </Html>
   );

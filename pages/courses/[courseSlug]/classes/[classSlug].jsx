@@ -7,7 +7,6 @@ import { classes, courses } from "../../../../data/data";
 import { ClassList } from "../../../../components/class-list";
 import { ClassDetails } from "../../../../components/class-details";
 import { Modal } from "../../../../components/modal";
-import { slugify } from "../../../../utils/string";
 
 function ClassPage() {
   return (
@@ -23,14 +22,6 @@ function ClassPage() {
           </div>
           <div className="col-7 pt-4 vh-100 overflow-scroll">
             <ClassDetails />
-            <Modal
-              title={'hola'}
-              id="fullScreenClassModal"
-              fullscreen
-              scrollable
-            >
-              <ClassDetails isFullScreen />
-            </Modal>
           </div>
         </div>
       </div>

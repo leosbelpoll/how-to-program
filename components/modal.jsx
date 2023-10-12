@@ -8,9 +8,7 @@ export function Modal({ children, title, id, scrollable, fullscreen }) {
 
   return (
     <div
-      className={classNames("modal fade", {
-        "text-bg-dark": theme === DARK_THEME,
-      })}
+      className={classNames("modal fade")}
       id={id}
       tabindex="-1"
       data-bs-backdrop="static"
@@ -52,7 +50,7 @@ export function Modal({ children, title, id, scrollable, fullscreen }) {
             </button>
           </div>
           <div
-            className={classNames("modal-body", {
+            className={classNames("modal-body rounded", {
               "text-bg-dark": theme === DARK_THEME,
             })}
           >
