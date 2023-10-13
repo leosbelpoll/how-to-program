@@ -10,7 +10,6 @@ export function HorizontalCard({
   link,
   active,
   showSubscription,
-  inProgress
 }) {
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
@@ -42,11 +41,8 @@ export function HorizontalCard({
             <div className="card-body">
               <strong>
                 <p className="card-title">
-                  {inProgress && (
-                    <span class="badge text-bg-success">En progreso</span>
-                  )}
                   {showSubscription && (
-                    <span class="badge text-bg-primary">Más adelante</span>
+                    <span class="badge text-bg-primary">Pronto</span>
                   )}{" "}
                   {title[language]}
                 </p>

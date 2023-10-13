@@ -76,10 +76,10 @@ export function ClassList() {
                 data-bs-target="#subscriptionModal"
               >
                 <i className="bi bi-file-earmark-play me-2"></i>
-                {title[language]}{" "}
                 {showSubscription && (
-                  <span class="badge text-bg-success">En progreso</span>
-                )}
+                  <span class="badge text-bg-primary">Pronto</span>
+                )}{" "}
+                {title[language]}
               </div>
             </Link>
           )

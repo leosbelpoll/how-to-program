@@ -36,7 +36,7 @@ function CourseList() {
       {foundCourses.length ? (
         <div>
           {foundCourses.map(
-            ({ id, title, description, thumbnail, showSubscription, inProgress }) => (
+            ({ id, title, description, thumbnail, showSubscription }) => (
               <div className="col mb-4" key={id}>
                 <HorizontalCard
                   thumbnail={thumbnail}
@@ -45,7 +45,6 @@ function CourseList() {
                   link={`/courses/${slugify(title[language])}`}
                   active={slugify(title[language]) === courseSlug}
                   showSubscription={showSubscription}
-                  inProgress={inProgress}
                 />
               </div>
             )

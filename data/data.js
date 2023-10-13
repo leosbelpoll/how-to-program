@@ -361,6 +361,96 @@ export const classes = [
       es: "https://www.youtube.com/embed/vBC0O7R-ge0?si=wtEMd-1q0dCYoRt2",
     },
   },
+  {
+    id: 16,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Textos",
+      en: "Text",
+    },
+  },
+  {
+    id: 17,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Hipervínculos",
+      en: "Links",
+    },
+  },
+  {
+    id: 18,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Listas",
+      en: "Lists",
+    },
+  },
+  {
+    id: 19,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Posiciones",
+      en: "Positions",
+    },
+  },
+  {
+    id: 20,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Unidades de medida",
+      en: "Measure Units",
+    },
+  },
+  {
+    id: 21,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Variables",
+      en: "Variables",
+    },
+  },
+  {
+    id: 22,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Transición y Animación",
+      en: "Transition and Animation",
+    },
+  },
+  {
+    id: 23,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Flexbox",
+      en: "Flexbox",
+    },
+  },
+  {
+    id: 24,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Estilos compuestos",
+      en: "Compound styles",
+    },
+  },
+  {
+    id: 25,
+    courseId: 2,
+    showSubscription: true,
+    title: {
+      es: "Proyecto de Curso",
+      en: "Course project",
+    },
+  },
 ];
 
 export const courses = [
@@ -384,7 +474,6 @@ export const courses = [
   },
   {
     id: 2,
-    inProgress: true,
     title: {
       es: "CSS",
       en: "CSS",
