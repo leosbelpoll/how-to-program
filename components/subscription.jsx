@@ -29,13 +29,19 @@ export function Subscription() {
       date: Timestamp.fromDate(new Date()),
     };
 
-    const createdSubscription = await addDoc(
-      collection(db, "subscriptions"),
-      subscriptionInfo
-    );
+    try {
+      const createdSubscription = await addDoc(
+        collection(db, "subscriptions"),
+        subscriptionInfo
+      );
 
-    setSubscription(createdSubscription);
-    localStorage.setItem("subscription", JSON.stringify(createdSubscription));
+      setSubscription(createdSubscription);
+      localStorage.setItem("subscription", JSON.stringify(createdSubscription));
+    } catch {
+      alert(
+        "Estamos teniendo un error. Es probable que tengas algun bloqueador en tu navegador. Deshabilitalo e intenta otra vez. Gracias!"
+      );
+    }
   };
 
   return (
