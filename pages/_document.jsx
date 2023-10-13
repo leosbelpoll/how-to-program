@@ -35,10 +35,6 @@ export default function Document() {
           property="og:description"
           content="Recursos y tutoriales de programación para programadores. Aprende a programar en diversos lenguajes y tecnologías."
         />
-        <meta
-          property="og:image"
-          content="https://www.comoprogramar.dev/images/logo-light.png"
-        />
         <meta property="og:url" content="https://www.comoprogramar.dev" />
 
         {/* Metatag de Twitter para compartir tu sitio */}
@@ -51,10 +47,7 @@ export default function Document() {
           name="twitter:description"
           content="Recursos y tutoriales de programación para programadores. Aprende a programar en diversos lenguajes y tecnologías."
         />
-        <meta
-          name="twitter:image"
-          content="https://www.comoprogramar.dev/images/logo-light.png"
-        />
+        <meta name="twitter:image" content="/ogp.png" />
 
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
@@ -66,6 +59,16 @@ export default function Document() {
 
         <link rel="icon" type="image/x-icon" href="/icon.png" />
         <title>Como Programar?</title>
+
+        <meta property="og:image" content="/ogp.png" />
+        <meta property="og:image:secure_url" content="/ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="740" />
+        <meta property="og:image:height" content="220" />
+        <meta
+          property="og:image:alt"
+          content="A shiny red apple with a bite taken out"
+        />
       </Head>
       <body>
         <Main />
