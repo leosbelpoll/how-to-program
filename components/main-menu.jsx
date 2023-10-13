@@ -94,6 +94,17 @@ export function MainMenu() {
           {getTranslation("MENU_COURSES", language)}
         </li>
       </Link>
+      <a
+        className="navbar-brand"
+        href="#"
+        data-bs-toggle="modal"
+        data-bs-target="#feedbackModal"
+      >
+        <li className={classNames("list-group-item")}>
+          <i className="bi bi-chat-dots me-3"></i>{" "}
+          {getTranslation("MENU_FEEDBACK", language)}
+        </li>
+      </a>
       {/* <Link className="navbar-brand" href="/resources">
       <li
         className={classNames("list-group-item", {

@@ -43,6 +43,10 @@ const translations = {
     es: "Marcadores",
     en: "Bookmarkers",
   },
+  MENU_FEEDBACK: {
+    es: "Sugerir cambios",
+    en: "Give feedback",
+  },
 };
 
 export const getTranslation = (key, language) => translations[key][language];

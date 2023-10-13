@@ -29,8 +29,8 @@ export function Subscription() {
 
     const subscriptionInfo = {
       email,
-      date: Timestamp.fromDate(new Date()),
       linkToSubscribe: localStorage.getItem("linkToSubscribe"),
+      createdAt: Timestamp.fromDate(new Date()),
     };
 
     try {
