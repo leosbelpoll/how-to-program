@@ -47,7 +47,7 @@ export function Feedback() {
   return (
     <Modal
       title={{
-        es: "Sugerir cambios",
+        es: "Sugerencias",
         en: "Give feedback",
       }}
       id="feedbackModal"
@@ -59,7 +59,7 @@ export function Feedback() {
               ¡Hola! Estoy trabajando para brindarte la mejor experiencia
               posible. Pero soy humano y cometo errores. Te pido que me ayudes a
               mejorar la plataforma. Ten en cuenta que para evitar bots
-              automáticos se puede enviar solo un comentario al día.{" "}
+              automáticos se puede enviar solo un comentario al día. Puedes enviar varias ideas a la vez sin problemas{" "}
               <p className="mt-4">
                 <strong>¡Gracias por tu interés y colaboración!</strong>
               </p>
