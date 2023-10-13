@@ -30,13 +30,10 @@ export function Subscription() {
     };
 
     try {
-      const createdSubscription = await addDoc(
-        collection(db, "subscriptions"),
-        subscriptionInfo
-      );
+      await addDoc(collection(db, "subscriptions"), subscriptionInfo);
 
-      setSubscription(createdSubscription);
-      localStorage.setItem("subscription", JSON.stringify(createdSubscription));
+      setSubscription(subscriptionInfo);
+      localStorage.setItem("subscription", JSON.stringify(subscriptionInfo));
     } catch {
       alert(
         "Estamos teniendo un error. Es probable que tengas algun bloqueador en tu navegador. Deshabilitalo e intenta otra vez. Gracias!"
