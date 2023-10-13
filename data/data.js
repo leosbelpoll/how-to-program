@@ -384,6 +384,7 @@ export const courses = [
   },
   {
     id: 2,
+    inProgress: true,
     title: {
       es: "CSS",
       en: "CSS",
