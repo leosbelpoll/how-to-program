@@ -4,6 +4,7 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { Modal } from "./modal";
 import { db } from "../utils/firebase";
 import { isToday } from "date-fns";
+import { getIpAddress } from "../utils/ip";
 
 export function Feedback() {
   const [feedback, setFeedback] = useState("");
@@ -11,7 +12,9 @@ export function Feedback() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLastFeedbackDate(new Date(JSON.parse(localStorage.getItem("lastFeedbackDate"))));
+    setLastFeedbackDate(
+      new Date(JSON.parse(localStorage.getItem("lastFeedbackDate")))
+    );
   }, []);
 
   const onFeedbackButtonClick = async () => {
@@ -19,8 +22,11 @@ export function Feedback() {
 
     const feedbackDate = new Date();
 
+    const ipAddress = await getIpAddress();
+
     const feedbackInfo = {
       message: feedback,
+      ipAddress,
       createdAt: Timestamp.fromDate(feedbackDate),
     };
 
@@ -52,7 +58,8 @@ export function Feedback() {
             <small className="mb-3">
               ¡Hola! Estoy trabajando para brindarte la mejor experiencia
               posible. Pero soy humano y cometo errores. Te pido que me ayudes a
-              mejorar la plataforma. Ten en cuenta que para evitar bots automáticos se puede enviar solo un comentario al día.{" "}
+              mejorar la plataforma. Ten en cuenta que para evitar bots
+              automáticos se puede enviar solo un comentario al día.{" "}
               <p className="mt-4">
                 <strong>¡Gracias por tu interés y colaboración!</strong>
               </p>
@@ -86,7 +93,8 @@ export function Feedback() {
         ) : (
           <>
             <small>
-              Se envió correctamente su comentario. A partir de mañana podrás enviar otro para evitar bots automáticos.
+              Se envió correctamente su comentario. A partir de mañana podrás
+              enviar otro para evitar bots automáticos.
               <p className="mt-4">
                 <strong>¡Gracias por tu interés y colaboración!</strong>
               </p>

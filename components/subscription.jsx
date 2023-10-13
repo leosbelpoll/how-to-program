@@ -3,6 +3,7 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 import { Modal } from "./modal";
 import { db } from "../utils/firebase";
+import { getIpAddress } from "../utils/ip";
 
 export function Subscription() {
   const [isInvalidEmail, setIsInvalidEmail] = useState(false);
@@ -27,9 +28,12 @@ export function Subscription() {
 
     setLoading(true);
 
+    const ipAddress = await getIpAddress();
+
     const subscriptionInfo = {
       email,
       linkToSubscribe: localStorage.getItem("linkToSubscribe"),
+      ipAddress,
       createdAt: Timestamp.fromDate(new Date()),
     };
 
