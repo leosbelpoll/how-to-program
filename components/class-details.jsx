@@ -27,6 +27,7 @@ function ClassDetailsInternal({
 
   return (
     <div className="class-details mb-3">
+      <div className="text-center mb-4">
       <iframe
         className="rounded"
         width={600}
@@ -36,6 +37,7 @@ function ClassDetailsInternal({
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
+      </div>
 
       {!isFullScreen && (
         <h2 className="mt-3">

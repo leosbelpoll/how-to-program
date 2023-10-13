@@ -13,7 +13,9 @@ export function CourseDetails({ course }) {
     query: { courseSlug },
   } = router;
 
-  const currentCourse = courses.find((course) => slugify(course.title[language]) === courseSlug);
+  const currentCourse = courses.find(
+    (course) => slugify(course.title[language]) === courseSlug
+  );
 
   if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
 
@@ -21,15 +23,17 @@ export function CourseDetails({ course }) {
 
   return (
     <>
-      <iframe
-        className="rounded"
-        width={600}
-        height={330}
-        src={video[LANGUAGE_SPANISH]}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
+      <div className="text-center mb-4">
+        <iframe
+          className="rounded"
+          width={600}
+          height={330}
+          src={video[LANGUAGE_SPANISH]}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
 
       <h2 className="mt-3">
         <strong>{title[language]} Curso</strong>
@@ -61,7 +65,11 @@ export function CourseDetails({ course }) {
               <i className="bi bi-file-earmark-play me-2"></i>
               <Link
                 href={
-                  !showSubscription ? `/courses/${slugify(currentCourse.title[language])}/classes/${slugify(title[language])}` : "#"
+                  !showSubscription
+                    ? `/courses/${slugify(
+                        currentCourse.title[language]
+                      )}/classes/${slugify(title[language])}`
+                    : "#"
                 }
               >
                 {title[language]}
