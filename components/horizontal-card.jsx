@@ -45,6 +45,11 @@ export function HorizontalCard({
               <small className="card-text text-secondary">
                 {description[language]?.slice(0, 50)} ...
               </small>
+              {showSubscription && (
+                <p>
+                  <span class="badge text-bg-success">En progreso</span>
+                </p>
+              )}
             </div>
           </div>
         </div>

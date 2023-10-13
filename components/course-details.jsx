@@ -80,7 +80,10 @@ export function CourseDetails({ course }) {
                   )
                 }
               >
-                {title[language]}
+                {title[language]}{" "}
+                {showSubscription && (
+                  <span class="badge text-bg-success">En progreso</span>
+                )}
               </Link>
             </div>
           )
