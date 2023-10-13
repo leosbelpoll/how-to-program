@@ -1,22 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { collection, addDoc, Timestamp } from "firebase/firestore";
+
 import { Modal } from "./modal";
+import { db } from "../utils/firebase";
 
 export function Subscription() {
+  const [isInvalidEmail, setIsInvalidEmail] = useState(false);
   const [email, setEmail] = useState("");
+  const [subscription, setSubscription] = useState(false);
+
+  useEffect(() => {
+    setSubscription(JSON.parse(localStorage.getItem("subscription")));
+  }, []);
 
   const isEmailValid = (email) => {
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/u;
     return regex.test(email);
   };
 
-  const onSubsciptionButtonClick = () => {
-    console.log("lets go");
+  const onSubsciptionButtonClick = async () => {
+    if (!isEmailValid(email)) {
+      setIsInvalidEmail(true);
+      return;
+    }
 
-    // if (!isEmailValid(email)) {
-    //   alert("Entre un correo electrónico válido");
-    // }
+    const subscriptionInfo = {
+      email,
+      date: Timestamp.fromDate(new Date()),
+    };
 
-    // alert("lets go");
+    const createdSubscription = await addDoc(
+      collection(db, "subscriptions"),
+      subscriptionInfo
+    );
+
+    setSubscription(createdSubscription);
+    localStorage.setItem("subscription", JSON.stringify(createdSubscription));
   };
 
   return (
@@ -28,31 +47,53 @@ export function Subscription() {
       id="subscriptionModal"
     >
       <div class="input-group mb-3">
-        <small className="mb-3">
-          ¡Hola! Estoy trabajando en la entrega del contenido
-          que deseas. Para mantenerte informado sobre el progreso y las
-          entregas, te invito a proporcionarme tu correo electrónico. Así,
-          podrás recibir actualizaciones importantes directamente en tu bandeja
-          de entrada. <strong>¡Gracias por tu interés y colaboración!</strong>
-        </small>
-        <input
-          type="text"
-          class="form-control rounded-start"
-          placeholder="Email"
-          aria-label="Email"
-          aria-describedby="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-        <button
-          class="input-group-text btn btn-primary rounded-end"
-          id="email"
-          onClick={onSubsciptionButtonClick}
-        >
-          Enviar
-        </button>
-        {/* <div class="invalid-feedback">Entre un email válido 🙏</div> */}
+        {!subscription ? (
+          <>
+            <small className="mb-3">
+              ¡Hola! Estoy trabajando en la entrega del contenido que deseas.
+              Para mantenerte informado sobre el progreso y las entregas, te
+              invito a proporcionarme tu correo electrónico. Así, podrás recibir
+              actualizaciones importantes directamente en tu bandeja de entrada.{" "}
+              <p className="mt-4">
+                <strong>¡Gracias por tu interés y colaboración!</strong>
+              </p>
+            </small>
+            <input
+              type="text"
+              class="form-control rounded-start"
+              placeholder="Email"
+              aria-label="Email"
+              aria-describedby="email"
+              value={email}
+              onChange={(event) => {
+                setEmail(event.target.value);
+                setIsInvalidEmail(false);
+              }}
+            />
+            <button
+              class="input-group-text btn btn-primary rounded-end"
+              id="email"
+              onClick={onSubsciptionButtonClick}
+            >
+              Enviar
+            </button>
+          </>
+        ) : (
+          <>
+            <small>
+              ¡Hola! Estoy trabajando en la entrega del contenido que deseas. A
+              penas vaya sacando contenido recibirás las actualizaciones
+              directamente en tu bandeja de entrada.{" "}
+              <p className="mt-4">
+                <strong>¡Gracias por tu interés y colaboración!</strong>
+              </p>
+            </small>
+          </>
+        )}
       </div>
+      {!subscription && isInvalidEmail && (
+        <div class="invalid-email text-danger">Entre un email válido</div>
+      )}
     </Modal>
   );
 }
