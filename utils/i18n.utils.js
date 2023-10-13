@@ -44,7 +44,7 @@ const translations = {
     en: "Bookmarkers",
   },
   MENU_FEEDBACK: {
-    es: "Sugerir cambios",
+    es: "Sugerencias",
     en: "Give feedback",
   },
 };
