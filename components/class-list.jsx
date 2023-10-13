@@ -59,6 +59,14 @@ export function ClassList() {
                     )}/classes/${slugify(title[language])}`
                   : "#"
               }
+              onClick={() =>
+                localStorage.setItem(
+                  "linkToSubscribe",
+                  `/courses/${slugify(
+                    currentCourse.title[language]
+                  )}/classes/${slugify(title[language])}`
+                )
+              }
             >
               <div
                 className={classNames("main-class-list-item", {

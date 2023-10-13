@@ -71,6 +71,14 @@ export function CourseDetails({ course }) {
                       )}/classes/${slugify(title[language])}`
                     : "#"
                 }
+                onClick={() =>
+                  localStorage.setItem(
+                    "linkToSubscribe",
+                    `/courses/${slugify(
+                      currentCourse.title[language]
+                    )}/classes/${slugify(title[language])}`
+                  )
+                }
               >
                 {title[language]}
               </Link>

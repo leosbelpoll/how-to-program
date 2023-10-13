@@ -15,7 +15,10 @@ export function HorizontalCard({
   const { theme } = useContext(ThemeContext);
 
   return (
-    <Link href={!showSubscription ? link : "#"}>
+    <Link
+      href={!showSubscription ? link : "#"}
+      onClick={() => localStorage.setItem("linkToSubscribe", link)}
+    >
       <div
         className={classNames("card h-100", {
           "bg-dark": theme === DARK_THEME,
