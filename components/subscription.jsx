@@ -8,6 +8,7 @@ export function Subscription() {
   const [isInvalidEmail, setIsInvalidEmail] = useState(false);
   const [email, setEmail] = useState("");
   const [subscription, setSubscription] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setSubscription(JSON.parse(localStorage.getItem("subscription")));
@@ -24,6 +25,8 @@ export function Subscription() {
       return;
     }
 
+    setLoading(true);
+
     const subscriptionInfo = {
       email,
       date: Timestamp.fromDate(new Date()),
@@ -39,6 +42,8 @@ export function Subscription() {
         "Estamos teniendo un error. Es probable que tengas algun bloqueador en tu navegador. Deshabilitalo e intenta otra vez. Gracias!"
       );
     }
+
+    setLoading(false);
   };
 
   return (
@@ -77,8 +82,15 @@ export function Subscription() {
               class="input-group-text btn btn-primary rounded-end"
               id="email"
               onClick={onSubsciptionButtonClick}
+              disabled={loading}
             >
-              Enviar
+              {!loading ? (
+                <>Enviar</>
+              ) : (
+                <div class="spinner-border spinner-border-sm" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              )}
             </button>
           </>
         ) : (
