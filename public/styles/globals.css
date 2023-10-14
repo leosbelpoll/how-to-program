@@ -8,7 +8,7 @@ a {
 }
 
 .navbar {
-    height: 65px;
+  height: 65px;
 }
 
 .navbar-toggler {
@@ -102,22 +102,39 @@ input.bg-dark::placeholder {
 }
 
 .main-class-list-item {
-    padding: 5px 10px;
-    border-radius: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .main-class-list-item.active {
-    background: #eeeeee !important;
-    color: #292929;
+  background: #eeeeee !important;
+  color: #292929;
 }
 
 .class-details a {
-    color: rgb(0, 162, 255);
-    text-decoration: underline;
+  color: rgb(0, 162, 255);
+  text-decoration: underline;
 }
 
 .layout-column {
-    height: calc(100vh - 65px - 1.5rem);
-    overflow-y: scroll;
-    padding-bottom: 1.5em;
+  height: calc(100vh - 65px - 1.5rem);
+  overflow-y: scroll;
+  padding-bottom: 1.5em;
+}
+
+@media (max-width: 990px) {
+  .navbar-collapse {
+    padding: 20px;
+    position: absolute;
+    width: 100vw;
+    background: #f8f9fa;
+    top: 65px;
+    left: 0;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .navbar-collapse a {
+    margin-top: 20px;
+  }
 }

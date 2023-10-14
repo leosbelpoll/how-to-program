@@ -115,7 +115,7 @@ function Nav() {
               </li>
             </a>
           </ul>
-          <form className="d-flex" role="search">
+          <form className="d-none d-lg-flex" role="search">
             <input
               type="text"
               className="form-control me-4"
