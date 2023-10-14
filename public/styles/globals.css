@@ -137,4 +137,9 @@ input.bg-dark::placeholder {
   .navbar-collapse a {
     margin-top: 20px;
   }
+
+  .horizontal-card img {
+    width: 100%;
+    aspect-ratio: 2 / 1g;
+  }
 }
