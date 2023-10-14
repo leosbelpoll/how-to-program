@@ -15,7 +15,7 @@ function LearningPaths() {
           </div>
           <LearningPathList />
         </div>
-        <div className="col-7 text-center pt-5 layout-column d-none d-md-block">
+        <div className="col-7 text-center mt-5 layout-column d-none d-md-block">
           <SelectConcept text="Seleccione ruta de aprendizaje" />
         </div>
       </div>
