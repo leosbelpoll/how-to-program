@@ -1,15 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 import { Modal } from "./modal";
 import { db } from "../utils/firebase";
 import { isToday } from "date-fns";
 import { getIpAddress } from "../utils/ip";
+import { getTranslations } from "../utils/i18n.utils";
+import { DARK_THEME, LanguageContext, ThemeContext } from "./layout";
 
 export function Feedback() {
   const [feedback, setFeedback] = useState("");
   const [lastFeedbackDate, setLastFeedbackDate] = useState();
   const [loading, setLoading] = useState(false);
+
+  const { language } = useContext(LanguageContext);
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     setLastFeedbackDate(
@@ -46,10 +51,7 @@ export function Feedback() {
 
   return (
     <Modal
-      title={{
-        es: "Sugerencias",
-        en: "Give feedback",
-      }}
+      title={getTranslations("MENU_FEEDBACK", language)}
       id="feedbackModal"
     >
       <div class="mb-3">
@@ -74,6 +76,7 @@ export function Feedback() {
               onChange={(event) => {
                 setFeedback(event.target.value);
               }}
+              data-bs-theme={theme === DARK_THEMEg ? "dark" : "light"}
             />
             <button
               class="input-group-text btn btn-primary rounded-end mt-3 w-100"

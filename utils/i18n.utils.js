@@ -50,3 +50,4 @@ const translations = {
 };
 
 export const getTranslation = (key, language) => translations[key][language];
+export const getTranslations = (key) => translations[key];

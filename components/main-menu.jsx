@@ -100,7 +100,11 @@ export function MainMenu() {
         data-bs-toggle="modal"
         data-bs-target="#feedbackModal"
       >
-        <li className={classNames("list-group-item")}>
+        <li
+          className={classNames("list-group-item", {
+            "list-group-item-dark": theme === DARK_THEME,
+          })}
+        >
           <i className="bi bi-chat-dots me-3"></i>{" "}
           {getTranslation("MENU_FEEDBACK", language)}
         </li>
