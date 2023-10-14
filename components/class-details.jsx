@@ -129,14 +129,14 @@ export function ClassDetails() {
     <>
       <ClassDetailsInternal
         clas={currentClass}
-        nextRecommendedclassName={nextRecommendedClass}
+        nextRecommendedClass={nextRecommendedClass}
         nextRecommendedCourse={nextRecommendedCourse}
       />
       <Modal title={title} id="fullScreenClassModal" fullscreen scrollable>
         <ClassDetailsInternal
           isFullScreen
           clas={currentClass}
-          nextRecommendedclassName={nextRecommendedClass}
+          nextRecommendedClass={nextRecommendedClass}
           nextRecommendedCourse={nextRecommendedCourse}
         />
       </Modal>
