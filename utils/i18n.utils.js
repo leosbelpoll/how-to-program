@@ -28,8 +28,8 @@ const translations = {
     en: "Home",
   },
   MENU_LEARNING_PATHS: {
-    es: "Rutas de aprendizaje",
-    en: "Learning paths",
+    es: "Rutas",
+    en: "Paths",
   },
   MENU_COURSES: {
     es: "Cursos",

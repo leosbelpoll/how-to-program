@@ -8,18 +8,12 @@ import { CourseDetails } from "../../../components/course-details";
 function Courses() {
   return (
     <Layout>
-      <div className="px-4">
-        <div className="row">
-          <div className="col-3 position-relative">
-            <MainMenu />
-          </div>
-          <div className="col-4 pt-4">
-            <Search />
-            <CourseList/>
-          </div>
-          <div className="col-5 pt-4 pb-3 vh-100 overflow-scroll">
-            <CourseDetails />
-          </div>
+      <div className="row">
+        <div className="col-5 layout-column d-none d-md-block">
+          <CourseList />
+        </div>
+        <div className="col-12 col-md-7 layout-column">
+          <CourseDetails />
         </div>
       </div>
     </Layout>

@@ -3,17 +3,23 @@ import React, { useContext } from "react";
 
 import {
   DARK_THEME,
-  LIGHT_THEME,
   ThemeContext,
   LANGUAGE_ENGLISH,
   LANGUAGE_SPANISH,
   LanguageContext,
+  SearchContext,
+  LIGHT_THEME,
 } from "./layout";
 import { getTranslation } from "../utils/i18n.utils";
+import classNames from "classnames";
+import { useRouter } from "next/router";
 
 function Nav() {
   const { theme, setTheme } = useContext(ThemeContext);
   const { language, setLanguage } = useContext(LanguageContext);
+  const { search, setSearch } = useContext(SearchContext);
+
+  const router = useRouter();
 
   const flipLanguage = () => {
     if (language === LANGUAGE_SPANISH) {
@@ -25,187 +31,124 @@ function Nav() {
 
   return (
     <nav
-      className="navbar-transparent navbar navbar-expand-md pt-4"
-      data-bs-theme={theme === DARK_THEME ? "dark" : "light"}
+      className={classNames("navbar navbar-expand-lg bg-body-tertiary", {
+        "bg-dark": theme === DARK_THEME,
+      })}
+      data-bs-theme={theme === DARK_THEME ? "dark" : ""}
     >
       <div className="container">
-        <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <Link className="navbar-brand ms-2 d-md-none" href="/">
-            {language === LANGUAGE_ENGLISH && (
-              <img
-                src={
-                  theme === DARK_THEME
-                    ? "/images/en-logo-dark.png"
-                    : "/images/en-logo-light.png"
-                }
-                alt=""
-                className="logo-inverse"
-                height={50}
-              />
-            )}
+        <Link className="navbar-brand me-5" href="/">
+          {language === LANGUAGE_ENGLISH && (
+            <img
+              src={
+                theme === DARK_THEME
+                  ? "/images/en-logo-dark.png"
+                  : "/images/en-logo-light.png"
+              }
+              alt=""
+              className="logo-inverse"
+              height={50}
+            />
+          )}
 
-            {language === LANGUAGE_SPANISH && (
-              <img
-                src={
-                  theme === DARK_THEME
-                    ? "/images/logo-dark.png"
-                    : "/images/logo-light.png"
-                }
-                alt=""
-                className="logo-inverse"
-                height={50}
-              />
-            )}
-          </Link>
-          <div className="d-md-none float-end pt-1">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row">
-              <li className="nav-item">
-                <Link
+          {language === LANGUAGE_SPANISH && (
+            <img
+              src={
+                theme === DARK_THEME
+                  ? "/images/logo-dark.png"
+                  : "/images/logo-light.png"
+              }
+              alt=""
+              className="logo-inverse"
+              height={40}
+            />
+          )}
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <Link className="nav-item" href="/learning-paths">
+              <li
+                className={classNames("nav-link", {
+                  "list-group-item-dark": theme === DARK_THEME,
+                  active: router.pathname.startsWith("/learning-paths"),
+                })}
+              >
+                <i className="bi bi-calendar2-minus-fill me-1"></i>
+                {getTranslation("MENU_LEARNING_PATHS", language)}
+              </li>
+            </Link>
+            <Link className="nav-item" href="/courses">
+              <li
+                className={classNames("nav-link", {
+                  "list-group-item-dark": theme === DARK_THEME,
+                  active: router.pathname.startsWith("/courses"),
+                })}
+              >
+                <i className="bi bi-rocket-takeoff-fill me-1"></i>
+                {getTranslation("MENU_COURSES", language)}
+              </li>
+            </Link>
+            <a
+              className="nav-item"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#feedbackModal"
+            >
+              <li
+                className={classNames("nav-link", {
+                  "list-group-item-dark": theme === DARK_THEME,
+                })}
+              >
+                <i className="bi bi-chat-dots-fill me-1"></i>
+                {getTranslation("MENU_FEEDBACK", language)}
+              </li>
+            </a>
+          </ul>
+          <form className="d-flex" role="search">
+            <input
+              type="text"
+              className="form-control me-4"
+              placeholder={getTranslation("SEARCH_FORM_PLACEHOLDER", language)}
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              style={{width: "300px"}}
+            />
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              {theme === LIGHT_THEME && (
+                <a
                   className="nav-link"
                   href="#"
                   role="button"
-                  onClick={flipLanguage}
+                  onClick={() => setTheme(DARK_THEME)}
                 >
-                  {language === LANGUAGE_ENGLISH ? "Es" : "En"}
-                </Link>
-              </li>
-              <li className="nav-item ms-3">
-                {theme === LIGHT_THEME && (
-                  <a
-                    className="nav-link btn"
-                    href="#"
-                    role="button"
-                    onClick={() => setTheme(DARK_THEME)}
-                  >
-                    <i className="bi bi-moon-stars-fill"></i>
-                  </a>
-                )}
-                {theme === DARK_THEME && (
-                  <a
-                    className="nav-link"
-                    href="#"
-                    role="button"
-                    onClick={() => setTheme(LIGHT_THEME)}
-                  >
-                    <i className="bi bi-brightness-high-fill"></i>
-                  </a>
-                )}
-              </li>
-            </ul>
-          </div>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link
-                  className="navbar-brand d-none d-md-inline-block"
-                  href="/"
-                >
-                  {language === LANGUAGE_ENGLISH && (
-                    <img
-                      src={
-                        theme === DARK_THEME
-                          ? "/images/en-logo-dark.png"
-                          : "/images/en-logo-light.png"
-                      }
-                      alt=""
-                      className="logo-inverse"
-                      height={40}
-                    />
-                  )}
-
-                  {language === LANGUAGE_SPANISH && (
-                    <img
-                      src={
-                        theme === DARK_THEME
-                          ? "/images/logo-dark.png"
-                          : "/images/logo-light.png"
-                      }
-                      alt=""
-                      className="logo-inverse"
-                      height={40}
-                    />
-                  )}
-                </Link>
-              </li>
-            </ul>
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item dropdown">
+                  <i className="bi bi-moon-stars-fill"></i>
+                </a>
+              )}
+              {theme === DARK_THEME && (
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link"
                   href="#"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  onClick={() => setTheme(LIGHT_THEME)}
                 >
-                  {getTranslation("LEARNING_PATHS", language)}
+                  <i className="bi bi-brightness-high-fill"></i>
                 </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" href="/">
-                      {getTranslation("LEARNING_PATHS.ALL", language)}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="/?search=frontend">
-                      FrontEnd
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="/?search=backend">
-                      BackEnd
-                    </Link>
-                  </li>
-                </ul>
-              </li>
+              )}
             </ul>
-            <div className="d-none d-md-inline-block">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0 pt-1">
-                <li className="nav-item">
-                  <Link
-                    className="nav-link"
-                    href="#"
-                    role="button"
-                    onClick={flipLanguage}
-                  >
-                    {language === LANGUAGE_ENGLISH ? "Es" : "En"}
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  {theme === LIGHT_THEME && (
-                    <a
-                      className="nav-link btn"
-                      href="#"
-                      role="button"
-                      onClick={() => setTheme(DARK_THEME)}
-                    >
-                      <i className="bi bi-moon-stars-fill"></i>
-                    </a>
-                  )}
-                  {theme === DARK_THEME && (
-                    <a
-                      className="nav-link"
-                      href="#"
-                      role="button"
-                      onClick={() => setTheme(LIGHT_THEME)}
-                    >
-                      <i className="bi bi-brightness-high-fill"></i>
-                    </a>
-                  )}
-                </li>
-              </ul>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </nav>

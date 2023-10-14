@@ -8,22 +8,12 @@ import { SelectConcept } from "../../components/SelectConcept";
 function LearningPaths() {
   return (
     <Layout>
-      <div className="px-4">
-        <div className="row">
-          <div className="col-3 position-relative">
-            <MainMenu />
-          </div>
-          <div className="col-4 pt-4">
-            <div className="input-group mb-4">
-              <Search />
-              <LearningPathList />
-            </div>
-          </div>
-          <div className="col-5 pt-5 mt-5 text-center text-secondary">
-            <div className="mt-5">
-              <SelectConcept text="Seleccione ruta de aprendizaje" />
-            </div>
-          </div>
+      <div className="row">
+        <div className="col-12 col-md-5 layout-column">
+          <LearningPathList />
+        </div>
+        <div className="col-7 text-center pt-5 layout-column d-none d-md-block">
+          <SelectConcept text="Seleccione ruta de aprendizaje" />
         </div>
       </div>
     </Layout>

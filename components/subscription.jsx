@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 import { Modal } from "./modal";
 import { db } from "../utils/firebase";
 import { getIpAddress } from "../utils/ip";
+import { DARK_THEME, ThemeContext } from "./layout";
 
 export function Subscription() {
   const [isInvalidEmail, setIsInvalidEmail] = useState(false);
   const [email, setEmail] = useState("");
   const [subscription, setSubscription] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     setSubscription(JSON.parse(localStorage.getItem("subscription")));
@@ -59,7 +62,7 @@ export function Subscription() {
       }}
       id="subscriptionModal"
     >
-      <div class="input-group mb-3">
+      <div className="input-group mb-3">
         {!subscription ? (
           <>
             <small className="mb-3">
@@ -73,7 +76,7 @@ export function Subscription() {
             </small>
             <input
               type="text"
-              class="form-control rounded-start"
+              className="form-control rounded-start"
               placeholder="Email"
               aria-label="Email"
               aria-describedby="email"
@@ -82,9 +85,10 @@ export function Subscription() {
                 setEmail(event.target.value);
                 setIsInvalidEmail(false);
               }}
+              data-bs-theme={theme === DARK_THEME ? "dark" : "light"}
             />
             <button
-              class="input-group-text btn btn-primary rounded-end"
+              className="input-group-text btn btn-primary rounded-end"
               id="email"
               onClick={onSubsciptionButtonClick}
               disabled={loading}
@@ -92,8 +96,8 @@ export function Subscription() {
               {!loading ? (
                 <>Enviar</>
               ) : (
-                <div class="spinner-border spinner-border-sm" role="status">
-                  <span class="visually-hidden">Loading...</span>
+                <div className="spinner-border spinner-border-sm" role="status">
+                  <span className="visually-hidden">Loading...</span>
                 </div>
               )}
             </button>
@@ -112,7 +116,7 @@ export function Subscription() {
         )}
       </div>
       {!subscription && isInvalidEmail && (
-        <div class="invalid-email text-danger">Entre un email válido</div>
+        <div className="invalid-email text-danger">Entre un email válido</div>
       )}
     </Modal>
   );

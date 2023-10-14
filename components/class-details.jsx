@@ -45,7 +45,7 @@ function ClassDetailsInternal({
         {!isFullScreen && (
           <button
             type="button"
-            className={classNames("btn btn-light", {
+            className={classNames("btn btn-light d-none d-md-block", {
               "btn-dark": theme === DARK_THEME,
             })}
             data-bs-toggle="modal"
@@ -129,14 +129,14 @@ export function ClassDetails() {
     <>
       <ClassDetailsInternal
         clas={currentClass}
-        nextRecommendedClass={nextRecommendedClass}
+        nextRecommendedclassName={nextRecommendedClass}
         nextRecommendedCourse={nextRecommendedCourse}
       />
       <Modal title={title} id="fullScreenClassModal" fullscreen scrollable>
         <ClassDetailsInternal
           isFullScreen
           clas={currentClass}
-          nextRecommendedClass={nextRecommendedClass}
+          nextRecommendedclassName={nextRecommendedClass}
           nextRecommendedCourse={nextRecommendedCourse}
         />
       </Modal>

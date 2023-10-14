@@ -77,7 +77,7 @@ export function ClassList() {
               >
                 <i className="bi bi-file-earmark-play me-2"></i>
                 {showSubscription && (
-                  <span class="badge text-bg-primary">Pronto</span>
+                  <span className="badge text-bg-primary">Pronto</span>
                 )}{" "}
                 {title[language]}
               </div>

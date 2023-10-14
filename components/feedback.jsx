@@ -54,7 +54,7 @@ export function Feedback() {
       title={getTranslations("MENU_FEEDBACK", language)}
       id="feedbackModal"
     >
-      <div class="mb-3">
+      <div className="mb-3">
         {!isToday(lastFeedbackDate) ? (
           <>
             <small className="mb-3">
@@ -68,7 +68,7 @@ export function Feedback() {
             </small>
             <textarea
               rows={5}
-              class="form-control rounded-start"
+              className="form-control rounded-start"
               placeholder="Entre comentario ..."
               aria-label="Feedback"
               aria-describedby="feedback"
@@ -79,7 +79,7 @@ export function Feedback() {
               data-bs-theme={theme === DARK_THEME ? "dark" : "light"}
             />
             <button
-              class="input-group-text btn btn-primary rounded-end mt-3 w-100"
+              className="input-group-text btn btn-primary rounded-end mt-3 w-100"
               id="feedback"
               onClick={onFeedbackButtonClick}
               disabled={loading}
@@ -87,8 +87,8 @@ export function Feedback() {
               {!loading ? (
                 <>Enviar</>
               ) : (
-                <div class="spinner-border spinner-border-sm" role="status">
-                  <span class="visually-hidden">Loading...</span>
+                <div className="spinner-border spinner-border-sm" role="status">
+                  <span className="visually-hidden">Loading...</span>
                 </div>
               )}
             </button>

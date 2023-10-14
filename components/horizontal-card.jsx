@@ -20,7 +20,7 @@ export function HorizontalCard({
       onClick={() => localStorage.setItem("linkToSubscribe", link)}
     >
       <div
-        className={classNames("card h-100", {
+        className={classNames("card mb-4", {
           "bg-dark": theme === DARK_THEME,
           "border-light": theme === DARK_THEME,
           "text-white": theme === DARK_THEME,
@@ -42,7 +42,7 @@ export function HorizontalCard({
               <strong>
                 <p className="card-title">
                   {showSubscription && (
-                    <span class="badge text-bg-primary">Pronto</span>
+                    <span className="badge text-bg-primary">Pronto</span>
                   )}{" "}
                   {title[language]}
                 </p>

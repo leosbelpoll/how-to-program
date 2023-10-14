@@ -7,6 +7,10 @@ a {
   color: inherit;
 }
 
+.navbar {
+    height: 65px;
+}
+
 .navbar-toggler {
   border: none;
 }
@@ -89,12 +93,12 @@ input.bg-dark::placeholder {
 }
 
 .card.bg-dark.active {
-  background: #939496 !important;
-  color: #292929 !important;
+  background: #383838 !important;
+  color: #dbdbdb !important;
 }
 
 .card.bg-dark.active .text-secondary {
-  color: #292929 !important;
+  color: #c9c9c9 !important;
 }
 
 .main-class-list-item {
@@ -110,4 +114,10 @@ input.bg-dark::placeholder {
 .class-details a {
     color: rgb(0, 162, 255);
     text-decoration: underline;
+}
+
+.layout-column {
+    height: calc(100vh - 65px - 1.5rem);
+    overflow-y: scroll;
+    padding-bottom: 1.5em;
 }

@@ -77,7 +77,7 @@ export function CourseDetails({ course }) {
                 }
               >
                 {showSubscription && (
-                  <span class="badge text-bg-primary">Pronto</span>
+                  <span className="badge text-bg-primary">Pronto</span>
                 )}{" "}
                 {title[language]}
               </Link>

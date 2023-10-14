@@ -99,8 +99,8 @@ function Layout({ children }) {
                 "text-bg-dark full-heigh": theme === DARK_THEME,
               })}
             >
-              {/* <Nav /> */}
-              <main>{children}</main>
+              <Nav />
+              <main className="container mt-4">{children}</main>
 
               {/* <Footer /> */}
             </div>
