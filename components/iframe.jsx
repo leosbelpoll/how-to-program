@@ -12,8 +12,8 @@ export function Iframe({ videoUrl }) {
   return (
     <iframe
       className="rounded"
-      width={600}
-      height={330}
+      width={"100%"}
+      height={"100%"}
       src={videoUrl}
       title="YouTube video player"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

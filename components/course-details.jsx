@@ -24,8 +24,11 @@ export function CourseDetails({ course }) {
 
   return (
     <>
-      <div className="text-center mb-4">
-      <Iframe videoUrl={video[language]} />
+      <div
+        className="text-center mb-4"
+        style={{ width: "100%", "aspect-ratio": "2 / 1.1" }}
+      >
+        <Iframe videoUrl={video[language]} />
       </div>
 
       <h2 className="mt-3">
