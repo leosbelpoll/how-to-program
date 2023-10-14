@@ -67,7 +67,7 @@ export default function Document() {
         <meta property="og:image:height" content="220" />
         <meta
           property="og:image:alt"
-          content="A shiny red apple with a bite taken out"
+          content="Recursos y tutoriales de programación para programadores. Aprende a programar en diversos lenguajes y tecnologías."
         />
       </Head>
       <body>

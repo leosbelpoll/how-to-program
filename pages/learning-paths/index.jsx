@@ -3,6 +3,7 @@ import { MainMenu } from "../../components/main-menu";
 import Layout from "../../components/layout";
 import Search from "../../components/search";
 import LearningPathList from "../../components/learning-path-list";
+import { SelectConcept } from "../../components/SelectConcept";
 
 function LearningPaths() {
   return (
@@ -20,7 +21,7 @@ function LearningPaths() {
           </div>
           <div className="col-5 pt-5 mt-5 text-center text-secondary">
             <div className="mt-5">
-              <h4>Seleccione alguna ruta</h4>
+              <SelectConcept text="Seleccione ruta de aprendizaje" />
             </div>
           </div>
         </div>

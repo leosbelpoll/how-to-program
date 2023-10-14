@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import { MainMenu } from "../../components/main-menu";
 import CourseList from "../../components/course-list";
 import Search from "../../components/search";
+import { SelectConcept } from "../../components/SelectConcept";
 
 function Courses() {
   return (
@@ -18,7 +19,7 @@ function Courses() {
           </div>
           <div className="col-5 pt-5 mt-5 text-center text-secondary">
             <div className="pt-5">
-              <h4>Seleccione algún curso</h4>
+              <SelectConcept text="Seleccione algún curso" />
             </div>
           </div>
         </div>
