@@ -76,7 +76,7 @@ export function Feedback() {
               onChange={(event) => {
                 setFeedback(event.target.value);
               }}
-              data-bs-theme={theme === DARK_THEMEg ? "dark" : "light"}
+              data-bs-theme={theme === DARK_THEME ? "dark" : "light"}
             />
             <button
               class="input-group-text btn btn-primary rounded-end mt-3 w-100"
