@@ -13,14 +13,14 @@ function ClassPage() {
     <Layout>
       <div className="px-4">
         <div className="row">
-          <div className="col-2 position-relative">
+          <div className="col-3 position-relative">
             <MainMenu />
           </div>
           <div className="col-3 pt-4">
             <Search />
             <ClassList />
           </div>
-          <div className="col-7 pt-4 vh-100 overflow-scroll">
+          <div className="col-6 pt-4 vh-100 overflow-scroll">
             <ClassDetails />
           </div>
         </div>

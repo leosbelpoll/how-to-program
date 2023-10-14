@@ -13,6 +13,7 @@ import { classes, courses } from "../data/data";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Modal } from "./modal";
+import { Iframe } from "./iframe";
 
 function ClassDetailsInternal({
   isFullScreen,
@@ -28,15 +29,7 @@ function ClassDetailsInternal({
   return (
     <div className="class-details mb-3">
       <div className="text-center mb-4">
-      <iframe
-        className="rounded"
-        width={600}
-        height={330}
-        src={video[LANGUAGE_SPANISH]}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
+        <Iframe videoUrl={video[language]} />
       </div>
 
       {!isFullScreen && (
