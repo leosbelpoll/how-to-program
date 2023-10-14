@@ -15,6 +15,9 @@ function LearningPath() {
           <LearningPathList />
         </div>
         <div className="col-12 col-md-7 layout-column">
+          <div className="d-md-none mt-2">
+            <Search />
+          </div>
           <LearningPathCourses />
         </div>
       </div>
