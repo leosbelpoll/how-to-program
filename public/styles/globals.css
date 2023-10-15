@@ -123,6 +123,10 @@ input.bg-dark::placeholder {
 }
 
 @media (max-width: 990px) {
+  main {
+    padding: 0 10px;
+  }
+
   .navbar-collapse {
     padding: 20px;
     position: absolute;
@@ -141,5 +145,13 @@ input.bg-dark::placeholder {
   .horizontal-card img {
     width: 100%;
     aspect-ratio: 2 / 1g;
+  }
+
+  .horizontal-card {
+    text-overflow: ellipsis;
+    max-height: 300px;
+    margin-bottom: 300em;
+    /* white-space: nowrap;
+    overflow: hidden; */
   }
 }

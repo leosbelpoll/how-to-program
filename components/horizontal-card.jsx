@@ -1,5 +1,7 @@
 import classNames from "classnames";
 import React, { useContext } from "react";
+import { useWindowSize } from "@uidotdev/usehooks";
+
 import { DARK_THEME, LanguageContext, ThemeContext } from "./layout";
 import Link from "next/link";
 
@@ -14,13 +16,18 @@ export function HorizontalCard({
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
 
+  const size = useWindowSize();
+
+  const textLengthToPreview = size.width > 768 ? 50 : 200;
+
   return (
     <Link
       href={!showSubscription ? link : "#"}
       onClick={() => localStorage.setItem("linkToSubscribe", link)}
+      className="horizontal-card"
     >
       <div
-        className={classNames("card mb-4 horizontal-card", {
+        className={classNames("card mb-4", {
           "bg-dark": theme === DARK_THEME,
           "border-light": theme === DARK_THEME,
           "text-white": theme === DARK_THEME,
@@ -48,7 +55,7 @@ export function HorizontalCard({
                 </p>
               </strong>
               <small className="card-text text-secondary">
-                {description[language]?.slice(0, 50)} ...
+                {description[language]?.slice(0, textLengthToPreview)}{textLengthToPreview < description[language]?.length && <span>...</span>}
               </small>
             </div>
           </div>

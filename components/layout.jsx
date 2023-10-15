@@ -100,7 +100,9 @@ function Layout({ children }) {
               })}
             >
               <Nav />
-              <main className="container">{children}</main>
+              <main>
+                <div className="container">{children}</div>
+              </main>
 
               {/* <Footer /> */}
             </div>
