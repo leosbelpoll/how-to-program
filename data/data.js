@@ -5,7 +5,7 @@ export const learningPaths = [
       es: "Frontend",
       en: "Frontend",
     },
-    description: {
+    content: {
       es: "¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.",
       en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
     },
@@ -18,7 +18,7 @@ export const learningPaths = [
       es: "Backend",
       en: "Backend",
     },
-    description: {
+    content: {
       es: "¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.",
       en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
     },
@@ -32,7 +32,7 @@ export const learningPaths = [
       es: "DevOps",
       en: "DevOps",
     },
-    description: {
+    content: {
       es: "Domina la cultura, prácticas y herramientas de DevOps. Aprende a acelerar el desarrollo de software, mejorar la colaboración entre equipos y automatizar despliegues. Obtén las habilidades clave para llevar tus proyectos al siguiente nivel y alcanzar la eficiencia operativa que tu empresa necesita. ¡Únete a nosotros y conviértete en un experto en DevOps!",
       en: "Master the culture, practices, and tools of DevOps. Learn to accelerate software development, enhance team collaboration, and automate deployments. Gain the key skills to take your projects to the next level and achieve the operational efficiency your company needs. Join us and become a DevOps expert!",
     },
@@ -50,15 +50,13 @@ export const classes = [
       es: "Entorno de desarrollo",
       en: "Development environment",
     },
-    description: {
-      es: "¿Quieres adentrarte en el mundo del desarrollo web y crear tus propias páginas HTML? Aquí te guio paso a paso a través del proceso de configuración del entorno de desarrollo HTML utilizando las herramientas escenciales.",
-      en: "Do you want to enter the world of web development and create your own HTML pages? Here I guide you step by step through the process of setting up the HTML development environment using the essential tools.",
-    },
     video: {
       es: "https://www.youtube.com/embed/ZwnAuRC1FtA?si=opSz5IRSdNsV43mT",
     },
     content: {
       es: `
+          ¿Quieres adentrarte en el mundo del desarrollo web y crear tus propias páginas HTML? Aquí te guio paso a paso a través del proceso de configuración del entorno de desarrollo HTML utilizando las herramientas escenciales.
+
           Vamos a necesitar dos herramientas. Un editor de código y un navegador para visualizar nuestras páginas web. Como editor de código vamos a estar usand Visual Studio Code o más conocido como VS Code y como navegador puedes usar alguno que ya esté instalado en tu computadora, pero actualmente la mayoría de programadores web usan el [Chrome](https://www.google.com/intl/es_es/chrome/).
 
           ### VS Code
@@ -105,6 +103,8 @@ export const classes = [
         `,
 
       en: `
+            Do you want to enter the world of web development and create your own HTML pages? Here I guide you step by step through the process of setting up the HTML development environment using the essential tools.
+
             We are going to need two tools. A code editor and a browser to view our web pages. As a code editor we will be using Visual Studio Code or better known as VS Code and as a browser you can use one that is already installed on your computer, but currently most web programmers use [Chrome](https://www.google.com/intl/en/chrome/).
 
             ### VSCode
@@ -158,12 +158,38 @@ export const classes = [
       es: "Estructura básica",
       en: "Basic structure",
     },
-    description: {
-      es: "Esta es mi descripcion",
-      en: "This is my description",
-    },
     video: {
       es: "https://www.youtube.com/embed/1L_ZrxDami4?si=paaLhJzGi-408Oqr",
+    },
+    content: {
+      es: `
+          ## ¿Qué es HTML?
+    
+          HTML significa **lenguaje de marcado de hipertexto**. Es la columna vertebral de cada página web que ve en línea. Piense en ello como el lenguaje que los navegadores web entienden para mostrar contenido en su pantalla. HTML le permite estructurar su contenido, como títulos, párrafos, imágenes, enlaces, etc, de una manera que los navegadores puedan interpretar.
+    
+          ## Estructura de un documento HTML básico
+    
+          Echemos un vistazo a la estructura básica de un documento HTML. Cada documento HTML comienza con una declaración \`<!DOCTYPE>\`, que le dice al navegador **la versión de HTML** con la que queremos trabajar, en este caso HTML5. Luego, tenemos la etiqueta \`<html>\` que contiene dos secciones principales: \`<head>\` y \`<body>\`. La sección \`<head>\` es para metadata y enlaces a recursos externos, mientras que la sección \`<body>\` contiene el contenido visible de su página web
+    
+          Agreguemos algo de contenido a nuestra página. Podemos usar etiquetas de encabezado, como \`<h1>\`, \`<h2>\`, etc., para definir encabezados de diferentes niveles. Y para los párrafos, simplemente usamos la etiqueta \`<p>\`. Intente agregar algunos títulos y párrafos a su página
+    
+          \`\`\`
+          <html>
+              <head>
+                  <title>Este título aparece en la pestaña del navegador</title>
+              </head>
+    
+              <body>
+                  <h1>Hola mundo!</h1>
+              </body>
+          </html>
+          \`\`\`
+
+          ### Recursos utilizados en la clase
+
+          - <a href="https://gist.github.com/leosbelpoll/5f08144a0781ee7cffadc28ab30afaa9" target="_blank">Código HTML</a>
+        `,
+      en: "",
     },
   },
   {
@@ -173,7 +199,7 @@ export const classes = [
       es: "Herramienta de desarrolladores",
       en: "DevOps tools",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -188,7 +214,7 @@ export const classes = [
       es: "Textos",
       en: "Text",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -203,7 +229,7 @@ export const classes = [
       es: "Listas",
       en: "List",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -218,7 +244,7 @@ export const classes = [
       es: "Navegación",
       en: "Navigation",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -233,7 +259,7 @@ export const classes = [
       es: "Imágenes",
       en: "Images",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -248,7 +274,7 @@ export const classes = [
       es: "Tablas",
       en: "Tables",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -263,7 +289,7 @@ export const classes = [
       es: "Formularios",
       en: "Forms",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -278,7 +304,7 @@ export const classes = [
       es: "HTML 5",
       en: "HTML 5",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -293,7 +319,7 @@ export const classes = [
       es: "Que sigue?",
       en: "What's next?",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -308,7 +334,7 @@ export const classes = [
       es: "Incluyendo estilos",
       en: "Including styles",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -323,7 +349,7 @@ export const classes = [
       es: "Selectores CSS",
       en: "CSS Selectors",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -338,7 +364,7 @@ export const classes = [
       es: "Colores",
       en: "Colors",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -353,7 +379,7 @@ export const classes = [
       es: "Modelo de Cajas",
       en: "Box Model",
     },
-    description: {
+    content: {
       es: "Esta es mi descripcion",
       en: "This is my description",
     },
@@ -461,8 +487,12 @@ export const courses = [
       en: "HTML",
     },
     thumbnail: "html",
-    description: {
-      es: "¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.",
+    content: {
+      es: `
+        ¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.
+      
+        - Diseño del proyecto de curso - [Figma link](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa092cU1hbzJRZ242UWM4ckE5VkEyQnV6UjRLZ3xBQ3Jtc0tscUU3ZmJlcXFfeEJqM2Y2UE44REdzMmEyeHBEV0lwUWZKa3l4OXBBT2FEbUtkUHlTZDlPWmJjWTVtUkItbFNkMHlWOGZpSWhqTHJEaUk0MllGd3B2bnlkUkpBalRxa2FLMnEwM18wdlhmWDFQb0ZWWQ&q=https%3A%2F%2Fwww.figma.com%2Fproto%2F5awPw6MrqyLpvVNdLy3lag%2FCurso-de-HTML-para-principiantes%3Ftype%3Ddesign%26node-id%3D1-2%26t%3D2CUAijwcGwTxTUAi-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26mode%3Ddesign&v=1L_ZrxDami4)
+      `,
       en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
     },
     video: {
@@ -482,7 +512,7 @@ export const courses = [
     video: {
       es: "https://www.youtube.com/embed/D5VzGWgF_zk?si=aynQktIMxDzRpbM3",
     },
-    description: {
+    content: {
       es: "Explora el mundo del diseño web con nuestro curso de CSS. CSS, o Cascading Style Sheets, es la herramienta esencial para dar vida a tus páginas web y hacerlas visualmente atractivas. En este curso, aprenderás a controlar la presentación y el estilo de tus sitios web, desde la selección de colores y fuentes hasta el diseño de diseños responsivos. Adquiere las habilidades necesarias para convertir tus proyectos web en experiencias visuales cautivadoras y profesionales.",
       en: "Explore the world of web design with our CSS course. CSS, or Cascading Style Sheets, is the essential tool to bring your web pages to life and make them visually appealing. In this course, you will learn how to control the presentation and style of your websites, from selecting colors and fonts to designing responsive layouts. Gain the skills needed to turn your web projects into captivating and professional visual experiences.",
     },
@@ -493,27 +523,11 @@ export const courses = [
   {
     id: 3,
     title: {
-      es: "JavaScript",
-      en: "JavaScript",
-    },
-    thumbnail: "javascript",
-    description: {
-      es: "Descubre el poder de la programación web con nuestro curso de JavaScript. JavaScript es el lenguaje de programación que impulsa la interactividad en sitios web modernos. En este curso, te enseñaremos desde los conceptos básicos hasta las técnicas avanzadas de JavaScript. Aprenderás a crear funciones dinámicas, manipular elementos HTML, y desarrollar aplicaciones web interactivas. Prepárate para desbloquear nuevas posibilidades en el mundo de la programación web con JavaScript como tu herramienta principal.",
-      en: "Discover the power of web programming with our JavaScript course. JavaScript is the programming language that drives interactivity on modern websites. In this course, we will teach you from the basics to advanced JavaScript techniques. You will learn how to create dynamic functions, manipulate HTML elements, and develop interactive web applications. Get ready to unlock new possibilities in the world of web programming with JavaScript as your primary tool.",
-    },
-    background: "#f7df1e",
-    textColor: "black",
-    tags: ["javascript", "js", "frontend"],
-    showSubscription: true,
-  },
-  {
-    id: 4,
-    title: {
       es: "Bootstrap",
       en: "Bootstrap",
     },
     thumbnail: "bootstrap",
-    description: {
+    content: {
       es: "Domina el arte del diseño web responsivo con nuestro curso de Bootstrap. Bootstrap es un popular framework de desarrollo web que simplifica la creación de sitios web modernos y adaptables. En este curso, aprenderás a utilizar Bootstrap para crear diseños atractivos y funcionales de manera rápida y eficiente. Explorarás componentes preestablecidos, grillas responsivas y mucho más. Prepárate para perfeccionar tus habilidades de diseño web y ofrecer experiencias excepcionales en dispositivos de todos los tamaños con Bootstrap.",
       en: "Master the art of responsive web design with our Bootstrap course. Bootstrap is a popular web development framework that simplifies the creation of modern and adaptable websites. In this course, you will learn how to use Bootstrap to quickly and efficiently create attractive and functional designs. You will explore pre-built components, responsive grids, and much more. Get ready to hone your web design skills and deliver exceptional experiences on devices of all sizes with Bootstrap.",
     },
@@ -523,13 +537,29 @@ export const courses = [
     showSubscription: true,
   },
   {
+    id: 4,
+    title: {
+      es: "JavaScript",
+      en: "JavaScript",
+    },
+    thumbnail: "javascript",
+    content: {
+      es: "Descubre el poder de la programación web con nuestro curso de JavaScript. JavaScript es el lenguaje de programación que impulsa la interactividad en sitios web modernos. En este curso, te enseñaremos desde los conceptos básicos hasta las técnicas avanzadas de JavaScript. Aprenderás a crear funciones dinámicas, manipular elementos HTML, y desarrollar aplicaciones web interactivas. Prepárate para desbloquear nuevas posibilidades en el mundo de la programación web con JavaScript como tu herramienta principal.",
+      en: "Discover the power of web programming with our JavaScript course. JavaScript is the programming language that drives interactivity on modern websites. In this course, we will teach you from the basics to advanced JavaScript techniques. You will learn how to create dynamic functions, manipulate HTML elements, and develop interactive web applications. Get ready to unlock new possibilities in the world of web programming with JavaScript as your primary tool.",
+    },
+    background: "#f7df1e",
+    textColor: "black",
+    tags: ["javascript", "js", "frontend"],
+    showSubscription: true,
+  },
+  {
     id: 5,
     title: {
       es: "React",
       en: "React",
     },
     thumbnail: "react",
-    description: {
+    content: {
       es: "Embárcate en un emocionante viaje hacia el desarrollo de aplicaciones web modernas con nuestro curso de React. React, desarrollada por Facebook, es una biblioteca de JavaScript ampliamente utilizada para construir interfaces de usuario dinámicas y eficientes. En este curso, te sumergirás en los conceptos fundamentales de React, aprenderás a crear componentes reutilizables y a gestionar el estado de la aplicación. Prepárate para dominar esta potente herramienta y construir aplicaciones web interactivas y de alto rendimiento con React.",
       en: "Embark on an exciting journey into modern web application development with our React course. Developed by Facebook, React is a widely used JavaScript library for building dynamic and efficient user interfaces. In this course, you'll dive into the fundamental concepts of React, learn to create reusable components, and manage application state. Get ready to master this powerful tool and build interactive, high-performance web applications with React.",
     },
@@ -545,7 +575,7 @@ export const courses = [
       en: "Node",
     },
     thumbnail: "node",
-    description: {
+    content: {
       es: "Explora el fascinante mundo del desarrollo de aplicaciones en el lado del servidor con nuestro curso de Node.js. Node.js es un entorno de tiempo de ejecución de JavaScript que te permite crear aplicaciones escalables y de alto rendimiento. En este curso, te sumergirás en los fundamentos de Node.js, aprenderás a construir servidores web, manipular bases de datos y desarrollar aplicaciones en tiempo real. Prepárate para adquirir las habilidades necesarias para construir aplicaciones robustas y eficientes en el lado del servidor con Node.js.",
       en: "Explore the fascinating world of server-side application development with our Node.js course. Node.js is a JavaScript runtime environment that allows you to create scalable and high-performance applications. In this course, you will delve into the fundamentals of Node.js, learn to build web servers, manipulate databases, and develop real-time applications. Get ready to acquire the skills needed to build robust and efficient server-side applications with Node.js.",
     },

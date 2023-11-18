@@ -32,9 +32,9 @@ function LearningPathList({ currentLearningPathId }) {
   if (learningPathSlug && !learningPath) return <h3>No learning path for slug: {learningPathSlug}</h3>;
 
   const foundLearningPaths = learningPaths.filter(
-    ({ title, description, tags = [] }) =>
+    ({ title, content, tags = [] }) =>
       title[language].toLowerCase().includes(lowercaseSearch) ||
-      description[language].toLowerCase().includes(lowercaseSearch) ||
+      content[language].toLowerCase().includes(lowercaseSearch) ||
       tags.some((tag) => tag.toLowerCase().includes(lowercaseSearch))
   );
 
@@ -43,12 +43,12 @@ function LearningPathList({ currentLearningPathId }) {
       {foundLearningPaths.length ? (
         <div>
           {foundLearningPaths.map(
-            ({ id, title, description, thumbnail, showSubscription }) => (
+            ({ id, title, content, thumbnail, showSubscription }) => (
               <div className="col mb-4" key={id}>
                 <HorizontalCard
                   thumbnail={thumbnail}
                   title={title}
-                  description={description}
+                  content={content}
                   link={`/learning-paths/${slugify(title[language])}`}
                   active={learningPathSlug && learningPath.id === id}
                   showSubscription={showSubscription}

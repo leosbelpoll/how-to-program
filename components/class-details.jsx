@@ -6,6 +6,7 @@ import {
   ThemeContext,
 } from "./layout";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 import classNames from "classnames";
 import { normalizeStringLiteral, slugify } from "../utils/string";
@@ -24,7 +25,7 @@ function ClassDetailsInternal({
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
 
-  const { video, title, description, content } = clas;
+  const { video, title, content } = clas;
 
   return (
     <div className="class-details mb-3">
@@ -55,14 +56,12 @@ function ClassDetailsInternal({
           </button>
         )}
       </div>
-      <div className="mt-3">
-        <p>{description[language]}</p>
-      </div>
       <div className="mt-2">
         {content && (
           <ReactMarkdown
             children={normalizeStringLiteral(content[language])}
             remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
           />
         )}
         {nextRecommendedClass && (

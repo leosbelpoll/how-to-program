@@ -111,7 +111,7 @@ input.bg-dark::placeholder {
   color: #292929;
 }
 
-.class-details a {
+.class-details a,.course-details a {
   color: rgb(0, 162, 255);
   text-decoration: underline;
 }
@@ -155,4 +155,14 @@ input.bg-dark::placeholder {
     /* white-space: nowrap;
     overflow: hidden; */
   }
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:#cacaca;
 }

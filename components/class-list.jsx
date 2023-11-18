@@ -45,7 +45,6 @@ export function ClassList() {
         .map(
           ({
             title,
-            description,
             thumbnail,
             id: classId,
             content,

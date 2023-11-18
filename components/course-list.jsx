@@ -19,9 +19,9 @@ function CourseList() {
   const lowercaseSearch = search.toLowerCase();
 
   const foundCourses = courses.filter(
-    ({ title, description, tags }) =>
+    ({ title, content, tags }) =>
       title[language].toLowerCase().includes(lowercaseSearch) ||
-      description[language].toLowerCase().includes(lowercaseSearch) ||
+      content[language].toLowerCase().includes(lowercaseSearch) ||
       tags.some((tag) => tag.toLowerCase().includes(lowercaseSearch))
   );
 
@@ -36,12 +36,12 @@ function CourseList() {
       {foundCourses.length ? (
         <div>
           {foundCourses.map(
-            ({ id, title, description, thumbnail, showSubscription }) => (
+            ({ id, title, content, thumbnail, showSubscription }) => (
               <div className="col mb-4" key={id}>
                 <HorizontalCard
                   thumbnail={thumbnail}
                   title={title}
-                  description={description}
+                  content={content}
                   link={`/courses/${slugify(title[language])}`}
                   active={slugify(title[language]) === courseSlug}
                   showSubscription={showSubscription}

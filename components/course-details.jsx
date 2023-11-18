@@ -1,9 +1,12 @@
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import { classes, courses } from "../data/data";
-import { LANGUAGE_SPANISH, LanguageContext } from "./layout";
+import { LanguageContext } from "./layout";
 import Link from "next/link";
-import { slugify } from "../utils/string";
+import { slugify, normalizeStringLiteral } from "../utils/string";
 import { Iframe } from "./iframe";
 
 export function CourseDetails({ course }) {
@@ -20,7 +23,7 @@ export function CourseDetails({ course }) {
 
   if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
 
-  const { id, video, title, description, tags } = currentCourse;
+  const { id, video, title, content, tags } = currentCourse;
 
   return (
     <>
@@ -40,7 +43,13 @@ export function CourseDetails({ course }) {
         ))}
       </div>
 
-      <p className="mt-4">{description[language]}</p>
+      <div className="course-details mt-4">
+        <ReactMarkdown
+          children={normalizeStringLiteral(content[language])}
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeRaw]}
+        />
+      </div>
 
       <h4 className="mt-4">Clases:</h4>
       {classes
@@ -48,7 +57,7 @@ export function CourseDetails({ course }) {
         .map(
           ({
             title,
-            description,
+            content,
             thumbnail,
             id: classId,
             showSubscription,

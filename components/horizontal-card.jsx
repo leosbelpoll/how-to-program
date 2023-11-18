@@ -8,7 +8,7 @@ import Link from "next/link";
 export function HorizontalCard({
   thumbnail,
   title,
-  description,
+  content,
   link,
   active,
   showSubscription,
@@ -55,7 +55,7 @@ export function HorizontalCard({
                 </p>
               </strong>
               <small className="card-text text-secondary">
-                {description[language]?.slice(0, textLengthToPreview)}{textLengthToPreview < description[language]?.length && <span>...</span>}
+                {content[language]?.slice(0, textLengthToPreview)}{textLengthToPreview < content[language]?.length && <span>...</span>}
               </small>
             </div>
           </div>

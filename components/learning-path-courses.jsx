@@ -38,12 +38,12 @@ function LearningPathCourses({ currentLearningPathId }) {
   return (
     <>
       {relatedCourses.map(
-        ({ id, title, description, thumbnail, showSubscription }) => (
+        ({ id, title, content, thumbnail, showSubscription }) => (
           <div className="col mb-4" key={id}>
             <HorizontalCard
               thumbnail={thumbnail}
               title={title}
-              description={description}
+              content={content}
               link={`/courses/${slugify(title[language])}`}
               showSubscription={showSubscription}
             />
