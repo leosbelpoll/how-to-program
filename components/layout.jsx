@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import classNames from "classnames";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -39,6 +40,13 @@ function Layout({ children }) {
   const searchParams = useSearchParams();
   const querySearch = searchParams.get("search");
 
+  const systemPrefersDark = useMediaQuery(
+    {
+      query: "(prefers-color-scheme: dark)",
+    },
+    undefined
+  );
+
   useEffect(() => {
     setSearch(querySearch || "");
     const storedLanguage = localStorage.getItem("language") ?? defaultLanguage;
@@ -47,10 +55,14 @@ function Layout({ children }) {
       setLanguage(storedLanguage);
     }
 
-    const initialTheme = localStorage.getItem("theme") ?? LIGHT_THEME;
+    const storedTheme = localStorage.getItem("theme");
+
+    const systemTheme = systemPrefersDark ? DARK_THEME : LIGHT_THEME;
+
+    const initialTheme = storedTheme ? storedTheme : systemTheme;
 
     setTheme(initialTheme);
-  }, [querySearch]);
+  }, [querySearch, systemPrefersDark]);
 
   return (
     <>
