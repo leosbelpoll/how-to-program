@@ -9,6 +9,7 @@ import Link from "next/link";
 import { slugify, normalizeStringLiteral } from "../utils/string";
 import { Iframe } from "./iframe";
 import { CodeBlock } from "./code-block";
+import { AutoScrollTop } from "./auto-scroll-top";
 
 export function CourseDetails({ course }) {
   const router = useRouter();
@@ -27,7 +28,7 @@ export function CourseDetails({ course }) {
   const { id, video, title, content, tags } = currentCourse;
 
   return (
-    <>
+    <AutoScrollTop params={{ courseSlug }}>
       <div
         className="text-center mb-4"
         style={{ width: "100%", "aspect-ratio": "2 / 1.1" }}
@@ -56,45 +57,37 @@ export function CourseDetails({ course }) {
       <h4 className="mt-4">Clases:</h4>
       {classes
         .filter((clas) => clas.courseId === id)
-        .map(
-          ({
-            title,
-            content,
-            thumbnail,
-            id: classId,
-            showSubscription,
-          }) => (
-            <div
-              className="mb-2"
-              data-bs-toggle={showSubscription ? "modal" : ""}
-              data-bs-target="#subscriptionModal"
-            >
-              <i className="bi bi-file-earmark-play me-2"></i>
-              <Link
-                href={
-                  !showSubscription
-                    ? `/courses/${slugify(
-                        currentCourse.title[language]
-                      )}/classes/${slugify(title[language])}`
-                    : "#"
-                }
-                onClick={() =>
-                  localStorage.setItem(
-                    "linkToSubscribe",
-                    `/courses/${slugify(
+        .map(({ title, content, thumbnail, id: classId, showSubscription }) => (
+          <div
+            className="mb-2"
+            data-bs-toggle={showSubscription ? "modal" : ""}
+            data-bs-target="#subscriptionModal"
+          >
+            <i className="bi bi-file-earmark-play me-2"></i>
+            <Link
+              href={
+                !showSubscription
+                  ? `/courses/${slugify(
                       currentCourse.title[language]
                     )}/classes/${slugify(title[language])}`
-                  )
-                }
-              >
-                {showSubscription && (
-                  <span className="badge text-bg-primary">Pronto</span>
-                )}{" "}
-                {title[language]}
-              </Link>
-            </div>
-          )
-        )}
-    </>
+                  : "#"
+              }
+              onClick={() =>
+                localStorage.setItem(
+                  "linkToSubscribe",
+                  `/courses/${slugify(
+                    currentCourse.title[language]
+                  )}/classes/${slugify(title[language])}`
+                )
+              }
+            >
+              {showSubscription && (
+                <span className="badge text-bg-primary">Pronto</span>
+              )}{" "}
+              {title[language]}
+            </Link>
+          </div>
+        ))}
+    </AutoScrollTop>
   );
 }

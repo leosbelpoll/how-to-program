@@ -16,6 +16,7 @@ import { useRouter } from "next/router";
 import { Modal } from "./modal";
 import { Iframe } from "./iframe";
 import { CodeBlock } from "./code-block";
+import { AutoScrollTop } from "./auto-scroll-top";
 
 function ClassDetailsInternal({
   isFullScreen,
@@ -69,7 +70,7 @@ function ClassDetailsInternal({
         {nextRecommendedClass && (
           <>
             <hr />
-            <strong>Próxima clase recomendada:</strong>{" "}
+            <strong>Próxima clase:</strong>{" "}
             <Link
               href={`/courses/${slugify(
                 nextRecommendedCourse.title[language]
@@ -127,7 +128,7 @@ export function ClassDetails() {
   const { title } = currentClass;
 
   return (
-    <>
+    <AutoScrollTop params={{ courseSlug, classSlug }}>
       <ClassDetailsInternal
         clas={currentClass}
         nextRecommendedClass={nextRecommendedClass}
@@ -141,6 +142,6 @@ export function ClassDetails() {
           nextRecommendedCourse={nextRecommendedCourse}
         />
       </Modal>
-    </>
+    </AutoScrollTop>
   );
 }

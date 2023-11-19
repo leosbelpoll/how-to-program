@@ -11,6 +11,7 @@ import {
 import { HorizontalCard } from "./horizontal-card";
 import { slugify } from "../utils/string";
 import { useRouter } from "next/router";
+import { AutoScrollTop } from "./auto-scroll-top";
 
 function LearningPathCourses({ currentLearningPathId }) {
   const { search = "" } = useContext(SearchContext);
@@ -36,7 +37,7 @@ function LearningPathCourses({ currentLearningPathId }) {
   );
 
   return (
-    <>
+    <AutoScrollTop params={{ learningPathSlug }}>
       {relatedCourses.map(
         ({ id, title, content, thumbnail, showSubscription }) => (
           <div className="col mb-4" key={id}>
@@ -50,7 +51,7 @@ function LearningPathCourses({ currentLearningPathId }) {
           </div>
         )
       )}
-    </>
+    </AutoScrollTop>
   );
 }
 
