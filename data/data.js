@@ -356,7 +356,7 @@ export const classes = [
         ### Recursos utilizados en la clase
 
         - <a href="https://gist.github.com/leosbelpoll/bd572bc3a0a846ad4c677058c87573d2" target="_blank">Parte teórica</a>
-        - <a href="https://gist.github.com/leosbelpoll/7cdffa6bb88e966909a0e35d4bc9fa5d" target="_blank">Desarrollo tablero de tareas</a> - Proyecto de Curso
+        - <a href="https://gist.github.com/leosbelpoll/7cdffa6bb88e966909a0e35d4bc9fa5d" target="_blank">Desarrollo del **Tablero de Tareas**</a> - Proyecto de Curso
       `,
       en: "",
     },
@@ -438,6 +438,11 @@ export const classes = [
         \`\`\`
         
         Podemos personalizar el estilo de la lista cambiando el tipo de viñeta con el atributo \`type\`.
+
+        ### Recursos utilizados en la clase
+
+        - <a href="https://gist.github.com/leosbelpoll/93e75450aa77cd967b04949c5c3daf68" target="_blank">Parte teórica</a>
+        - <a href="https://gist.github.com/leosbelpoll/af502f0e99295f9c34c7ce082ddf1998" target="_blank">Desarrollo del **Menú Lateral**</a> - Proyecto de Curso
       `,
       en: "",
     },
@@ -489,6 +494,11 @@ export const classes = [
         \`\`\`
         
         Al emplear este enfoque, el contenido dentro del hipervínculo puede abarcar diversos elementos HTML, permitiendo una personalización completa de la apariencia y funcionalidad del enlace.
+
+        ### Recursos utilizados en la clase
+
+        - <a href="https://gist.github.com/leosbelpoll/d339fa2e2b6ee60fd7d742565c39a452" target="_blank">Parte teórica</a>
+        - <a href="https://gist.github.com/leosbelpoll/2274d514c5d7aaef7d20f6af27717639#file-chat-html" target="_blank">Desarrollo de la **Página de Chat**</a> - Proyecto de Curso
       `,
       en: "",
     },
@@ -533,6 +543,17 @@ export const classes = [
         ### Buenas Prácticas
 
         Es importante destacar que la etiqueta \`<img>\` en HTML no requiere una etiqueta de cierre. Aunque es opcional, una buena práctica es agregar una barra inclinada al final (\`<img ... />\`).
+
+        ### Recursos utilizados en la clase
+
+        - <a href="https://gist.github.com/leosbelpoll/96627a44812c2a6a4481ec9c8e458c46" target="_blank">Parte teórica</a>
+        - <a href="https://gist.github.com/leosbelpoll/32a2fad78e0805a46cadc279878a86e2" target="_blank">Agregando imágenes al Proyecto de Curso</a>
+        - Imágenes utilizadas
+            - [Amigos del espacio](https://como-programar-resources.vercel.app/spanish/courses/html-beginners/images/espacio.png)
+            - [Gatito](https://como-programar-resources.vercel.app/spanish/courses/html-beginners/images/imagen1.jpg)
+            - [Perrito 1](https://como-programar-resources.vercel.app/spanish/courses/html-beginners/images/imagen2.jpg)
+            - [Perrito 2](https://como-programar-resources.vercel.app/spanish/courses/html-beginners/images/imagen3.jpg)
+            - [León](https://como-programar-resources.vercel.app/spanish/courses/html-beginners/images/imagen4.jpg)
       `,
       en: "",
     },
@@ -686,6 +707,11 @@ export const classes = [
             </tfoot>
         </table>
         \`\`\`
+
+        ### Recursos utilizados en la clase
+
+        - <a href="https://gist.github.com/leosbelpoll/f7a15618f231124d1ac16dea4b2353b1" target="_blank">Parte teórica</a>
+        - <a href="https://gist.github.com/leosbelpoll/e0805c6d1077884ede8fb522bb25a301" target="_blank">Agregando **Listado de Miembros**</a> - Proyecto de Curso
       `,
       en: "",
     },
@@ -839,6 +865,11 @@ export const classes = [
             <input type="number" name="edad" min="18" max="150" />
         </form>
         \`\`\`
+
+        ### Recursos utilizados en la clase
+
+        - <a href="https://gist.github.com/leosbelpoll/5ba95703562050e5e9ed72c6060b1f31" target="_blank">Parte teórica</a>
+        - <a href="https://gist.github.com/leosbelpoll/d9b3964e1efa89806f2f7a673864f9f0" target="_blank">Agregando formulario de **Búsqueda dinámica** y **Eliminar múltiple**</a> - Proyecto de Curso
       `,
       en: "",
     },
@@ -879,6 +910,13 @@ export const classes = [
         La etiqueta \`<footer>\` engloba la información del pie de página. Es el lugar adecuado para ubicar elementos relacionados con el cierre de la página.
 
         HTML5 no solo ha revolucionado la forma en que estructuramos nuestras páginas web, sino que también ha introducido características avanzadas, como imágenes responsivas y una mejor integración con el almacenamiento del navegador. Estos temas avanzados los exploraremos en cursos futuros.
+
+        ### Recursos utilizados en la clase
+
+        - <a href="https://www.w3.org/TR/html5-diff/" target="_blank">Profundizar mucho más en HTML 5</a>
+        - <a href="https://gist.github.com/leosbelpoll/3fdb85c5a5fb26fee9011ccbc108f920#file-tareas-html" target="_blank">Modificación del **Tablero de tareas**</a> - Proyecto de Curso
+        - <a href="https://gist.github.com/leosbelpoll/3fdb85c5a5fb26fee9011ccbc108f920#file-miembros-html" target="_blank">Modificación del **Listado de miembros**</a> - Proyecto de Curso
+        - <a href="https://gist.github.com/leosbelpoll/3fdb85c5a5fb26fee9011ccbc108f920#file-chat-html" target="_blank">Modificación de la **Página de Chat**</a> - Proyecto de Curso
       `,
       en: "",
     },
