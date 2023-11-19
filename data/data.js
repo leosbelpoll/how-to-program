@@ -10,20 +10,7 @@ export const learningPaths = [
       en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
     },
     thumbnail: "react",
-    courses: [1, 2, 3, 4, 5, 6, 7, 8],
-  },
-  {
-    id: 11,
-    title: {
-      es: "Frontend",
-      en: "Frontend",
-    },
-    content: {
-      es: "¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.",
-      en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
-    },
-    thumbnail: "react",
-    courses: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5],
+    courses: [1, 2, 3, 4, 5],
   },
   {
     id: 2,
