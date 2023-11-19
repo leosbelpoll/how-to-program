@@ -928,6 +928,75 @@ export const classes = [
     id: 11,
     courseId: 1,
     title: {
+      es: "Proyecto de Curso",
+      en: "Course Project",
+    },
+    content: {
+      es: `
+        - Diseño del proyecto de curso - [Figma link](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa092cU1hbzJRZ242UWM4ckE5VkEyQnV6UjRLZ3xBQ3Jtc0tscUU3ZmJlcXFfeEJqM2Y2UE44REdzMmEyeHBEV0lwUWZKa3l4OXBBT2FEbUtkUHlTZDlPWmJjWTVtUkItbFNkMHlWOGZpSWhqTHJEaUk0MllGd3B2bnlkUkpBalRxa2FLMnEwM18wdlhmWDFQb0ZWWQ&q=https%3A%2F%2Fwww.figma.com%2Fproto%2F5awPw6MrqyLpvVNdLy3lag%2FCurso-de-HTML-para-principiantes%3Ftype%3Ddesign%26node-id%3D1-2%26t%3D2CUAijwcGwTxTUAi-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26mode%3Ddesign&v=1L_ZrxDami4)
+
+        <br/>
+        <br/>
+
+        ### Presentación
+
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/1L_ZrxDami4?&theme=dark&autohide=2&start=9&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        <br/>
+        <br/>
+
+        ### Tablero de tareas
+
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/Ta7JUgMfcr0?&theme=dark&autohide=2&start=776&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        
+        <br/>
+        <br/>
+
+        ### Menú Lateral
+
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/0a8kjLjNfh4?&theme=dark&autohide=2&start=401&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        
+        <br/>
+        <br/>
+
+        ### Agregando Navegación
+
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/4BiyEG_OWsE?&theme=dark&autohide=2&start=357&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        
+        <br/>
+        <br/>
+
+        ### Agregando Imágenes
+
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/5fPZRK6WauE?&theme=dark&autohide=2&start=185&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        
+        <br/>
+        <br/>
+
+        ### Agregando Listado de Miembros
+
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/l3CLCfyHAWg?&theme=dark&autohide=2&start=466&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        
+        <br/>
+        <br/>
+
+        ### Formulario para búsqueda y eliminar elementos
+
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/-Il58AlPvs0?&theme=dark&autohide=2&start=1110&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        
+        <br/>
+        <br/>
+
+        ### Agregando los elementos de HTML 5
+
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/1YoGeG7ikuY?&theme=dark&autohide=2&start=321&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+      `,
+      en: "",
+    },
+  },
+  {
+    id: 12,
+    courseId: 1,
+    title: {
       es: "Que sigue?",
       en: "What's next?",
     },
@@ -1131,8 +1200,6 @@ export const courses = [
     content: {
       es: `
         ¡Aprende los fundamentos esenciales de HTML en nuestro curso introductorio! HTML, o HyperText Markup Language, es el lenguaje de marcado fundamental para crear páginas web. En este curso, te guiaremos a través de los conceptos básicos de HTML, desde la estructura de un documento HTML hasta la creación de enlaces y la inserción de imágenes. Desarrolla las habilidades necesarias para construir tus propias páginas web y da tus primeros pasos en el emocionante mundo del desarrollo web.
-      
-        - Diseño del proyecto de curso - [Figma link](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa092cU1hbzJRZ242UWM4ckE5VkEyQnV6UjRLZ3xBQ3Jtc0tscUU3ZmJlcXFfeEJqM2Y2UE44REdzMmEyeHBEV0lwUWZKa3l4OXBBT2FEbUtkUHlTZDlPWmJjWTVtUkItbFNkMHlWOGZpSWhqTHJEaUk0MllGd3B2bnlkUkpBalRxa2FLMnEwM18wdlhmWDFQb0ZWWQ&q=https%3A%2F%2Fwww.figma.com%2Fproto%2F5awPw6MrqyLpvVNdLy3lag%2FCurso-de-HTML-para-principiantes%3Ftype%3Ddesign%26node-id%3D1-2%26t%3D2CUAijwcGwTxTUAi-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26mode%3Ddesign&v=1L_ZrxDami4)
       `,
       en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
     },

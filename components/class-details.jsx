@@ -31,12 +31,14 @@ function ClassDetailsInternal({
 
   return (
     <div className="class-details mb-3">
-      <div
-        className="text-center mb-4"
-        style={{ width: "100%", "aspect-ratio": "2 / 1.1" }}
-      >
-        <Iframe videoUrl={video[language]} />
-      </div>
+      {video && (
+        <div
+          className="text-center mb-4"
+          style={{ width: "100%", "aspect-ratio": "2 / 1.1" }}
+        >
+          <Iframe videoUrl={video[language]} />
+        </div>
+      )}
 
       {!isFullScreen && (
         <h2 className="mt-3">
