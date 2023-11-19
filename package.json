@@ -12,12 +12,14 @@
     "@uidotdev/usehooks": "^2.4.0",
     "bootstrap-icons": "^1.10.5",
     "classnames": "^2.3.2",
+    "copy-to-clipboard": "^3.3.3",
     "date-fns": "^2.30.0",
     "firebase": "^10.4.0",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.0"
   }

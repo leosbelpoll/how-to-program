@@ -8,6 +8,7 @@ import { LanguageContext } from "./layout";
 import Link from "next/link";
 import { slugify, normalizeStringLiteral } from "../utils/string";
 import { Iframe } from "./iframe";
+import { CodeBlock } from "./code-block";
 
 export function CourseDetails({ course }) {
   const router = useRouter();
@@ -48,6 +49,7 @@ export function CourseDetails({ course }) {
           children={normalizeStringLiteral(content[language])}
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
+          renderers={{ code: CodeBlock }}
         />
       </div>
 

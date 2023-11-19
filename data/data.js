@@ -173,7 +173,8 @@ export const classes = [
     
           Agreguemos algo de contenido a nuestra página. Podemos usar etiquetas de encabezado, como \`<h1>\`, \`<h2>\`, etc., para definir encabezados de diferentes niveles. Y para los párrafos, simplemente usamos la etiqueta \`<p>\`. Intente agregar algunos títulos y párrafos a su página
     
-          \`\`\`
+          \`\`\`html
+          <!DOCTYPE>
           <html>
               <head>
                   <title>Este título aparece en la pestaña del navegador</title>
@@ -197,11 +198,50 @@ export const classes = [
     courseId: 1,
     title: {
       es: "Herramienta de desarrolladores",
-      en: "DevOps tools",
+      en: "Dev Tools",
     },
     content: {
-      es: "Esta es mi descripcion",
-      en: "This is my description",
+      es: `
+        Las **Herramientas de Desarrollador del Navegador** desempeñan un papel crucial en el desarrollo web, proporcionando a los desarrolladores un conjunto potente de funciones para inspeccionar, depurar y optimizar páginas web. Aquí hay varias razones clave que destacan la importancia de las Herramientas de Desarrollador:
+
+        1. Depuración
+        - **Inspeccionar y Modificar:** Los desarrolladores pueden inspeccionar HTML, CSS y JavaScript en tiempo real, lo que les permite identificar y solucionar problemas rápidamente.
+        - **Consola:** La consola permite a los desarrolladores registrar información, probar fragmentos de código e interactuar dinámicamente con la página.
+
+        2. Optimización del Rendimiento
+        - **Pestaña de Red:** Ayuda a analizar y optimizar el rendimiento de la red al monitorear los tiempos de carga de recursos, identificar cuellos de botella y optimizar tamaños de archivos.
+        - **Pestaña de Línea de Tiempo:** Proporciona una línea de tiempo de eventos, ayudando a los desarrolladores a identificar áreas donde se puede mejorar el rendimiento.
+
+        3. Diseño Responsivo
+        - **Emulación de Dispositivos:** Permite a los desarrolladores simular diferentes dispositivos y tamaños de pantalla, asegurando que los sitios web sean receptivos y amigables para el usuario en diversas plataformas.
+
+        4. Inspección y Modificación del DOM
+        - **Pestaña de Elementos:** Facilita la inspección y modificación del Modelo de Objetos del Documento (DOM), permitiendo a los desarrolladores comprender la estructura de una página web y realizar cambios dinámicos.
+
+        5. Depuración de CSS
+        - **Pestaña de Estilos:** Permite a los desarrolladores ver y modificar estilos CSS, ayudando a depurar problemas de diseño y estilo en tiempo real.
+
+        6. Depuración de JavaScript
+        - **Pestaña del Depurador:** Permite a los desarrolladores establecer puntos de interrupción, avanzar a través del código e inspeccionar variables, facilitando la identificación y corrección de errores de JavaScript.
+
+        7. Análisis de Seguridad
+        - **Pestaña de Seguridad:** Proporciona información sobre problemas de seguridad en una página web, ayudando a los desarrolladores a identificar posibles vulnerabilidades y mejorar la seguridad general de un sitio.
+
+        8. Análisis de Red
+        - **Pestaña de Red:** Ofrece información sobre las solicitudes y respuestas entre el navegador y el servidor, ayudando en la optimización de los tiempos de carga de la página web.
+
+        9. Consola para Scripting
+        - **Consola:** Permite a los desarrolladores ejecutar comandos de JavaScript, probar fragmentos de código e interactuar dinámicamente con la página.
+
+        10. Perfil de Memoria
+        - **Pestaña de Memoria:** Ayuda a identificar y abordar fugas de memoria proporcionando información sobre el consumo de memoria de una página web.
+
+        11. Auditoría de Accesibilidad
+        - **Pestaña de Accesibilidad:** Ayuda a identificar y solucionar problemas de accesibilidad, asegurando que los sitios web sean utilizables por personas con discapacidades.
+
+        En resumen, las Herramientas de Desarrollador del Navegador son esenciales para los desarrolladores web, ya que proporcionan un conjunto de funciones que simplifican el proceso de desarrollo, desde la depuración y la optimización hasta garantizar la accesibilidad y la seguridad. La familiaridad con estas herramientas mejora la capacidad de un desarrollador para crear aplicaciones web de alta calidad, eficientes y amigables para el usuario.
+      `,
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/X9ngOAyNjCA?si=TxUgRznxaPeMJInV",
@@ -215,7 +255,7 @@ export const classes = [
       en: "Text",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -230,7 +270,7 @@ export const classes = [
       en: "List",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -245,7 +285,7 @@ export const classes = [
       en: "Navigation",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -260,7 +300,7 @@ export const classes = [
       en: "Images",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -275,7 +315,7 @@ export const classes = [
       en: "Tables",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -290,7 +330,7 @@ export const classes = [
       en: "Forms",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -305,7 +345,7 @@ export const classes = [
       en: "HTML 5",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -320,7 +360,7 @@ export const classes = [
       en: "What's next?",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -335,7 +375,7 @@ export const classes = [
       en: "Including styles",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -350,7 +390,7 @@ export const classes = [
       en: "CSS Selectors",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -365,7 +405,7 @@ export const classes = [
       en: "Colors",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {
@@ -380,7 +420,7 @@ export const classes = [
       en: "Box Model",
     },
     content: {
-      es: "Esta es mi descripcion",
+      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
       en: "This is my description",
     },
     video: {

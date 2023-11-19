@@ -15,6 +15,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Modal } from "./modal";
 import { Iframe } from "./iframe";
+import { CodeBlock } from "./code-block";
 
 function ClassDetailsInternal({
   isFullScreen,
@@ -62,6 +63,7 @@ function ClassDetailsInternal({
             children={normalizeStringLiteral(content[language])}
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw]}
+            components={{ code: CodeBlock }}
           />
         )}
         {nextRecommendedClass && (
