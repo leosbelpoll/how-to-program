@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LanguageContext, SearchContext } from "./layout";
+import { DARK_THEME, LanguageContext, SearchContext, ThemeContext } from "./layout";
 import classNames from "classnames";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import { classes, courses } from "../data/data";
 export function ClassList() {
   const { search = "" } = useContext(SearchContext);
   const { language } = useContext(LanguageContext);
+  const { theme } = useContext(ThemeContext);
 
   const router = useRouter();
 
@@ -42,47 +43,40 @@ export function ClassList() {
             .toLowerCase()
             .includes(search.toLocaleLowerCase())
         )
-        .map(
-          ({
-            title,
-            thumbnail,
-            id: classId,
-            content,
-            showSubscription,
-          }) => (
-            <Link
-              href={
-                !showSubscription
-                  ? `/courses/${slugify(
-                      currentCourse.title[language]
-                    )}/classes/${slugify(title[language])}`
-                  : "#"
-              }
-              onClick={() =>
-                localStorage.setItem(
-                  "linkToSubscribe",
-                  `/courses/${slugify(
+        .map(({ title, thumbnail, id: classId, content, showSubscription }) => (
+          <Link
+            href={
+              !showSubscription
+                ? `/courses/${slugify(
                     currentCourse.title[language]
                   )}/classes/${slugify(title[language])}`
-                )
-              }
+                : "#"
+            }
+            onClick={() =>
+              localStorage.setItem(
+                "linkToSubscribe",
+                `/courses/${slugify(
+                  currentCourse.title[language]
+                )}/classes/${slugify(title[language])}`
+              )
+            }
+          >
+            <div
+              className={classNames("main-class-list-item", {
+                "bg-dark": theme === DARK_THEME,
+                active: slugify(title[language]) === classSlug,
+              })}
+              data-bs-toggle={showSubscription ? "modal" : ""}
+              data-bs-target="#subscriptionModal"
             >
-              <div
-                className={classNames("main-class-list-item", {
-                  active: slugify(title[language]) === classSlug,
-                })}
-                data-bs-toggle={showSubscription ? "modal" : ""}
-                data-bs-target="#subscriptionModal"
-              >
-                <i className="bi bi-file-earmark-play me-2"></i>
-                {showSubscription && (
-                  <span className="badge text-bg-primary">Pronto</span>
-                )}{" "}
-                {title[language]}
-              </div>
-            </Link>
-          )
-        )}
+              <i className="bi bi-file-earmark-play me-2"></i>
+              {showSubscription && (
+                <span className="badge text-bg-primary">Pronto</span>
+              )}{" "}
+              {title[language]}
+            </div>
+          </Link>
+        ))}
     </>
   );
 }

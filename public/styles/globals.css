@@ -106,9 +106,13 @@ input.bg-dark::placeholder {
   border-radius: 5px;
 }
 
+.main-class-list-item.bg-dark.active {
+  background: #383838 !important;
+  color: #dbdbdb !important;
+}
+
 .main-class-list-item.active {
   background: #eeeeee !important;
-  color: #292929;
 }
 
 .class-details a,
@@ -177,8 +181,7 @@ input.bg-dark::placeholder {
 }
 
 .code-container {
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
   position: relative;
 }
 

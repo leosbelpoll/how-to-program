@@ -49,7 +49,7 @@ export function CourseDetails({ course }) {
           children={normalizeStringLiteral(content[language])}
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
-          renderers={{ code: CodeBlock }}
+          components={{ code: CodeBlock }}
         />
       </div>
 

@@ -163,11 +163,11 @@ export const classes = [
     },
     content: {
       es: `
-          ## ¿Qué es HTML?
+          ### ¿Qué es HTML?
     
           HTML significa **lenguaje de marcado de hipertexto**. Es la columna vertebral de cada página web que ve en línea. Piense en ello como el lenguaje que los navegadores web entienden para mostrar contenido en su pantalla. HTML le permite estructurar su contenido, como títulos, párrafos, imágenes, enlaces, etc, de una manera que los navegadores puedan interpretar.
     
-          ## Estructura de un documento HTML básico
+          ### Estructura de un documento HTML básico
     
           Echemos un vistazo a la estructura básica de un documento HTML. Cada documento HTML comienza con una declaración \`<!DOCTYPE>\`, que le dice al navegador **la versión de HTML** con la que queremos trabajar, en este caso HTML5. Luego, tenemos la etiqueta \`<html>\` que contiene dos secciones principales: \`<head>\` y \`<body>\`. La sección \`<head>\` es para metadata y enlaces a recursos externos, mientras que la sección \`<body>\` contiene el contenido visible de su página web
     
@@ -255,8 +255,110 @@ export const classes = [
       en: "Text",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      es: `
+        ### Comentarios en HTML
+        
+        En nuestro editor de código, diferenciaremos los elementos que veremos hoy utilizando comentarios en HTML. Para escribir un comentario en HTML, puedes presionar la tecla Control y Slash (o Command Slash en Mac). Los comentarios son útiles para recordatorios futuros, documentación, etc y estos no se muestran en la página.
+        
+        \`\`\`html
+        <!-- Este es un comentario en HTML -->
+        \`\`\`
+        
+        ### Cabeceras en HTML
+        
+        Las cabeceras son elementos importantes de texto en HTML y tienen un orden jerárquico de h1 a h6, donde h1 es el más importante y h6 el menos importante.
+        
+        \`\`\`html
+        <h1>Hola mundo</h1>
+        <h2>Subtítulo</h2>
+        <h3>Subtítulo 3</h3>
+        <h4>Subtítulo 4</h4>
+        <h5>Subtítulo 5</h5>
+        <h6>Subtítulo 6</h6>
+        \`\`\`
+        
+        ### Párrafos en HTML
+        
+        Utilizamos la etiqueta \`<p>\` para párrafos en HTML.
+        
+        \`\`\`html
+        <p>De esta manera se escriben los párrafos.</p>
+        <p>Agregamos otra etiqueta en caso queremos agregar algún otro.</p>
+        \`\`\`
+        
+        ### Elementos de Texto Especiales
+        
+        #### Span
+        
+        La etiqueta \`<span>\` se utiliza para destacar texto en línea, a primera vista no parece que cambie nada pero luego podemos aplicar estilos diferentes a estos elementos.
+        
+        \`\`\`html
+        <span>Hola mundo</span>
+        \`\`\`
+        
+        #### Strong
+        
+        La etiqueta \`<strong>\` se utiliza para denotar importancia y muestra el texto en negrita.
+        
+        \`\`\`html
+        <strong>Hola mundo</strong>
+        \`\`\`
+        
+        #### Emphasis
+        
+        La etiqueta \`<em>\` se utiliza para dar énfasis y muestra el texto en cursiva.
+        
+        \`\`\`html
+        <em>Hola mundo</em>
+        \`\`\`
+        
+        ### Formato de Texto
+        
+        #### Negrita y Cursiva
+        
+        Las etiquetas \`<b>\` e \`<i>\` también se utilizan para aplicar formato, mostrando texto en negrita y cursiva, respectivamente.
+        
+        \`\`\`html
+        <b>Soy negrita</b>
+        <i>Soy cursiva</i>
+        \`\`\`
+
+        Tal parece que hacen lo mismo que \`<strong>\` y \`<em>\`, pero no, las anteriormente mencionadas tienen este formato por defecto, pero podemos personalizarlas para que se visualizen como querramos. Sin embargo \`<b>\` e \`<i>\` si están pensadas exclisivamente para dar formato de negrita y cursiva.
+        
+        #### Subrayado y Tachado
+        
+        La etiqueta \`<u>\` se utiliza para subrayar, y \`<s>\` para tachar texto.
+        
+        \`\`\`html
+        <u>Subrayado</u>
+        <s>Tachado</s>
+        \`\`\`
+        
+        #### Small
+        
+        La etiqueta \`<small>\` muestra el texto un poco más pequeño que el tamaño por defecto.
+        
+        \`\`\`html
+        <small>Soy más pequeño</small>
+        \`\`\`
+        
+        ### (Un plus) Contenedor básico en HTML
+        
+        Utilizamos la etiqueta \`<div>\` como contenedor. Los contenedor se consideran elementos de bloque.
+        
+        \`\`\`html
+        <div>
+            <span>Hola mundo</span>
+            <span>Otro texto</span>
+        </div>
+        \`\`\`
+
+        ### Recursos utilizados en la clase
+
+        - <a href="https://gist.github.com/leosbelpoll/bd572bc3a0a846ad4c677058c87573d2" target="_blank">Parte teórica</a>
+        - <a href="https://gist.github.com/leosbelpoll/7cdffa6bb88e966909a0e35d4bc9fa5d" target="_blank">Desarrollo tablero de tareas</a> - Proyecto de Curso
+      `,
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/Ta7JUgMfcr0?si=bF-SPd73IV3mXlc6",
@@ -270,8 +372,74 @@ export const classes = [
       en: "List",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      es: `
+        En HTML podemos tener 3 tipos de listas. Siendo estos las descriptivas, ordenadas y no ordenadas.
+        
+        ### Lista Descriptiva
+        
+        Esta lista es bastante útil cuando queremos crear algo parecido a un diccionario, donde tendremos los conceptos y su significado. Para este tipo de lista, utilizamos la etiqueta \`<dl>\` (Description List).
+        
+        \`\`\`html
+        <dl>
+            <dt>Lunes</dt>
+            <dd>El primer día de la semana.</dd>
+            <dt>Martes</dt>
+            <dd>El segundo día de la semana.</dd>
+            <!-- ... -->
+        </dl>
+        \`\`\`
+        
+        ### Listas Ordenadas
+        
+        Estas listas las utilizamos cuando necesitamos varios elementos que estén ordenados. Utilizamos la etiqueta \`<ol>\` (Ordered List) y la etiqueta \`<li>\` (List Item).
+        
+        \`\`\`html
+        <ol>
+            <li>Lunes</li>
+            <li>Martes</li>
+            <li>Miércoles</li>
+            <li>Jueves</li>
+            <li>Viernes</li>
+            <li>Sábado</li>
+            <li>Domingo</li>
+        </ol>
+        \`\`\`
+        
+        Podemos especificar el tipo de notación con el atributo \`type\`, por ejemplo:
+        
+        \`\`\`html
+        <ol type="a">
+            <li>Lunes</li>
+            <li>Martes</li>
+            <!-- ... -->
+        </ol>
+        \`\`\`
+        
+        También, el atributo \`reversed\` para invertir el orden, como este es **booleano** no lleva valor, es solo especificarlo.
+
+        \`\`\`html
+        <ol reversed>
+            <li>Lunes</li>
+            <li>Martes</li>
+            <!-- ... -->
+        </ol>
+        \`\`\`
+        
+        ### Listas No Ordenadas
+        
+        Estas listas las utilizamos cuando los elementos no requieren un orden específico. Utilizamos la etiqueta \`<ul>\` (Unordered List) y la etiqueta \`<li>\` (List Item).
+        
+        \`\`\`html
+        <ul>
+            <li>Pepe</li>
+            <li>Juan</li>
+            <!-- ... -->
+        </ul>
+        \`\`\`
+        
+        Podemos personalizar el estilo de la lista cambiando el tipo de viñeta con el atributo \`type\`.
+      `,
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/0a8kjLjNfh4?si=Q9GODj7ncU3RhPuX",
@@ -285,8 +453,44 @@ export const classes = [
       en: "Navigation",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      es: `
+        ### ¿Qué son los hipervínculos?
+
+        Los hipervínculos, también reconocidos como enlaces o links, constituyen elementos interactivos fundamentales en una página web, posibilitando la navegación fluida de un punto a otro. Estos recursos no solo encuentran aplicación dentro de nuestro propio sitio web, sino que también son empleados para vincularse con páginas externas, creando una red de conexiones.
+        
+        ### Creando un hipervínculo
+        
+        La creación de un hipervínculo en HTML se lleva a cabo mediante la implementación de la etiqueta \`<a>\`. Tomemos como ejemplo la vinculación con una página de ayuda:
+        
+        \`\`\`html
+        <a href="ayuda.html" title="Ir a la página de ayuda">Acceder a la ayuda</a>
+        \`\`\`
+        
+        En este caso, el atributo \`href\` define la ubicación de destino del enlace, ya sea una página interna de nuestro proyecto HTML o un recurso externo. Adicionalmente, hemos incorporado el atributo \`title\`, que proporciona un texto descriptivo emergente cuando se coloca el cursor sobre el enlace.
+        
+        ### Enlazando a una página externa
+        
+        La vinculación a páginas externas, como en el caso de Facebook, requiere la utilización del atributo \`target\` con el valor \`_blank\`, asegurando que la página se abra en una nueva pestaña del navegador y no reemplace la actual.
+        
+        \`\`\`html
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Ir al Facebook</a>
+        \`\`\`
+        
+        Adicionalmente, hemos incluido los atributos \`rel="noopener noreferrer"\`, recomendados para mejorar la seguridad al abrir enlaces externos desde nuestra página.
+        
+        ### Contenido dentro de un hipervínculo
+        
+        Dentro de la etiqueta \`<a>\`, se tiene la flexibilidad de incorporar una variedad de elementos, como texto, imágenes, formularios, etc. Esto posibilita la creación de enlaces visualmente atractivos y dinámicos.
+        
+        \`\`\`html
+        <a href="enlace..." title="Descripción del enlace">
+            <!-- Otros elementos HTML, como imágenes, texto, formularios, etc. -->
+        </a>
+        \`\`\`
+        
+        Al emplear este enfoque, el contenido dentro del hipervínculo puede abarcar diversos elementos HTML, permitiendo una personalización completa de la apariencia y funcionalidad del enlace.
+      `,
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/4BiyEG_OWsE?si=jITsFhhGh5sit5OP",
@@ -300,8 +504,37 @@ export const classes = [
       en: "Images",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      es: `
+        Las imágenes son más que simples elementos visuales; son narradores de historias, expresan emociones y añaden un toque personal a nuestro contenido. En esta clase, aprenderemos a utilizar la etiqueta <img> de HTML para incorporar imágenes de manera efectiva en nuestro sitio web. Desde el control de dimensiones hasta la integración de hipervínculos, exploraremos cada detalle para llevar nuestras habilidades de desarrollo web al siguiente nivel.
+
+        Los atributos más comunes que se usan en la etiqueta \`<img />\` son:
+
+        - **src (source):** Este atributo especifica la dirección de nuestra imagen. Por ejemplo, usaremos la imagen "espacio.png".
+        - **alt (contenido alternativo):** Brinda un texto alternativo en caso de que la imagen no se pueda mostrar. Además, es vital para dispositivos que no pueden mostrar imágenes o para personas con problemas visuales. En nuestro caso, estableceremos "Amigos en el espacio" como contenido alternativo.
+
+        \`\`\`html
+        <img src="espacio.png" alt="Amigos en el espacio">
+        \`\`\`
+
+        ### Controlando Dimensiones
+
+        Para evitar que la imagen ocupe más o menos espacio del esperado, podemos especificar el ancho y el alto utilizando los atributos \`width\` y \`height\`. Esto garantiza una presentación visual agradable sin distorsionar la imagen.
+
+        \`\`\`html
+        <img src="espacio.png" alt="Amigos en el espacio" width="40%">
+        \`\`\`
+
+        \`\`\`html
+        <img src="espacio.png" alt="Amigos en el espacio" height="50%">
+        \`\`\`
+
+        Es esencial recordar que forzar dimensiones inapropiadas puede distorsionar la imagen, y resolveremos este problema más adelante cuando exploremos los [estilos](/courses/css/classes/modelo-de-cajas).
+
+        ### Buenas Prácticas
+
+        Es importante destacar que la etiqueta \`<img>\` en HTML no requiere una etiqueta de cierre. Aunque es opcional, una buena práctica es agregar una barra inclinada al final (\`<img ... />\`).
+      `,
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/5fPZRK6WauE?si=OH89Fd4supajTdxC",
@@ -315,8 +548,146 @@ export const classes = [
       en: "Tables",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      es: `
+        ¿Cómo dar vida a tus datos, organizar la información de manera eficiente y mejorar la experiencia del usuario? En esta lección, aprenderemos a crear y gestionar tablas en HTML de una manera efectiva y dinámica.
+
+        ### Creando una tabla básica en HTML
+
+        Utilizamos la etiqueta \`<table>\` para crear nuestra tabla.
+
+        \`\`\`html
+        <table>
+            <!-- ... -->
+        </table>
+        \`\`\`
+
+        ### Descripción de la tabla en HTML
+        Muchas veces queremos especificar cuál es el objetivo de la tabla y para eso vamos a utilizar la etiquet \`<caption>\`
+
+        \`\`\`html
+        <table>
+        <caption>Listado de Empleados</caption>
+        <!-- ... -->
+        </table>
+        \`\`\`
+
+        ### Cabecera de la tabla en HTML
+
+        Las tablas HTML suelen dividirse en tres secciones: cabecera, cuerpo y pie. Empezaremos con la cabecera, donde definiremos las **columnas** de nuestra tabla.
+
+        \`\`\`html
+        <table>
+            <thead>
+                <tr>
+                    <th>Área</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                </tr>
+            </thead>
+        </table>
+        \`\`\`
+
+        ### Cuerpo de la tabla en HTML
+
+        Ahora, agregaremos filas con información en la sección de cuerpo de la tabla. Utilizaremos las etiquetas \`<tbody>\` para el cuerpo en general, \`<tr>\` para las filas y \`<td>\` para las celdas, en HTML no definimos columnas como tal, sino que la combinación de filas y celdas dan como resultado columnas.
+
+        \`\`\`html
+        <table>
+            <tbody>
+                <tr>
+                    <td>Diseño</td>
+                    <td>José</td>
+                    <td>Mesa Rodríguez</td>
+                </tr>
+                <!-- Puedes duplicar el <tr> y modificar los datos para agregar mas filas -->
+            </tbody>
+        </table>
+        \`\`\`
+
+        ### Pie de tabla en HTML
+
+        Es poco común, pero algunas veces necesitamos agregar una parte inferior en nuestra tabla para mostrar alguna información consolidada. Por ejemplo totales, promedios, etc. Usamos la etiqueta \`<tfooter>\` para esto
+
+        \`\`\`html
+        <table>
+            <tbody>
+                <!-- ... -->
+            </tbody>
+
+            <tfooter>
+                <tr>
+                    <td>Total:</td>
+                    <td>xxx</td>
+                </tr>
+            </tfooter>
+        </table>
+        \`\`\`
+
+        ### Personalizando la tabla en HTML
+
+        Para mejorar la visualización, podemos usar atributos como:
+        - \`border\` para agregar un borde a la tabla, aunque generalmente esto lo hacemos con [estilos](/courses/css/classes/modelo-de-cajas) y no directamente en el HTML
+        - \`colspan\` para fusionar celdas y que ocupen varias columnas
+        - \`rowspan\` para fusionar celdas y que ocupen varias filas
+
+        \`\`\`html
+        <table border="2">
+            <!-- ... -->
+            <td colspan="2">Rodríguez</td>
+            <!-- ... -->
+        </table>
+        \`\`\`
+
+        Ejemplo con los elementos vistos:
+
+        \`\`\`html
+        <table border="2">
+            <caption>Listado de empleados</caption>
+            <thead>
+            <th>Area</th>
+            <th>Nombre</th>
+            <th colspan="2">Apellidos</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Disenno</td>
+                <td>Jose</td>
+                <td>Mesa</td>
+                <td>Rodriguez</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Programacion</td>
+                <td>Jose</td>
+                <td>Mesa</td>
+                <td>Rodriguez</td>
+            </tr>
+            <tr>
+                <td>Jose</td>
+                <td>Mesa</td>
+                <td>Rodriguez</td>
+            </tr>
+            <tr>
+                <td>Jose</td>
+                <td>Mesa</td>
+                <td>Rodriguez</td>
+            </tr>
+            <tr>
+                <td>Calidad</td>
+                <td>Jose</td>
+                <td>Mesa</td>
+                <td>Rodriguez</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>Total</td>
+                <td colspan="3">5 empleados</td>
+            </tr>
+            </tfoot>
+        </table>
+        \`\`\`
+      `,
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/l3CLCfyHAWg?si=9dwcA-ddjHo6_Ur",
@@ -330,8 +701,146 @@ export const classes = [
       en: "Forms",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      es: `
+        Los formularios son una parte fundamental de la interacción entre usuarios y aplicaciones web. En HTML, la creación y el diseño de formularios es esencial para recopilar datos de manera estructurada y eficiente. En esta clase, exploraremos los elementos asociados a los formularios en HTML.
+
+        ### Creando la Base del Formulario
+        
+        Comencemos por la etiqueta \`<form>\`, la cual encierra todos los elementos del formulario. El atributo \`action\` indica a qué servidor se enviará la petición una vez completado el formulario, acompañado por el atributo \`method\` que define que [**método** o **verbo** HTTP](https://developer.mozilla.org/es/docs/Web/HTTP/Methods) queremos usar para enviar la información, teniendo por defecto el valor \`get\`.
+        
+        \`\`\`html
+        <form action="/ruta-del-servidor" method="post">
+            <!-- Contenido del formulario -->
+        </form>
+        \`\`\`
+        
+        ### Campos en formularios HTML
+        
+        La etiqueta \`<input>\` es fundamental. Por defecto, su atributo \`type\` tiene valor \`text\`, pero esta es utilizada para la mayoría de tipos de campos de formularios. Los tipos más comunes serían:
+        
+        1. **text:**: Campo de entrada de texto estándar.
+        2. **password:**: Campo de entrada de contraseña oculta.
+        3. **number:**: Campo de entrada numérico para valores.
+        4. **checkbox:**: Casilla de verificación que permite seleccionar múltiples opciones.
+        5. **radio:**: Botón de opción que permite seleccionar una opción de un grupo.
+        6. **submit:**: Botón para enviar el formulario.
+        7. **reset:**: Botón para restablecer los valores del formulario.
+        8. **file:**: Campo para seleccionar archivos locales.
+        9. **date:**: Campo de entrada de fecha.
+        10. **email:**: Campo de entrada para direcciones de correo electrónico.
+        11. **url:**: Campo de entrada para direcciones URL.
+        12. **search:**: Campo de búsqueda interactivo.
+        13. **tel:**: Campo de entrada para números de teléfono.
+        14. **email:**: Campo de entrada para correo electrónicos.
+        
+        
+        ### Uso de "Etiquetas", mejorando la Accesibilidad
+        
+        Mejoramos la accesibilidad asociando etiquetas (no se refiere a etiqueta HTML, sino a una un elemento asociado a un campo de formulario). Para esto usamos la etiqueta \`<label>\` con los elementos del formulario mediante el atributo \`for\`, el valor de éste atributo tiene que ser el mismo que el valor del atributo \`id\` en el campo de formulario, ejemplo: **nombre_usuario**.
+        
+        \`\`\`html
+        <label for="nombre_usuario">Nombre de Usuario:</label>
+        <input type="text" id="nombre_usuario" />
+        \`\`\`
+        
+        ### Agrupación de elementos
+        
+        Para evitar confusiones visuales, agrupamos elementos dentro de contenedores, utilizando la etiqueta \`div\` normalmente.
+        
+        \`\`\`html
+        <div>
+            <label for="nombre_usuario">Nombre de Usuario:</label>
+            <input type="text" id="nombre_usuario" />
+        </div>
+        <div>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" />
+        </div>
+        \`\`\`
+        
+        ### Elementos Numéricos, Checkboxes y Radios
+        
+        Añadimos un elemento de tipo número, checkboxes y radios al formulario
+        
+        \`\`\`html
+        <form>
+            <div>
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" />
+            </div>
+            <div>
+                <p>Seleccione varias opciones para aprender:</p>
+        
+                <input type="checkbox" id="check_html" value="html" />
+                <label for="check_html">HTML</label>
+                <br />
+                <input type="checkbox" id="check_html" value="css" />
+                <label for="check_html">CSS</label>
+                <br />
+                <input type="checkbox" id="check_html" value="javascript" />
+                <label for="check_html">Javascript</label>
+            </div>
+            <div>
+                <p>Seleccione SOLO UNA opción para aprender:</p>
+        
+                <input type="radio" name="radio-lenguaje" id="radio-html" value="html" />
+                <label for="radio-html">HTML</label>
+                <br />
+                <input type="radio" name="radio-lenguaje" id="radio-css" value="css"/>
+                <label for="radio-css">CSS</label>
+                <br />
+                <input type="radio" name="radio-lenguaje" id="radio-javascript" value="javascript"/>
+                <label for="radio-javascript">JavaScript</label>
+            </div>
+        </form>
+        \`\`\`
+        
+        ### Campos que tienen su propia etiqueta
+        
+        Hay algunos campos que tienen su propia etiqueta en vez de usar \`<input>\` con algun \`type\` específico. Las más comunes son:
+        
+        - \`<select>\`: Agrega un selector con múltiple opciones
+        - \`<textarea>\`: Agrega un campo de texto cuando el contenido es más largo que algunas palabras
+        
+        \`\`\`html
+        <form>
+            <label for="selector_lenguaje">Seleccione alguna opción a aprender:</label>
+            <select id="selector_lenguaje">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">Javascript</option>
+            </select>
+        </form>
+        \`\`\`
+        
+        \`\`\`html
+        <form>
+            <label for="parrafo">Escriba su párrafo:</label>
+            <textarea  id="parrafo" cols="30" rows="10"></textarea>
+        </form>
+        \`\`\`
+        
+        Para todos los elementos que vimos se usa un atributo que va a ser el nombre de la variable que viaja hacia el servidor, este sería \`name\`.
+        
+        ### Validación de Formularios en HTML
+        
+        La validación de formularios es esencial para garantizar que los datos ingresados sean correctos y cumplan con los requisitos esperados. HTML proporciona funciones integradas para validar formularios de manera sencilla utilizando atributos como por ejemplo:
+        
+        - **required**: Especifica que un campo debe ser completado antes de enviar el formulario.
+        - **pattern**: Para [expresiones regulares](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_expressions).
+        - **min** y **max**: Especifican un valor mínimo y máximo en campos numéricos.
+        
+        \`\`\`html
+        <form>
+            <input type="text" name="nombre" required />
+        
+            <input type="text" name="cedula" pattern="[a-z]{7,10}" />
+        
+            <input type="number" name="edad" min="18" max="150" />
+        </form>
+        \`\`\`
+      `,
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/-Il58AlPvs0?si=2rlmZ-p6s6OrvtmQ",
@@ -345,8 +854,33 @@ export const classes = [
       en: "HTML 5",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      es: `
+        Hasta hace algunos años, reinaba un contenedor omnipresente en el mundo web: la etiqueta \`<div>\`. En el pasado, para diseñar una página web, dividíamos sus partes con \`<div>\`s, y la identificación de cada sección se volvía un desafío para los desarrolladores. Sin embargo, HTML5 llegó para cambiar esto, con nuevas etiquetas con significado semántico para estructurar nuestra web.
+
+        ### Nueva jerarquía de contenedores
+        HTML5 trajo consigo una gama de elementos para facilitar la identificación y navegación en las páginas web. Vamos a sumergirnos en la estructura y descubrir cómo estos elementos mejoran la indexación de contenido por parte de los motores de búsqueda.
+
+        #### Navegación
+        En lugar de depender solo de \`<div>\`s, ahora utilizamos \`<nav>\` para definir áreas de navegación. Esto proporciona claridad sobre el propósito del contenido y su relación con la navegación.
+
+        #### Cabecera
+        La etiqueta \`<header>\` reemplaza a las \`<div>\`s que solíamos usar para la parte superior de la página. Ahora, el contenido del encabezado no solo es más semántico sino también más fácil de identificar.
+
+        #### Contenido Principal
+        La etiqueta \`<main>\` se convierte en el contenedor principal para todo el contenido importante de la página. Esto mejora la indexación y claridad en la jerarquía de la página.
+
+        #### Secciones Específicas
+        Dentro de \`<main>\`, utilizamos la etiqueta \`<section>\` para dividir el contenido en secciones más específicas. Esto hace que la estructura sea más organizada y comprensible.
+
+        #### Artículos
+        Los elementos específicos dentro de las secciones se representan con la etiqueta \`<article>\`. Esto es especialmente útil para contenidos repetitivos o similares.
+
+        #### Pie de Página
+        La etiqueta \`<footer>\` engloba la información del pie de página. Es el lugar adecuado para ubicar elementos relacionados con el cierre de la página.
+
+        HTML5 no solo ha revolucionado la forma en que estructuramos nuestras páginas web, sino que también ha introducido características avanzadas, como imágenes responsivas y una mejor integración con el almacenamiento del navegador. Estos temas avanzados los exploraremos en cursos futuros.
+      `,
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/1YoGeG7ikuY?si=_4YyAlrXszGadwiu",
@@ -360,8 +894,37 @@ export const classes = [
       en: "What's next?",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      es: `
+        En este episodio de despedida, descubrirás dos atributos cruciales que no exploramos intencionalmente durante el curso, pero que se convertirán en herramientas fundamentales en tus futuros proyectos: \`id\` y \`class\`. Estos no solo te permitirán identificar elementos de manera única (\`id\`) sino también agrupar varios elementos bajo un mismo concepto (\`class\`), brindándote un control más preciso y eficiente sobre el comportamiento y estilo de tus elementos. Éstos los estaremos analizando a profundidad en los cursos de [CSS](/courses/css) y Javascript (Curso en progreso).
+
+        ### Documentación Oficial
+
+        El sitio de [desarrolladores de Mozilla](https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML) y también [W3 Schools](https://www.w3schools.com/html/default.asp) se erigen como una fuente invaluable de tutoriales, referencias y guías que te acompañarán en tu trayecto de programación.
+
+        ### Siguiente Paso: Explorando Caminos
+
+        Ahora que has dominado la esencia de HTML, es el momento de reflexionar sobre tu futuro en el desarrollo web. Te ofrezco un consejo: visualiza cinco o seis páginas web que desearías crear y ¡manos a la obra! No te obsesiones con la estética en este punto, recuerda que HTML se centra en el contenido.
+
+        Después de HTML, el horizonte se abre en varias direcciones:
+
+        ##### 1. CSS: Estilo Personalizado
+
+        Si eres un diseñador gráfico experimentado o posees ideas claras sobre el diseño de tu sitio, adéntrate en [CSS](/courses/css). Dedica unas semanas a aprender este lenguaje para dotar a tus páginas web con estilos únicos y personalizados.
+
+        ##### 2. Librerías de CSS: Resultados Rápidos y Atractivos
+
+        Si buscas un camino más rápido para lograr páginas visualmente atractivas con poco esfuerzo, las librerías de CSS son tu mejor aliado. Recomiendo especialmente Bootstrap (Curso en progreso), una librería popular que ofrece recursos abundantes y componentes predefinidos para agilizar tu proceso de desarrollo.
+
+        ##### 3. Javascript
+
+        Si ya sabes cómo dar estilos a tu página, o si no es algo que necesitas ahora mismo sino que quieres aprender a darle vida a tus páginas para que éstas sean interactivas, te recomiendo el curso de Javascript (Curso en progreso)
+
+        ---
+        **¡Gracias por acompañarme en este curso HTML!**
+        
+        ¡Nos vemos en el próximo desafío de programación!
+      `,
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/9KF4ZzL4_qw?si=Qt01b39_Mvfk5qah",
@@ -376,7 +939,7 @@ export const classes = [
     },
     content: {
       es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/ELvgd1jAHvs?si=JHASn34qWfnzxszu",
@@ -391,7 +954,7 @@ export const classes = [
     },
     content: {
       es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/rXuB6a56DR8?si=Y8pv2G1JPM3Wfnz1",
@@ -406,7 +969,7 @@ export const classes = [
     },
     content: {
       es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/bI4Zc9dDRMI?si=eL8mEs6S819Jdmbp",
@@ -421,7 +984,7 @@ export const classes = [
     },
     content: {
       es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
-      en: "This is my description",
+      en: "",
     },
     video: {
       es: "https://www.youtube.com/embed/vBC0O7R-ge0?si=wtEMd-1q0dCYoRt2",
