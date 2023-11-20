@@ -1368,7 +1368,92 @@ export const classes = [
       en: "Colors",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
+      es: `
+        Vamos a explorar cómo transformar el diseño de una página web, centrándonos específicamente en la manipulación de colores. Descubriremos las propiedades más utilizadas y los diferentes tipos de valores que podemos asignar a estas propiedades para dar vida a nuestros elementos.
+
+        ### Propiedades relacionadas con colores más comunes
+
+        #### Color del texto
+
+        Comencemos por cambiar el color del texto en nuestra página. Utilizaremos la propiedad \`color\`
+
+        \`\`\`css
+        body {
+            color: red;
+        }
+        \`\`\`
+
+        #### Color de fondo
+
+        La propiedad \`background\` nos permite modificar el fondo de los elementos. Experimentaremos con colores sólidos y, como un extra, exploraremos los elegantes degradados.
+
+        \`\`\`css
+        body {
+            background: red;
+        }
+        \`\`\`
+
+        \`\`\`css
+        body {
+            background: linear-gradient(#e66465, #9198e5);
+        }
+        \`\`\`
+
+        #### Bordes
+
+        Otra de las propiedades comunes es \`border\`, esta nos permite agregarle un borde a los contenedores. Su valor está compuesto por el tamaño, el estilo y el color del borde.
+
+        \`\`\`css
+        .button {
+            border: 2px solid white;
+        }
+        \`\`\`
+
+        #### Añadiendo Sombras y Efectos
+
+        Demos un toque de profundidad a nuestros elementos. La propiedad \`box-shadow\` nos permitirá crear sombras con diferentes desplazamientos y difuminaciones a los cajas contenedoras. Su valor se compone por desplazamiento en el eje de las X, luego el eje de las Y, difuminación y por último color.
+
+        \`\`\`css
+        .activo {
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+        }
+        \`\`\`
+
+        También podemos añadirle sombra a los textos con la propiedad \`text-shadow\`. Su valor esta compuesto de la misma manera que \`box-shadow\`
+
+        \`\`\`css
+        .super-texto {
+            text-shadow: 5px 5px 0px red;
+        }
+        \`\`\`
+
+        ### Tipos de valores que pueden generar color
+
+        Seguramente cuando viste en los ejemplos anteriores te quedó la duda que significaba \`#e66465\` o \`rgba(0, 0, 0, 0.2)\`. Y es que en CSS tenemos varias maneras de lograr algún color específico.
+
+        #### Colores nombrados
+
+        Existe una gran variedad de <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">colores nombrados</a>. Básicamente el valor seria como su significado en Inglés. Con algunas variaciones cuando es más claro u oscuro. Por ejemplo: \`blue\`, \`lightblue\` y \`darkblue\`.
+
+        Hay un valor nombrado en específico que es bastante especial, y estamos hablando de \`transparent\`. Cuando este valor está asignado simplemente será invisible. Es bastante útil para algunas técnicas con bordes, degradados, etc.
+
+        #### Valores hexadecimales
+
+        El <a target="_blank" href="https://es.wikipedia.org/wiki/Sistema_hexadecimal">sistema hexadecimal</a> es bastante común usado en los colores CSS. Este se puede usar de varias maneras pero básicamente representa la combinación de los colores primarios RGB (Red, Green and Blue) además de el canal alpha (A) para lograr cierto nivel de transparencia. Podemos encontrarnos con las siguientes sintaxis:
+
+        \`\`\`text
+        #RGB        // 3 valores
+        #RGBA       // 4 valores
+        #RRGGBB     // 6 valores
+        #RRGGBBAA   // 8 valores
+        \`\`\`
+
+        #### Funciones RGB y RGBA
+
+        Algo parecido a lo de arriba pero esta vez se usa específicamente las funciones pasándoles los valores desde 0 a 255. En el caso de \`rgb(25, 70, 87)\` le estamos pasando desde el rango de 0 a 255, 25 de rojo, 70 de verde y 87 de azul. Si queremos pasarle transparencia usamos la función \`rgba(25, 70, 87, 0.5)\`, el último valor significa un 50% de transparencia.
+
+        Hay muchísimos más tipos de propiedades y valores para los colores, pero los mencionados son los que utilizarán la mayoría del tiempo. Pueden usar <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">la documentación</a> en caso quieran profundizar.
+      `,
       en: "",
     },
     video: {
@@ -1383,7 +1468,74 @@ export const classes = [
       en: "Box Model",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
+      es: `
+        El conocimiento del Modelo de Cajas en CSS (Box Model) es esencial para crear diseños web atractivos, funcionales y compatibles. Permite a los desarrolladores tener un control granular sobre el diseño y resolver eficientemente problemas relacionados con el espacio y la presentación visual en diferentes contextos de navegación.
+
+        ### Conceptos Fundamentales
+
+        El Modelo de Cajas se basa en cuatro elementos clave: **contenido**, **padding**, **border**, y **margen**. Comprender estos elementos es esencial para lograr diseños limpios y atractivos, ya que el espacio entre nuestros elementos juega un papel crucial.
+
+        #### Espacios y Direcciones
+
+        Cuando hablamos del Modelo de Cajas, nos referimos a dos direcciones desde el borde. Hacia adentro, encontramos el **padding**, que es el espacio entre el borde y el contenido. Hacia afuera, tenemos el **margen**, que afecta la relación con otros elementos.
+
+        ### Atributos relacionados
+
+        #### Ancho y Alto
+
+        Cuando éstos no se definen los contenedores van a crecer según el contenido, pero una vez definidos se restringe a que un contenedor se comporte con cierto ancho (\`width\`) y alto (\`height\`).
+
+        \`\`\`css
+        .tarjeta {
+            width: 250px;
+            height: 400px;
+        }
+        \`\`\`
+
+        #### Borde
+
+        \`\`\`css
+        .tarjeta {
+            border: 5px solid white;
+        }
+        \`\`\`
+
+        #### Padding
+
+        La mayoría de las veces vamos a querer cierto espacio entre el borde y el contenido para que no aparezca todo pegado.
+
+        \`\`\`css
+        .tarjeta {
+            padding: 20px;
+        }
+        \`\`\`
+
+        #### Margin
+
+        Otras veces vamos a querer cierto espacio entre el borde de nuestro contenedor y el borde de los otros contenedores que lo rodean.
+
+        \`\`\`css
+        .tarjeta {
+            margin: 20px;
+        }
+        \`\`\`
+
+        Para asignarle el valor del \`padding\` y \`margin\` podemos hacerlo de varias maneras.
+
+        \`\`\`text
+        padding: 10px; // Significa 10px arriba, a la derecha, abajo y a la izquierda
+
+        padding: 5px 10px; // Significa 5px arriba y abajo y 10px a la izquierda y derecha
+
+        margin: 5px 10px 0 10px; // Significa 5px arriba, 10px a la derecha, 0 abajo y 10px a la izquierda
+        \`\`\`
+
+        Tambien existen propiedades específicas para referirse a que lado queremos asignarle el valor, siendo estas \`padding-top\`, \`padding-left\`, \`padding-right\`, y \`padding-bottom\`. Los mismos prefijos aplican para el \`border\` y \`margin\`.
+
+        ### Tamaño total
+
+        El tamaño total de un contenedor está dado por \`contenido + padding + border + margin\`, algunas veces queremos que si le damos un ancho fijo a nuestras cajas que este no se vea afectado por alguna otra propiedad de espaciado. Para lograr esto usamos la propiedad \`box-sizing: border-box\`.
+      `,
       en: "",
     },
     video: {

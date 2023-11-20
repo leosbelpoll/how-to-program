@@ -17,17 +17,29 @@ import { Modal } from "./modal";
 import { Iframe } from "./iframe";
 import { CodeBlock } from "./code-block";
 import { AutoScrollTop } from "./auto-scroll-top";
+import { InProgressContent } from "./in-progress-content";
 
 function ClassDetailsInternal({
   isFullScreen,
   clas,
+  course,
   nextRecommendedClass,
   nextRecommendedCourse,
 }) {
   const { language } = useContext(LanguageContext);
   const { theme } = useContext(ThemeContext);
 
-  const { video, title, content } = clas;
+  const { video, title, content, showSubscription } = clas;
+
+  if (showSubscription) {
+    return (
+      <InProgressContent
+        interestedUrl={`/courses/${slugify(
+          course.title[language]
+        )}/classes/${slugify(clas.title[language])}`}
+      />
+    );
+  }
 
   return (
     <div className="class-details mb-3">
@@ -74,9 +86,25 @@ function ClassDetailsInternal({
             <hr />
             <strong>Próxima clase:</strong>{" "}
             <Link
-              href={`/courses/${slugify(
-                nextRecommendedCourse.title[language]
-              )}/classes/${slugify(nextRecommendedClass.title[language])}`}
+              href={
+                !nextRecommendedClass.showSubscription
+                  ? `/courses/${slugify(
+                      nextRecommendedCourse.title[language]
+                    )}/classes/${slugify(nextRecommendedClass.title[language])}`
+                  : "#"
+              }
+              onClick={() =>
+                localStorage.setItem(
+                  "linkToSubscribe",
+                  `/courses/${slugify(
+                    nextRecommendedCourse.title[language]
+                  )}/classes/${slugify(nextRecommendedClass.title[language])}`
+                )
+              }
+              data-bs-toggle={
+                nextRecommendedClass.showSubscription ? "modal" : ""
+              }
+              data-bs-target="#subscriptionModal"
             >
               {nextRecommendedCourse.title[language]} -{" "}
               {nextRecommendedClass.title[language]}
@@ -133,6 +161,7 @@ export function ClassDetails() {
     <AutoScrollTop params={{ courseSlug, classSlug }}>
       <ClassDetailsInternal
         clas={currentClass}
+        course={currentCourse}
         nextRecommendedClass={nextRecommendedClass}
         nextRecommendedCourse={nextRecommendedCourse}
       />
@@ -140,6 +169,7 @@ export function ClassDetails() {
         <ClassDetailsInternal
           isFullScreen
           clas={currentClass}
+          course={currentCourse}
           nextRecommendedClass={nextRecommendedClass}
           nextRecommendedCourse={nextRecommendedCourse}
         />

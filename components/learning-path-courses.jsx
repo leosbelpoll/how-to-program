@@ -12,6 +12,7 @@ import { HorizontalCard } from "./horizontal-card";
 import { slugify } from "../utils/string";
 import { useRouter } from "next/router";
 import { AutoScrollTop } from "./auto-scroll-top";
+import { InProgressContent } from "./in-progress-content";
 
 function LearningPathCourses({ currentLearningPathId }) {
   const { search = "" } = useContext(SearchContext);
@@ -35,6 +36,18 @@ function LearningPathCourses({ currentLearningPathId }) {
   const relatedCourses = courses.filter((course) =>
     learningPath.courses.includes(course.id)
   );
+
+  const { showSubscription } = learningPath;
+
+  if (showSubscription) {
+    return (
+      <InProgressContent
+        interestedUrl={`/learning-paths/${slugify(
+          learningPath.title[language]
+        )}`}
+      />
+    );
+  }
 
   return (
     <AutoScrollTop params={{ learningPathSlug }}>

@@ -10,6 +10,7 @@ import { slugify, normalizeStringLiteral } from "../utils/string";
 import { Iframe } from "./iframe";
 import { CodeBlock } from "./code-block";
 import { AutoScrollTop } from "./auto-scroll-top";
+import { InProgressContent } from "./in-progress-content";
 
 export function CourseDetails({ course }) {
   const router = useRouter();
@@ -25,7 +26,15 @@ export function CourseDetails({ course }) {
 
   if (!currentCourse) return <h3>Invalid course slug: {courseSlug}</h3>;
 
-  const { id, video, title, content, tags } = currentCourse;
+  const { id, video, title, content, tags, showSubscription } = currentCourse;
+
+  if (showSubscription) {
+    return (
+      <InProgressContent
+        interestedUrl={`/courses/${slugify(currentCourse.title[language])}`}
+      />
+    );
+  }
 
   return (
     <AutoScrollTop params={{ courseSlug }}>
