@@ -1084,7 +1084,82 @@ export const classes = [
       en: "Including styles",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
+      es: `
+        Vamos a explorar las tres formas de incorporar CSS en nuestras páginas web. Descubriremos las ventajas y desventajas de cada método para que puedas tomar decisiones informadas en tu desarrollo web.
+
+        ## Método 1: Estilos en Línea
+
+        La primera técnica que exploraremos es la asignación de estilos en línea. Al agregar el atributo \`style\` a un elemento, podemos personalizar su apariencia de manera rápida y directa. Sin embargo, esta metodología presenta limitaciones cuando lidiamos con múltiples elementos similares. Imagina tener que copiar y pegar estilos repetitivos en cada uno, ¡un trabajo tedioso y propenso a errores!
+
+        \`\`\`html
+        <p style="color: red; background: yellow">Este párrafo va a tener el fondo amarillo con el color rojo</p>
+        \`\`\`
+
+        ## Método 2: Estilos Internos
+
+        El segundo enfoque es la aplicación de estilos internos. Mediante la etiqueta \`<style>\` dentro del elemento \`<head>\`, podemos especificar estilos para elementos específicos. Aunque más organizado que el método en línea, este enfoque puede volverse engorroso en proyectos extensos, donde la mezcla de estilos y contenido puede dificultar el mantenimiento y la comprensión del código. Además de imposibilitar reutilizar estilos de un fichero HTML a otro.
+
+        \`\`\`html
+        <html>
+            <head>
+                <style>
+                    p {
+                        color: red;
+                        background: yellow;
+                    }
+                </style>
+            </head>
+
+            <body>
+                <p>Este párrafo va a tener el fondo amarillo con el color rojo</p>
+                <p>Este otro párrafo también va a tener los mismos estilos</p>
+            </body>
+        </html>
+        \`\`\`
+
+        ## Método 3: Estilos Externos
+
+        Finalmente, llegamos al método externo, una práctica que revoluciona la eficiencia en el desarrollo web. Crearemos un archivo CSS independiente, en este caso, llamado \`index.css\`. Luego, mediante la etiqueta \`<link>\` en el \`<head>\`, vincularemos este archivo a nuestro HTML. Esto no solo organiza nuestro código de manera más clara, sino que también facilita la reutilización de estilos en múltiples páginas, evitando duplicaciones innecesarias.
+
+        \`\`\`css
+        /* Fichero index.css */
+
+        p {
+            color: red;
+            background: yellow;
+        }
+        \`\`\`
+
+        \`\`\`html
+        <html>
+            <head>
+                <link rel="stylesheet" href="index.css" />
+            </head>
+
+            <body>
+                <p>Este párrafo va a tener el fondo amarillo con el color rojo</p>
+                <p>Este otro párrafo también va a tener los mismos estilos</p>
+            </body>
+        </html>
+        \`\`\`
+
+        ### Cascada de Estilos
+
+        CSS, que significa Cascading Style Sheets (Hojas de Estilo en Cascada), opera de arriba hacia abajo. Cada instrucción sobrescribe a la anterior si se refiere al mismo elemento y estilo. Este principio de cascada nos permite controlar la apariencia de nuestros elementos de manera efectiva.
+
+        Los párrafos van a ser de color verde en este caso:
+
+        \`\`\`css
+        p {
+            color: red;
+            background: yellow;
+        }
+
+        p {
+            color: green;
+        }
+        \`\`\`
+      `,
       en: "",
     },
     video: {
@@ -1099,7 +1174,186 @@ export const classes = [
       en: "CSS Selectors",
     },
     content: {
-      es: "Descripción en progreso. Puedes ver la clase en YouTube en lo que actualizo el contenido.",
+      es: `
+        Vamos a explorar los **selectores** en CSS de manera detallada, permitiéndote acceder y estilizar cada elemento de tu página de una manera que transformará la apariencia y comportamiento de tus componentes. Prepárate para descubrir nuevas formas de acceder a tus elementos que nunca imaginaste.
+
+        ### 1. Selectores Simples
+
+        Comenzaremos nuestro viaje explorando los selectores simples, permitiéndonos darle estilo a todos los elementos de la misma etiqueta. Veremos cómo, con tan solo especificar la etiqueta, podemos transformar la apariencia de nuestros componentes.
+
+        \`\`\`css
+        li {
+            color: red;
+        }
+        \`\`\`
+
+        También podemos especificar todos los elementos que tienen una determinada clase o un elemento específico por su identificador.
+
+        \`\`\`css
+        /* Todos los elementos que tengan clase activo, no importa la etiqueta que sean */
+        .activo {
+            color: green;
+        }
+
+        /* Todos los elementos de tipo p que tengan clase activo */
+        p.activo {
+            color: yellow;
+        }
+
+        /* El único elemento que tenga como identificador cabecera */
+        #cabecera {
+            color: orange;
+        }
+        \`\`\`
+
+        ### 2. Selectores Combinadores
+
+        Avanzaremos hacia los selectores combinadores, aprendiendo a especificar estilos para los descendientes de un elemento. Descubriremos cómo utilizar el espacio y los símbolos \`>\`, \`+\`, y \`~\` para afectar únicamente a ciertos elementos relacionados.
+
+        \`\`\`css
+        /* index.css */
+
+        /* Afecta a todos los <li> dentro de cualquier <ul> */
+        ul li {
+            color: grey;
+        }
+
+        /* Afecta a todos los <li> que sean hijos inmediatos de cualquier <ul> que tenga clase en-progreso */
+        ul.en-progreso > li {
+            color: green;
+        }
+
+        /* Afecta a todos los <li> hermanos, que estan después de cualquier <li> con clase siendo-atendido */
+        li.siendo-atendido ~ li {
+            color: blue;
+        }
+
+        /* Afecta solo al próximo <li> hermano, que estan después de cualquier <li> con clase siendo-atendido */
+        li.siendo-atendido + li {
+            color: orange;
+        }
+        \`\`\`
+
+        \`\`\`html
+        <html>
+            <head>
+                <link rel="stylesheet" href="index.css" />
+            </head>
+
+            <body>
+                <ul class="lista-principal">
+                    <li>Sala A</li> <!-- grey -->
+                    <ul>
+                        <li>Tomás</li> <!-- grey -->
+                        <li>Luisi</li> <!-- grey -->
+                    </ul>
+                    <li>Sala B</li> <!-- grey -->
+                    <ul class="en-progreso">
+                        <li>Juan</li> <!-- green -->
+                        <li class="siendo-atendido">Carlos</li> <!-- green -->
+                        <li>Manuel</li> <!-- orange -->
+                        <li>Pepe</li> <!-- blue -->
+                        <li>Joaquin</li> <!-- blue -->
+                    </ul>
+                </ul>
+            </body>
+        </html>
+        \`\`\`
+
+        ### 3. Selectores de Pseudo Elementos: Partes de un elemento
+
+        Estos nos permiten dar estilos específicos a partes de nuestros elementos, utilizando \`::before\`,  \`::after\`, \`::first-line\`, \`::first-letter\`, etc
+
+        \`\`\`css
+        /* 
+            Agregar algun contenido con estilos sin tener que tocar el HTML
+            A los <li class="proxima-persona">, se le va a agregar automáticamente algún contenido con estilos
+        */
+        li.proxima-persona::after {
+            content: "➡️ Vaya preparándose ";
+            background: yellow;
+            color: red;
+        }
+        \`\`\`
+
+        \`\`\`css
+        /* Hacer la primera letra de todos los párrafos más grande */
+        p::first-letter {
+            font-size: 3em;
+        }
+        \`\`\`
+
+        ### 4. Pseudo Clases: Estados de un elemento
+
+        Las pseudo clases nos van a permitir acceder a elementos en estados específicos, como \`:hover\`, \`:focus\`, \`:invalid\`, etc.
+
+        \`\`\`css
+        /* Modificar el background de los botones cuando le pase el mouse por encima */
+        button:hover {
+            background: green;
+        }
+
+        /* Cambiar el estilo del elemento de formulario mientras esté enfocado */
+        input:focus {
+            background: yellow;
+            color: red;
+        }
+
+        /*
+            Cambiar el estilo del elemento de formulario mientras sea inválido
+            Ejemplo:
+            - Está vacio cuando es requerido
+            - El valor numérico es menor a mayor al mínimo o máximo requerido
+        */
+        input:invalid {
+            border: 2px dashed red;
+        }
+
+        /* Cambiar el estilo de las filas pares dentro de una tabla */
+        table tr:nth-child(2n) {
+            background: grey;
+        }
+        \`\`\`
+
+        ### 5. Selectores de Atributos
+
+        Nos permite seleccionar elementos basados en la presencia o valor de sus atributos
+
+        \`\`\`css
+        /* Modificar el estilo de los links que contengan el atributo target */
+        a[target] {
+            color: green;
+        }
+
+        /* Modificar el estilo de los links que contengan el atributo target con valor _blank */
+        a[target="_blank"] {
+            color: violet;
+        }
+
+        /* Modificar el estilo de los links que contengan el atributo href y que el valor comience por https:// */
+        a[href^="https://"] {
+            color: blue;
+        }
+        \`\`\`
+
+        ### 6. Selector Universal y Agrupación de Selectores
+
+        Finalmente, exploraremos el poder del selector universal, afectando a todos los elementos de la página. Además, descubriremos cómo agrupar selectores, aplicando estilos similares a varios elementos de manera eficiente.
+
+        \`\`\`css
+        /* A todos los elementos de la página aplica margen 0 */
+        * {
+            margin: 0;
+        }
+
+        /* Aplicar estilos a varios tipos de selectores separandolos por coma, en este caso a todos los <p> pero también a todos los <h3> */
+        p, h3 {
+            color: red;
+        }
+        \`\`\`
+
+        Solo te mostré algunos de los ejemplos por cada categoría de selectores, pero puedes profundizar en <a target="_blank" href="https://www.w3schools.com/css/css_selectors.asp">la documentación</a>.
+      `,
       en: "",
     },
     video: {
