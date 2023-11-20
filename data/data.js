@@ -933,62 +933,101 @@ export const classes = [
     },
     content: {
       es: `
-        - Diseño del proyecto de curso - [Figma link](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa092cU1hbzJRZ242UWM4ckE5VkEyQnV6UjRLZ3xBQ3Jtc0tscUU3ZmJlcXFfeEJqM2Y2UE44REdzMmEyeHBEV0lwUWZKa3l4OXBBT2FEbUtkUHlTZDlPWmJjWTVtUkItbFNkMHlWOGZpSWhqTHJEaUk0MllGd3B2bnlkUkpBalRxa2FLMnEwM18wdlhmWDFQb0ZWWQ&q=https%3A%2F%2Fwww.figma.com%2Fproto%2F5awPw6MrqyLpvVNdLy3lag%2FCurso-de-HTML-para-principiantes%3Ftype%3Ddesign%26node-id%3D1-2%26t%3D2CUAijwcGwTxTUAi-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26mode%3Ddesign&v=1L_ZrxDami4)
+
+        Los videos van a reproducir solo la parte relacionada con el proyecto de curso. Si tienes duda en algo puedes ir a la clase específica.
 
         <br/>
+
+        ### Presentación del proyecto de curso
+
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/1L_ZrxDami4?&theme=dark&autohide=2&start=9&end=90"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
         <br/>
-
-        ### Presentación
-
-        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/1L_ZrxDami4?&theme=dark&autohide=2&start=9&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        
+        - [Figma link con el diseño](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa092cU1hbzJRZ242UWM4ckE5VkEyQnV6UjRLZ3xBQ3Jtc0tscUU3ZmJlcXFfeEJqM2Y2UE44REdzMmEyeHBEV0lwUWZKa3l4OXBBT2FEbUtkUHlTZDlPWmJjWTVtUkItbFNkMHlWOGZpSWhqTHJEaUk0MllGd3B2bnlkUkpBalRxa2FLMnEwM18wdlhmWDFQb0ZWWQ&q=https%3A%2F%2Fwww.figma.com%2Fproto%2F5awPw6MrqyLpvVNdLy3lag%2FCurso-de-HTML-para-principiantes%3Ftype%3Ddesign%26node-id%3D1-2%26t%3D2CUAijwcGwTxTUAi-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26mode%3Ddesign&v=1L_ZrxDami4)
+        
         <br/>
         <br/>
 
         ### Tablero de tareas
 
-        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/Ta7JUgMfcr0?&theme=dark&autohide=2&start=776&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/Ta7JUgMfcr0?&theme=dark&autohide=2&start=776&end=1439"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
         
+        <br/>
+
+        - <a href="https://gist.github.com/leosbelpoll/7cdffa6bb88e966909a0e35d4bc9fa5d" target="_blank">Código del **Tablero de Tareas**</a>
+
         <br/>
         <br/>
 
         ### Menú Lateral
 
-        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/0a8kjLjNfh4?&theme=dark&autohide=2&start=401&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/0a8kjLjNfh4?&theme=dark&autohide=2&start=401&end=592"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
         
+        <br/>
+
+        - <a href="https://gist.github.com/leosbelpoll/af502f0e99295f9c34c7ce082ddf1998" target="_blank">Código del **Menú Lateral**</a>
+
         <br/>
         <br/>
 
         ### Agregando Navegación
 
-        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/4BiyEG_OWsE?&theme=dark&autohide=2&start=357&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/4BiyEG_OWsE?&theme=dark&autohide=2&start=357&end=516"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
         
+        <br/>
+
+        - <a href="https://gist.github.com/leosbelpoll/2274d514c5d7aaef7d20f6af27717639#file-chat-html" target="_blank">Código de la **Página de Chat**</a>
+
         <br/>
         <br/>
 
         ### Agregando Imágenes
 
-        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/5fPZRK6WauE?&theme=dark&autohide=2&start=185&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/5fPZRK6WauE?&theme=dark&autohide=2&start=185&end=425"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
         
+        <br/>
+
+        - <a href="https://gist.github.com/leosbelpoll/32a2fad78e0805a46cadc279878a86e2" target="_blank">Código agregando imágenes al Proyecto de Curso</a>
+        - Imágenes utilizadas
+            - <a target="_blank" href="https://como-programar-resources.vercel.app/spanish/courses/html-beginners/images/imagen1.jpg">Gatito</a>
+            - <a target="_blank" href="https://como-programar-resources.vercel.app/spanish/courses/html-beginners/images/imagen2.jpg">Perrito 1</a>
+            - <a target="_blank" href="https://como-programar-resources.vercel.app/spanish/courses/html-beginners/images/imagen3.jpg">Perrito 2</a>
+            - <a target="_blank" href="https://como-programar-resources.vercel.app/spanish/courses/html-beginners/images/imagen4.jpg">León</a>
+
         <br/>
         <br/>
 
         ### Agregando Listado de Miembros
 
-        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/l3CLCfyHAWg?&theme=dark&autohide=2&start=466&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/l3CLCfyHAWg?&theme=dark&autohide=2&start=466&end=795"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
         
+        <br/>
+
+        - <a href="https://gist.github.com/leosbelpoll/e0805c6d1077884ede8fb522bb25a301" target="_blank">Código del **Listado de Miembros**</a>
+
         <br/>
         <br/>
 
         ### Formulario para búsqueda y eliminar elementos
 
-        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/-Il58AlPvs0?&theme=dark&autohide=2&start=1110&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/-Il58AlPvs0?&theme=dark&autohide=2&start=1110&end=1436"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
         
         <br/>
+
+        - <a href="https://gist.github.com/leosbelpoll/d9b3964e1efa89806f2f7a673864f9f0" target="_blank">Código con formulario de **Búsqueda dinámica** y **Eliminar múltiple**</a>
+
+        <br/>
+        <br/>
+        
+        ### Agregando los elementos de HTML 5
+        
+        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/1YoGeG7ikuY?&theme=dark&autohide=2&start=321&end=654"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        
         <br/>
 
-        ### Agregando los elementos de HTML 5
-
-        <style>.youtube-iframe{position:relative;width:100%;height:0;padding-bottom:56.27198%;}.youtube-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;}</style><div class="youtube-iframe"><iframe width='500' height='294' src="https://www.youtube.com/embed/1YoGeG7ikuY?&theme=dark&autohide=2&start=321&end=83"frameborder="0"></iframe></div><div style='font-size: 0.8em'></div>
+        - <a href="https://gist.github.com/leosbelpoll/3fdb85c5a5fb26fee9011ccbc108f920#file-tareas-html" target="_blank">Código actualizando el **Tablero de tareas**</a>
+        - <a href="https://gist.github.com/leosbelpoll/3fdb85c5a5fb26fee9011ccbc108f920#file-miembros-html" target="_blank">Código actualizando el **Listado de miembros**</a>
+        - <a href="https://gist.github.com/leosbelpoll/3fdb85c5a5fb26fee9011ccbc108f920#file-chat-html" target="_blank">Código actualizando la **Página de Chat**</a>
       `,
       en: "",
     },
