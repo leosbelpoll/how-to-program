@@ -58,35 +58,32 @@ export function CourseDetails({ course }) {
       {classes
         .filter((clas) => clas.courseId === id)
         .map(({ title, content, thumbnail, id: classId, showSubscription }) => (
-          <div
-            className="mb-2"
+          <Link
+            href={
+              !showSubscription
+                ? `/courses/${slugify(
+                    currentCourse.title[language]
+                  )}/classes/${slugify(title[language])}`
+                : "#"
+            }
+            onClick={() =>
+              localStorage.setItem(
+                "linkToSubscribe",
+                `/courses/${slugify(
+                  currentCourse.title[language]
+                )}/classes/${slugify(title[language])}`
+              )
+            }
+            className="mb-2 course-class-link d-block"
             data-bs-toggle={showSubscription ? "modal" : ""}
             data-bs-target="#subscriptionModal"
           >
             <i className="bi bi-file-earmark-play me-2"></i>
-            <Link
-              href={
-                !showSubscription
-                  ? `/courses/${slugify(
-                      currentCourse.title[language]
-                    )}/classes/${slugify(title[language])}`
-                  : "#"
-              }
-              onClick={() =>
-                localStorage.setItem(
-                  "linkToSubscribe",
-                  `/courses/${slugify(
-                    currentCourse.title[language]
-                  )}/classes/${slugify(title[language])}`
-                )
-              }
-            >
-              {showSubscription && (
-                <span className="badge text-bg-primary">Pronto</span>
-              )}{" "}
-              {title[language]}
-            </Link>
-          </div>
+            {showSubscription && (
+              <span className="badge text-bg-primary">Pronto</span>
+            )}{" "}
+            {title[language]}
+          </Link>
         ))}
     </AutoScrollTop>
   );

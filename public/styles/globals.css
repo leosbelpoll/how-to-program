@@ -162,8 +162,6 @@ input.bg-dark::placeholder {
     text-overflow: ellipsis;
     max-height: 300px;
     margin-bottom: 300em;
-    /* white-space: nowrap;
-    overflow: hidden; */
   }
 }
 
@@ -200,4 +198,17 @@ input.bg-dark::placeholder {
 
 .code-container .code-copy-button:hover {
   color: rgb(79, 79, 79);
+}
+
+.course-class-link {
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.course-class-link:hover {
+  background: rgba(159, 159, 159, 0.3) !important;
+}
+
+.card:hover {
+  background: rgba(159, 159, 159, 0.2) !important;
 }
