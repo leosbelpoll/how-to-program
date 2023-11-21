@@ -196,7 +196,7 @@ input.bg-dark::placeholder {
   position: absolute;
   top: 0px;
   right: 0px;
-  z-index: 1000;
+  z-index: 2;
   color: rgb(148, 147, 147);
 }
 
