@@ -744,20 +744,20 @@ export const classes = [
         
         La etiqueta \`<input>\` es fundamental. Por defecto, su atributo \`type\` tiene valor \`text\`, pero esta es utilizada para la mayoría de tipos de campos de formularios. Los tipos más comunes serían:
         
-        1. **text:**: Campo de entrada de texto estándar.
-        2. **password:**: Campo de entrada de contraseña oculta.
-        3. **number:**: Campo de entrada numérico para valores.
-        4. **checkbox:**: Casilla de verificación que permite seleccionar múltiples opciones.
-        5. **radio:**: Botón de opción que permite seleccionar una opción de un grupo.
-        6. **submit:**: Botón para enviar el formulario.
-        7. **reset:**: Botón para restablecer los valores del formulario.
-        8. **file:**: Campo para seleccionar archivos locales.
-        9. **date:**: Campo de entrada de fecha.
-        10. **email:**: Campo de entrada para direcciones de correo electrónico.
-        11. **url:**: Campo de entrada para direcciones URL.
-        12. **search:**: Campo de búsqueda interactivo.
-        13. **tel:**: Campo de entrada para números de teléfono.
-        14. **email:**: Campo de entrada para correo electrónicos.
+        1. **text**: Campo de entrada de texto estándar.
+        2. **password**: Campo de entrada de contraseña oculta.
+        3. **number**: Campo de entrada numérico para valores.
+        4. **checkbox**: Casilla de verificación que permite seleccionar múltiples opciones.
+        5. **radio**: Botón de opción que permite seleccionar una opción de un grupo.
+        6. **submit**: Botón para enviar el formulario.
+        7. **reset**: Botón para restablecer los valores del formulario.
+        8. **file**: Campo para seleccionar archivos locales.
+        9. **date**: Campo de entrada de fecha.
+        10. **email**: Campo de entrada para direcciones de correo electrónico.
+        11. **url**: Campo de entrada para direcciones URL.
+        12. **search**: Campo de búsqueda interactivo.
+        13. **tel**: Campo de entrada para números de teléfono.
+        14. **email**: Campo de entrada para correo electrónicos.
         
         
         ### Uso de "Etiquetas", mejorando la Accesibilidad
