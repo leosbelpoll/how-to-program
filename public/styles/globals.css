@@ -149,6 +149,10 @@ input.bg-dark::placeholder {
     z-index: 1000;
   }
 
+  .bg-dark .navbar-collapse {
+    background: #2b3035;
+  }
+
   .navbar-collapse a {
     margin-top: 20px;
   }
