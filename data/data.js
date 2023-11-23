@@ -1545,10 +1545,78 @@ export const classes = [
   {
     id: 16,
     courseId: 2,
-    showSubscription: true,
     title: {
       es: "Textos",
       en: "Text",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/wULdNNzm4EU?si=KLJ4pyBFKhrzuffD",
+    },
+    content: {
+      es: `
+        Cuando se trata de aplicar estilo al texto en CSS, existen varias propiedades que puedes usar para controlar la fuente, el tamaño, el color, el espaciado y otros aspectos del texto. A continuación te dejo una descripción general de las propiedades clave relacionadas con el texto en CSS:
+
+        1. **Propiedades Básicas de Texto:**
+          - \`font-family\`: Define la fuente del texto.
+          - \`font-size\`: Establece el tamaño del texto.
+          - \`font-weight\`: Define el grosor del texto (por ejemplo, normal, negrita).
+          - \`font-style\`: Especifica el estilo del texto (por ejemplo, normal, italic).
+
+            \`\`\`css
+            body {
+              font-family: 'Arial', sans-serif;
+              font-size: 16px;
+              font-weight: normal;
+              font-style: italic;
+            }
+            \`\`\`
+
+        2. **Sombra de Texto:**
+          - \`text-shadow\`: Agrega sombra al texto.
+
+            \`\`\`css
+            h1 {
+              text-shadow: 2px 2px 4px #000;
+            }
+            \`\`\`
+
+        3. **Decoraciones de Texto:**
+          - \`text-decoration\`: Puede ser usado para agregar o quitar decoraciones como subrayado.
+          - \`text-transform\`: Cambia el caso del texto (mayúsculas, minúsculas, capitalización).
+
+            \`\`\`css
+            a {
+              text-decoration: none; /* Elimina el subrayado en los enlaces */
+            }
+
+            h2 {
+              text-transform: uppercase; /* Convierte el texto a mayúsculas */
+            }
+            \`\`\`
+
+        4. **Espaciado y Alineación:**
+          - \`line-height\`: Establece la altura de línea del texto.
+          - \`letter-spacing\`: Controla el espaciado entre caracteres.
+          - \`word-spacing\`: Controla el espaciado entre caracteres.
+          - \`text-align\`: Define la alineación del texto (izquierda, derecha, centrado, justificado).
+
+            \`\`\`css
+            p {
+              line-height: 1.5;
+              letter-spacing: 1px;
+              text-align: justify;
+            }
+            \`\`\`
+
+
+
+        Estos son solo algunos ejemplos básicos. CSS ofrece muchas más propiedades y opciones para estilizar el texto. Además, ten en cuenta que las propiedades pueden ser combinadas para lograr efectos más complejos.
+
+        ### Recursos utilizados en la clase
+
+        - <a href="https://gist.github.com/leosbelpoll/6aa65282166cb26dff0616af9af275a9#file-index-css" target="_blank">Fichero CSS</a>
+        - <a href="https://gist.github.com/leosbelpoll/6aa65282166cb26dff0616af9af275a9#file-index-html" target="_blank">Fichero HTML</a>
+      `,
     },
   },
   {

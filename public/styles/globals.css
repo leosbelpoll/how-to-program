@@ -121,8 +121,8 @@ input.bg-dark::placeholder {
   text-decoration: underline;
 }
 
-.text-bg-dark .class-details a,
-.text-bg-dark .course-details a {
+.text-bg-dark .class-details a:not(.code-copy-button),
+.text-bg-dark .course-details a:not(.code-copy-button) {
   color: rgb(10, 240, 248) !important;
 }
 
