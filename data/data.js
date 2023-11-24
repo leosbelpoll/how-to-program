@@ -1622,11 +1622,96 @@ export const classes = [
   {
     id: 17,
     courseId: 2,
-    showSubscription: true,
     title: {
       es: "Hipervínculos",
       en: "Links",
     },
+    video: {
+      es: 'https://www.youtube.com/embed/fv3Bo_WVyaw?si=6OAyNEfWKJRHWImO'
+    },
+    content: {
+      es: `
+        Los hipervínculos en CSS (Cascading Style Sheets) son utilizados para estilizar y dar formato a los enlaces en una página web. Aquí hay algunos conceptos clave que debes conocer sobre hipervínculos en CSS:
+
+        1. **Selección de enlaces:**
+          Puedes seleccionar y aplicar estilos a diferentes estados de un enlace, como enlace no visitado, enlace visitado, enlace activo y enlace al pasar el mouse. Puedes hacer esto utilizando pseudo-clases:
+        
+          \`\`\`css
+          /* Enlace no visitado */
+          a:link {
+            color: #0077cc;
+          }
+        
+          /* Enlace visitado */
+          a:visited {
+            color: #551a8b;
+          }
+        
+          /* Enlace al pasar el mouse */
+          a:hover {
+            color: #ff0000;
+          }
+        
+          /* Enlace activo (cuando se hace clic) */
+          a:active {
+            color: #00ff00;
+          }
+          \`\`\`
+        
+        2. **Estilos de texto:**
+          Puedes aplicar estilos específicos de texto a los enlaces, como el color, la decoración y el tamaño de fuente:
+        
+          \`\`\`css
+          /* Cambiar color de texto y quitar subrayado */
+          a {
+            color: #333;
+            text-decoration: none;
+          }
+        
+          /* Agregar subrayado al pasar el mouse */
+          a:hover {
+            text-decoration: underline;
+          }
+          \`\`\`
+        
+        3. **Estilos de fondo:**
+          Además de los estilos de texto, también puedes aplicar estilos de fondo a los enlaces. Por ejemplo, puedes cambiar el color de fondo cuando se pasa el mouse sobre el enlace:
+        
+          \`\`\`css
+          /* Cambiar color de fondo al pasar el mouse */
+          a:hover {
+            background-color: #f0f0f0;
+          }
+          \`\`\`
+        
+        4. **Estilos de borde:**
+          Puedes aplicar estilos de borde a los enlaces para darles un aspecto más visual:
+        
+          \`\`\`css
+          /* Agregar borde al pasar el mouse */
+          a:hover {
+            border: 1px solid #333;
+          }
+          \`\`\`
+        
+        5. **Otros estilos:**
+          Puedes experimentar con otros estilos, como márgenes, rellenos y sombras, para personalizar aún más la apariencia de los enlaces.
+        
+          \`\`\`css
+          /* Agregar sombra al pasar el mouse */
+          a:hover {
+            box-shadow: 2px 2px 5px #888888;
+          }
+          \`\`\`
+        
+        Recuerda que estos son solo ejemplos y puedes ajustar los valores según tus preferencias de diseño. Además, es importante considerar la accesibilidad al aplicar estilos a los enlaces para garantizar una buena experiencia para todos los usuarios.
+        
+        ### Recursos utilizados en la clase
+        
+        - <a href="https://gist.github.com/leosbelpoll/3696a05f71c82f3909169a1de5bc342b#file-index-css" target="_blank">Fichero CSS</a>
+        - <a href="https://gist.github.com/leosbelpoll/3696a05f71c82f3909169a1de5bc342b#file-index-html" target="_blank">Fichero HTML</a>
+      `
+    }
   },
   {
     id: 18,
