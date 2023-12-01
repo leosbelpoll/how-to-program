@@ -59,6 +59,10 @@ In the file `/data/data.js` you will find the list `classes`, each of them conta
 
 This repo is being listening to for a Vercel project, every time something is pushed to the `main` branch, it will be automatically deployed in Vercel. I haven't created a Vercel **team** since I'm not paying for now. And I don't think it's necessary for the moment either.
 
+I have two domains associated to the vercel project
+- https://comoprogramar.dev
+- https://howtoprogram.dev
+
 ### [Firebase](https://console.firebase.google.com/)
 
 Kind of similar situation with the payment, I'm using the free layer. I'm just using for now `Firestore` service to store people's `feedback` and `subscriptions`.
