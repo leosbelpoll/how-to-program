@@ -11,6 +11,8 @@ import { Iframe } from "./iframe";
 import { CodeBlock } from "./code-block";
 import { AutoScrollTop } from "./auto-scroll-top";
 import { InProgressContent } from "./in-progress-content";
+import Head from "next/head";
+import { getVideoThumbnailFromEmbedUrl } from "../utils/youtube";
 
 export function CourseDetails({ course }) {
   const router = useRouter();
@@ -37,63 +39,82 @@ export function CourseDetails({ course }) {
   }
 
   return (
-    <AutoScrollTop params={{ courseSlug }}>
-      <div
-        className="text-center mb-4"
-        style={{ width: "100%", "aspect-ratio": "2 / 1.1" }}
-      >
-        <Iframe videoUrl={video[language]} />
-      </div>
+    <>
+      <Head>
+        <title>Curso {title[language]} - Cómo programar?</title>
+        {video && (
+          <>
+            <meta
+              property="og:image"
+              content={getVideoThumbnailFromEmbedUrl(video[language])}
+            />
+            <meta
+              property="og:image:secure_url"
+              content={getVideoThumbnailFromEmbedUrl(video[language])}
+            />
+          </>
+        )}
+      </Head>
+      <AutoScrollTop params={{ courseSlug }}>
+        <div
+          className="text-center mb-4"
+          style={{ width: "100%", "aspect-ratio": "2 / 1.1" }}
+        >
+          <Iframe videoUrl={video[language]} />
+        </div>
 
-      <h2 className="mt-3">
-        <strong>{title[language]} Curso</strong>
-      </h2>
-      <div className="categories">
-        {tags.map((tag) => (
-          <span className="badge text-bg-secondary">{tag}</span>
-        ))}
-      </div>
+        <h2 className="mt-3">
+          <strong>{title[language]} Curso</strong>
+        </h2>
+        <div className="categories">
+          {tags.map((tag) => (
+            <span className="badge text-bg-secondary">{tag}</span>
+          ))}
+        </div>
 
-      <div className="course-details mt-4">
-        <ReactMarkdown
-          children={normalizeStringLiteral(content[language])}
-          remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeRaw]}
-          components={{ code: CodeBlock }}
-        />
-      </div>
+        <div className="course-details mt-4">
+          <ReactMarkdown
+            children={normalizeStringLiteral(content[language])}
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+            components={{ code: CodeBlock }}
+          />
+        </div>
 
-      <h4 className="mt-4">Clases:</h4>
-      {classes
-        .filter((clas) => clas.courseId === id)
-        .map(({ title, content, thumbnail, id: classId, showSubscription }) => (
-          <Link
-            href={
-              !showSubscription
-                ? `/courses/${slugify(
-                    currentCourse.title[language]
-                  )}/classes/${slugify(title[language])}`
-                : "#"
-            }
-            onClick={() =>
-              localStorage.setItem(
-                "linkToSubscribe",
-                `/courses/${slugify(
-                  currentCourse.title[language]
-                )}/classes/${slugify(title[language])}`
-              )
-            }
-            className="mb-2 course-class-link d-block"
-            data-bs-toggle={showSubscription ? "modal" : ""}
-            data-bs-target="#subscriptionModal"
-          >
-            <i className="bi bi-file-earmark-play me-2"></i>
-            {showSubscription && (
-              <span className="badge text-bg-primary">Pronto</span>
-            )}{" "}
-            {title[language]}
-          </Link>
-        ))}
-    </AutoScrollTop>
+        <h4 className="mt-4">Clases:</h4>
+        {classes
+          .filter((clas) => clas.courseId === id)
+          .map(
+            ({ title, content, thumbnail, id: classId, showSubscription }) => (
+              <Link
+                href={
+                  !showSubscription
+                    ? `/courses/${slugify(
+                        currentCourse.title[language]
+                      )}/classes/${slugify(title[language])}`
+                    : "#"
+                }
+                onClick={() =>
+                  localStorage.setItem(
+                    "linkToSubscribe",
+                    `/courses/${slugify(
+                      currentCourse.title[language]
+                    )}/classes/${slugify(title[language])}`
+                  )
+                }
+                className="mb-2 course-class-link d-block"
+                data-bs-toggle={showSubscription ? "modal" : ""}
+                data-bs-target="#subscriptionModal"
+              >
+                <i className="bi bi-file-earmark-play me-2"></i>
+                {showSubscription && (
+                  <span className="badge text-bg-primary">Pronto</span>
+                )}{" "}
+                {title[language]}
+              </Link>
+            )
+          )}
+      </AutoScrollTop>
+    </>
   );
 }

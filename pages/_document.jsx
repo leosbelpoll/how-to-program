@@ -58,8 +58,6 @@ export default function Document() {
         <meta property="og:image" content="/ogp.png" />
         <meta property="og:image:secure_url" content="/ogp.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="740" />
-        <meta property="og:image:height" content="220" />
         <meta
           property="og:image:alt"
           content="Recursos y tutoriales de programación para programadores. Aprende a programar en diversos lenguajes y tecnologías."

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Head from "next/head";
 import {
   DARK_THEME,
   LANGUAGE_SPANISH,
@@ -18,6 +19,7 @@ import { Iframe } from "./iframe";
 import { CodeBlock } from "./code-block";
 import { AutoScrollTop } from "./auto-scroll-top";
 import { InProgressContent } from "./in-progress-content";
+import { getVideoThumbnailFromEmbedUrl } from "../utils/youtube";
 
 function ClassDetailsInternal({
   isFullScreen,
@@ -155,25 +157,45 @@ export function ClassDetails() {
     );
   }
 
-  const { title } = currentClass;
+  const { title, video } = currentClass;
 
   return (
-    <AutoScrollTop params={{ courseSlug, classSlug }}>
-      <ClassDetailsInternal
-        clas={currentClass}
-        course={currentCourse}
-        nextRecommendedClass={nextRecommendedClass}
-        nextRecommendedCourse={nextRecommendedCourse}
-      />
-      <Modal title={title} id="fullScreenClassModal" fullscreen scrollable>
+    <>
+      <Head>
+        <title>
+          {title[language]} - Curso {currentCourse.title[language]} - Cómo
+          programar?
+        </title>
+        {video && (
+          <>
+            <meta
+              property="og:image"
+              content={getVideoThumbnailFromEmbedUrl(video[language])}
+            />
+            <meta
+              property="og:image:secure_url"
+              content={getVideoThumbnailFromEmbedUrl(video[language])}
+            />
+          </>
+        )}
+      </Head>
+      <AutoScrollTop params={{ courseSlug, classSlug }}>
         <ClassDetailsInternal
-          isFullScreen
           clas={currentClass}
           course={currentCourse}
           nextRecommendedClass={nextRecommendedClass}
           nextRecommendedCourse={nextRecommendedCourse}
         />
-      </Modal>
-    </AutoScrollTop>
+        <Modal title={title} id="fullScreenClassModal" fullscreen scrollable>
+          <ClassDetailsInternal
+            isFullScreen
+            clas={currentClass}
+            course={currentCourse}
+            nextRecommendedClass={nextRecommendedClass}
+            nextRecommendedCourse={nextRecommendedCourse}
+          />
+        </Modal>
+      </AutoScrollTop>
+    </>
   );
 }
