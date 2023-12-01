@@ -1627,7 +1627,7 @@ export const classes = [
       en: "Links",
     },
     video: {
-      es: 'https://www.youtube.com/embed/fv3Bo_WVyaw?si=6OAyNEfWKJRHWImO'
+      es: "https://www.youtube.com/embed/fv3Bo_WVyaw?si=6OAyNEfWKJRHWImO",
     },
     content: {
       es: `
@@ -1710,16 +1710,148 @@ export const classes = [
         
         - <a href="https://gist.github.com/leosbelpoll/3696a05f71c82f3909169a1de5bc342b#file-index-css" target="_blank">Fichero CSS</a>
         - <a href="https://gist.github.com/leosbelpoll/3696a05f71c82f3909169a1de5bc342b#file-index-html" target="_blank">Fichero HTML</a>
-      `
-    }
+      `,
+    },
   },
   {
     id: 18,
     courseId: 2,
-    showSubscription: true,
     title: {
       es: "Listas",
       en: "Lists",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/Py1nZxPJ9ec?si=peuD5NKMn-g88NJt",
+    },
+    content: {
+      es: `
+        En HTML, hay dos tipos principales de listas: listas ordenadas (\`<ol>\`) y listas no ordenadas (\`<ul>\`). Dentro de estas listas, tienes elementos de lista (\`<li>\`). Aquí tienes un breve resumen de cómo puedes dar estilo a las listas con CSS:
+
+        1. **Estilizando Listas:**
+          - **Listas Ordenadas (\`<ol>\`):**
+            \`\`\`css
+            ol {
+              /* Estilos para el contenedor de la lista ordenada */
+            }
+
+            ol li {
+              /* Estilos para cada elemento de lista en la lista ordenada */
+            }
+            \`\`\`
+
+          - **Listas No Ordenadas (\`<ul>\`):**
+            \`\`\`css
+            ul {
+              /* Estilos para el contenedor de la lista no ordenada */
+            }
+
+            ul li {
+              /* Estilos para cada elemento de lista en la lista no ordenada */
+            }
+            \`\`\`
+
+        2. **Estilos de Elementos de Lista:**
+          - Puedes dar estilo a elementos de lista específicos (\`li\`) de manera diferente o aplicar estilos a todos los elementos de lista (\`ul\` o \`ol\`).
+
+            \`\`\`css
+            li {
+              /* Estilos para todos los elementos de lista */
+            }
+
+            /* Estilizando elementos de lista específicos */
+            li:nth-child(odd) {
+              /* Estilos para elementos de lista con número impar */
+            }
+
+            li:nth-child(even) {
+              /* Estilos para elementos de lista con número par */
+            }
+            \`\`\`
+
+        3. **Estilos de Listas:**
+          - Puedes personalizar la apariencia de los marcadores de lista tanto para listas ordenadas como para listas no ordenadas.
+
+            \`\`\`css
+            /* Personalizando marcadores de lista ordenada */
+            ol {
+              list-style-type: decimal; /* o lower-alpha, lower-roman, etc. */
+            }
+
+            /* Personalizando marcadores de lista no ordenada */
+            ul {
+              list-style-type: square; /* o circle, disc, etc. */
+            }
+            \`\`\`
+
+          - Mover los marcadores afuera o dentro del contenedor de la lista
+
+            \`\`\`css
+              ul {
+                list-style-position: inside; /* o outside. */
+              }
+            \`\`\`
+
+          - Usar una imágen como marcador
+
+            \`\`\`css
+              ul {
+                list-style-image: url('ruta-imagen');
+              }
+            \`\`\`
+
+        4. **Eliminar Estilos Predeterminados de Lista:**
+          - Si deseas eliminar los estilos predeterminados de la lista (como viñetas o números), puedes hacerlo.
+
+            \`\`\`css
+            /* Eliminar estilos predeterminados de listas ordenadas y no ordenadas */
+            ul, ol {
+              list-style: none;
+            }
+            \`\`\`
+
+        5. **Personalizar Estilos Predeterminados de Lista:**
+          - Si deseas personalizar los estilos predeterminados de la lista, puedes hacerlo.
+
+            \`\`\`css
+            /* Eliminar estilos predeterminados de listas ordenadas y no ordenadas */
+            ul, ol {
+              list-style-type: "<VALOR> ";
+            }
+            \`\`\`
+
+            Donde \`<VALOR>\` puede ser casi cualquier cosa, podemos poner un unicode como estos 📬, podemos poner el unicode de alguna fuente específica como <a target="_blank" href="https://fontawesome.com/search?o=r&m=free&s=solid">FontAwesome</a> comenzando con \`\\\`
+
+            Si usamos algún unicode desde una alguna fuente tenemos que especificarlo con la propiedad \`font-family\`
+
+            \`\`\`css
+            ul {
+              list-style-type: "\\f005 ";
+              font-family: FontAwesome
+            }
+            \`\`\`
+            Si ves que no sale la estrella, es que la página no conoce aún esta fuente, podemos incluirla en el \`head\` de nuestra página \`html\`
+
+            \`\`\`html
+              <html>
+                <head>
+                  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+                </head>
+
+                <body>
+                  .....
+                </body>
+              </html>
+            \`\`\`
+
+        6. **Usar el pseudo elemento ::marker**:
+        - Tambien podemos usar el pseudo elemento \`::marker\` para personalizar tus elementos de lista, este debe ser aplicado a los \`li\`s
+
+          \`\`\`css
+          li::marker {
+            content: "<VALOR> ";
+          }
+          \`\`\`
+      `,
     },
   },
   {
