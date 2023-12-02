@@ -1904,12 +1904,21 @@ export const classes = [
     courseId: 2,
     showSubscription: true,
     title: {
+      es: "Diseño Responsivo",
+      en: "Responsive Design",
+    },
+  },
+  {
+    id: 25,
+    courseId: 2,
+    showSubscription: true,
+    title: {
       es: "Estilos compuestos",
       en: "Compound styles",
     },
   },
   {
-    id: 25,
+    id: 26,
     courseId: 2,
     showSubscription: true,
     title: {
