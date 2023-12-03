@@ -1857,10 +1857,87 @@ export const classes = [
   {
     id: 19,
     courseId: 2,
-    showSubscription: true,
     title: {
       es: "Posiciones",
       en: "Positions",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/MQuGqzuCkuA?si=37JVDuFsQTPNVODB",
+    },
+    content: {
+      es: `
+        En CSS (Hojas de Estilo en Cascada), la posición es un aspecto crucial del diseño de la maquetación. Permite controlar la ubicación de los elementos en una página web. Hay varias propiedades de posicionamiento en CSS, cada una con un propósito específico. Aquí tienes un resumen de las principales propiedades de posicionamiento:
+
+        1. **Posicionamiento Estático:**
+          - Esta es la posición predeterminada para todos los elementos.
+          - Los elementos se posicionan según el flujo normal del documento (es decir, el orden en el que aparecen en el HTML).
+
+          \`\`\`css
+          .ejemplo {
+            position: static;
+          }
+          \`\`\`
+
+        2. **Posicionamiento Relativo:**
+          - Se posiciona en relación con su posición normal en el flujo del documento.
+          - Usa las propiedades \`top\`, \`right\`, \`bottom\` e \`left\` para desplazar el elemento desde su posición normal.
+
+          \`\`\`css
+          .ejemplo {
+            position: relative;
+            top: 10px;
+            left: 20px;
+          }
+          \`\`\`
+
+        3. **Posicionamiento Absoluto:**
+          - Se elimina del flujo normal del documento y se posiciona en relación con su ancestro posicionado más cercano (si lo hay) con una \`position\` diferente de \`static\`.
+          - Si no se encuentra un ancestro posicionado, se posiciona en relación con el bloque contenedor inicial (por lo general, el elemento \`<html>\`).
+
+          \`\`\`css
+          .ejemplo {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+          }
+          \`\`\`
+
+        4. **Posicionamiento Fijo:**
+          - Se posiciona en relación con la ventana del navegador.
+          - No se mueve aunque se haga scroll en la página.
+
+          \`\`\`css
+          .ejemplo {
+            position: fixed;
+            top: 0;
+            right: 0;
+          }
+          \`\`\`
+
+        5. **Posicionamiento Adhesivo (Sticky):**
+          - Actúa como posicionamiento \`relative\` hasta que un elemento cruza un punto especificado durante el desplazamiento, luego se vuelve \`fixed\`.
+          - Requiere la propiedad \`top\`, \`right\`, \`bottom\` o \`left\` para determinar el punto de adherencia.
+
+          \`\`\`css
+          .ejemplo {
+            position: sticky;
+            top: 20px;
+          }
+          \`\`\`
+
+        6. **Índice Z:**
+          - Determina el orden de apilamiento de elementos posicionados.
+          - Los elementos con un valor de \`z-index\` más alto se apilan sobre aquellos con un valor más bajo.
+
+          \`\`\`css
+          .ejemplo {
+            position: absolute;
+            z-index: 2;
+          }
+          \`\`\`
+
+        Entender estas propiedades de posicionamiento y técnicas de maquetación te dará las herramientas para crear diseños de página complejos y receptivos en CSS. Ten en cuenta que a menudo se utiliza una combinación de estas técnicas para lograr la maquetación deseada.
+      `,
     },
   },
   {
