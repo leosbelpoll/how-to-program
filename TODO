@@ -4,6 +4,7 @@
   - Filter any path, course, class, resource that match with the search value
   - Render different sections for the above concepts
   - If any concept is clicked it will redirect to the proper place
+- Fix the meta:og image and description to be dynamic. Right now is getting always the same image and description. The idea is that if a class or course is shared, the url preview display the class / course thumbnail and kind of description
 - Resources menu with categories
   - Add menu resources
   - Add routing /resources
