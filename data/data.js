@@ -51,7 +51,7 @@ export const classes = [
       en: "Development environment",
     },
     video: {
-      es: "https://www.youtube.com/embed/ZwnAuRC1FtA?si=opSz5IRSdNsV43mT",
+      es: "https://www.youtube.com/embed/ZwnAuRC1FtA?si=utm_source=comoprogramar.dev",
     },
     content: {
       es: `
@@ -159,7 +159,7 @@ export const classes = [
       en: "Basic structure",
     },
     video: {
-      es: "https://www.youtube.com/embed/1L_ZrxDami4?si=paaLhJzGi-408Oqr",
+      es: "https://www.youtube.com/embed/1L_ZrxDami4?si=utm_source=comoprogramar.dev",
     },
     content: {
       es: `
@@ -244,7 +244,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/X9ngOAyNjCA?si=TxUgRznxaPeMJInV",
+      es: "https://www.youtube.com/embed/X9ngOAyNjCA?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -361,7 +361,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/Ta7JUgMfcr0?si=bF-SPd73IV3mXlc6",
+      es: "https://www.youtube.com/embed/Ta7JUgMfcr0?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -447,7 +447,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/0a8kjLjNfh4?si=Q9GODj7ncU3RhPuX",
+      es: "https://www.youtube.com/embed/0a8kjLjNfh4?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -503,7 +503,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/4BiyEG_OWsE?si=jITsFhhGh5sit5OP",
+      es: "https://www.youtube.com/embed/4BiyEG_OWsE?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -558,7 +558,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/5fPZRK6WauE?si=OH89Fd4supajTdxC",
+      es: "https://www.youtube.com/embed/5fPZRK6WauE?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -716,7 +716,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/l3CLCfyHAWg?si=9dwcA-ddjHo6_Ur",
+      es: "https://www.youtube.com/embed/l3CLCfyHAWg?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -874,7 +874,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/-Il58AlPvs0?si=2rlmZ-p6s6OrvtmQ",
+      es: "https://www.youtube.com/embed/-Il58AlPvs0?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -921,7 +921,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/1YoGeG7ikuY?si=_4YyAlrXszGadwiu",
+      es: "https://www.youtube.com/embed/1YoGeG7ikuY?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -1073,7 +1073,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/9KF4ZzL4_qw?si=Qt01b39_Mvfk5qah",
+      es: "https://www.youtube.com/embed/9KF4ZzL4_qw?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -1163,7 +1163,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/ELvgd1jAHvs?si=JHASn34qWfnzxszu",
+      es: "https://www.youtube.com/embed/ELvgd1jAHvs?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -1357,7 +1357,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/rXuB6a56DR8?si=Y8pv2G1JPM3Wfnz1",
+      es: "https://www.youtube.com/embed/rXuB6a56DR8?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -1457,7 +1457,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/bI4Zc9dDRMI?si=eL8mEs6S819Jdmbp",
+      es: "https://www.youtube.com/embed/bI4Zc9dDRMI?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -1539,7 +1539,7 @@ export const classes = [
       en: "",
     },
     video: {
-      es: "https://www.youtube.com/embed/vBC0O7R-ge0?si=wtEMd-1q0dCYoRt2",
+      es: "https://www.youtube.com/embed/vBC0O7R-ge0?si=utm_source=comoprogramar.dev",
     },
   },
   {
@@ -1550,7 +1550,7 @@ export const classes = [
       en: "Text",
     },
     video: {
-      es: "https://www.youtube.com/embed/wULdNNzm4EU?si=KLJ4pyBFKhrzuffD",
+      es: "https://www.youtube.com/embed/wULdNNzm4EU?si=utm_source=comoprogramar.dev",
     },
     content: {
       es: `
@@ -1627,7 +1627,7 @@ export const classes = [
       en: "Links",
     },
     video: {
-      es: "https://www.youtube.com/embed/fv3Bo_WVyaw?si=6OAyNEfWKJRHWImO",
+      es: "https://www.youtube.com/embed/fv3Bo_WVyaw?si=utm_source=comoprogramar.dev",
     },
     content: {
       es: `
@@ -1721,7 +1721,7 @@ export const classes = [
       en: "Lists",
     },
     video: {
-      es: "https://www.youtube.com/embed/Py1nZxPJ9ec?si=peuD5NKMn-g88NJt",
+      es: "https://www.youtube.com/embed/Py1nZxPJ9ec?si=utm_source=comoprogramar.dev",
     },
     content: {
       es: `
@@ -1862,7 +1862,7 @@ export const classes = [
       en: "Positions",
     },
     video: {
-      es: "https://www.youtube.com/embed/MQuGqzuCkuA?si=37JVDuFsQTPNVODB",
+      es: "https://www.youtube.com/embed/MQuGqzuCkuA?si=utm_source=comoprogramar.dev",
     },
     content: {
       es: `
@@ -1943,10 +1943,78 @@ export const classes = [
   {
     id: 20,
     courseId: 2,
-    showSubscription: true,
     title: {
       es: "Unidades de medida",
       en: "Measure Units",
+    },
+    video: {
+      es: "https://www.youtube.com/embed/dxB4Ue67dD8?si=utm_source=comoprogramar.dev",
+    },
+    content: {
+      es: `
+        En CSS, las unidades de medida se utilizan para definir el tamaño, la longitud y el espaciado de varios elementos en una página web. Hay varios tipos de unidades en CSS, y entenderlas es crucial para fines de estilo y diseño. Aquí hay una descripción general de las unidades de medida más comunes en CSS, junto con ejemplos adicionales y problemas comunes que podrías encontrar:
+
+        1. **Unidades de Longitud Absoluta:**
+          - **\`px\` (píxeles):** Un píxel es un punto único en una pantalla de computadora. Es una unidad de tamaño fijo y se utiliza comúnmente para especificar medidas precisas.
+          - **\`in\` (pulgadas), \`cm\` (centímetros), \`mm\` (milímetros), \`pt\` (puntos), \`pc\` (picas):** Estas unidades son longitudes absolutas utilizadas típicamente para estilos de impresión. Ten en cuenta que su representación en una pantalla puede variar según el dispositivo del usuario.
+
+        2. **Unidades de Longitud Relativa:**
+          - **\`em\`:** La unidad \`em\` es relativa al tamaño de fuente del propio elemento. Si el tamaño de fuente de un elemento es de 16px, \`1em\` es igual a 16px.
+          - **\`rem\`:** Similar a \`em\`, pero es relativo al tamaño de fuente del elemento raíz (generalmente el elemento \`<html>\`).
+          - **\`%\` (porcentaje):** Relativo al elemento padre. Por ejemplo, si el ancho del elemento padre es de 200px y un elemento hijo tiene un ancho del 50%, el elemento hijo tendrá un ancho de 100px.
+
+        3. **Longitudes en Porcentaje del Visor:**
+          - **\`vw\` (ancho del visor):** 1vw es igual al 1% del ancho del visor. Por ejemplo, \`50vw\` sería la mitad del ancho del visor.
+          - **\`vh\` (altura del visor):** Similar a \`vw\`, pero basado en la altura del visor en lugar del ancho.
+
+        4. **Unidades de Posicionamiento Absoluto:**
+          - **\`ex\`:** Representa la altura x de la fuente actual. Un \`ex\` suele ser la altura de una 'x' minúscula.
+          - **\`ch\`:** Representa el ancho de 0 de la fuente actual. Un \`ch\` suele ser el ancho de un '0' (cero).
+
+        Ejemplos adicionales:
+
+        \`\`\`css
+        /* Píxeles */
+        div {
+          width: 100px;
+        }
+
+        /* Em */
+        p {
+          font-size: 16px;
+          margin-bottom: 1em; /* equivalente a 16px */
+        }
+
+        /* Porcentaje */
+        section {
+          width: 50%; /* 50% del ancho del elemento padre */
+        }
+
+        /* Ancho del Visor */
+        header {
+          width: 80vw; /* 80% del ancho del visor */
+        }
+
+        /* Flexbox */
+        .container {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        \`\`\`
+
+        Entender y utilizar estas unidades de manera efectiva te permite crear diseños flexibles y responsivos en CSS. Ten en cuenta que diferentes unidades son adecuadas para diferentes situaciones, y elegir la unidad correcta depende del contexto y los requisitos de diseño. 
+
+        **Problemas Comunes:**
+        1. **No entender la diferencia entre unidades absolutas y relativas.**
+        2. **No considerar la accesibilidad al elegir tamaños de fuente y unidades.**
+        3. **No tener en cuenta la variabilidad de las pantallas al usar unidades fijas.**
+        4. **Sobrecargar el uso de píxeles en diseños responsivos.**
+        5. **No tener cuidado al usar porcentajes en contextos de diseño complejos.**
+        6. **Ignorar la importancia de las unidades relativas al diseño adaptable.**
+
+        Recuerda ajustar tus elecciones de unidades según las necesidades específicas de tu diseño y considerar las mejores prácticas para garantizar una experiencia de usuario consistente y efectiva.
+      `,
     },
   },
   {
@@ -2020,7 +2088,7 @@ export const courses = [
       en: "Learn the essential fundamentals of HTML in our introductory course! HTML, or HyperText Markup Language, is the fundamental markup language for creating web pages. In this course, we will guide you through the basics of HTML, from the structure of an HTML document to creating links and inserting images. Develop the skills needed to build your own web pages and take your first steps into the exciting world of web development.",
     },
     video: {
-      es: "https://www.youtube.com/embed/zJTjsLCKzio?si=3nIfoX0-kad7mbL3",
+      es: "https://www.youtube.com/embed/zJTjsLCKzio?si=utm_source=comoprogramar.dev",
     },
     background: "#ff6633",
     textColor: "white",
@@ -2034,7 +2102,7 @@ export const courses = [
     },
     thumbnail: "css",
     video: {
-      es: "https://www.youtube.com/embed/D5VzGWgF_zk?si=aynQktIMxDzRpbM3",
+      es: "https://www.youtube.com/embed/D5VzGWgF_zk?si=utm_source=comoprogramar.dev",
     },
     content: {
       es: "Explora el mundo del diseño web con nuestro curso de CSS. CSS, o Cascading Style Sheets, es la herramienta esencial para dar vida a tus páginas web y hacerlas visualmente atractivas. En este curso, aprenderás a controlar la presentación y el estilo de tus sitios web, desde la selección de colores y fuentes hasta el diseño de diseños responsivos. Adquiere las habilidades necesarias para convertir tus proyectos web en experiencias visuales cautivadoras y profesionales.",
