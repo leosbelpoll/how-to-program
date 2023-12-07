@@ -1,16 +1,20 @@
 ## Development
 
-### What technologies should I know?
-
-- [React](https://react.dev/learn)
-- [NextJS](https://nextjs.org/) (Only the pages concept for the auto [routing](https://nextjs.org/docs/app/building-your-application/routing))
-- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-
 ### How to start?
 
 - Clone this repo
 - Install dependencies `npm i` or `yarn`
 - Run locally `npm run dev` or `yarn dev`
+
+### What can I do?
+
+In this [TODO file](TODO.md) we're setting the things we want to do. In near future when more people join we can switch to some board tool.
+
+### What technologies are used?
+
+- [React](https://react.dev/learn)
+- [NextJS](https://nextjs.org/) (Only the pages concept for the auto [routing](https://nextjs.org/docs/app/building-your-application/routing))
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
 ### How to manage content?
 
