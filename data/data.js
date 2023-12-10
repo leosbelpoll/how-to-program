@@ -2026,15 +2026,15 @@ export const classes = [
       en: "Variables",
     },
   },
-  {
-    id: 22,
-    courseId: 2,
-    showSubscription: true,
-    title: {
-      es: "Transición y Animación",
-      en: "Transition and Animation",
-    },
-  },
+  // {
+  //   id: 22,
+  //   courseId: 2,
+  //   showSubscription: true,
+  //   title: {
+  //     es: "Transición y Animación",
+  //     en: "Transition and Animation",
+  //   },
+  // },
   {
     id: 23,
     courseId: 2,
