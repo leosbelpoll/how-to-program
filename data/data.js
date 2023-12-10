@@ -2020,11 +2020,87 @@ export const classes = [
   {
     id: 21,
     courseId: 2,
-    showSubscription: true,
     title: {
       es: "Variables",
       en: "Variables",
     },
+    video: {
+      es: "https://www.youtube.com/embed/VEcMDTEqZfA?si=utm_source=comoprogramar.dev",
+    },
+    content: {
+      es: `
+        En CSS (Hojas de Estilo en Cascada), las variables se utilizan para almacenar y reutilizar valores en toda una hoja de estilo. Las variables en CSS a menudo se denominan propiedades personalizadas. Permiten definir un valor una vez y reutilizarlo en varios lugares, facilitando el mantenimiento y la actualización de los estilos. Aquí tienes todo lo que necesitas saber sobre las variables en CSS:
+
+        ### Declaración de Variables:
+
+        Puedes declarar una variable utilizando el prefijo \`--\`, seguido de un nombre y un valor. Aquí tienes un ejemplo:
+
+        \`\`\`css
+        :root {
+          --color-principal: #3498db;
+          --tamanno-letra: 16px;
+        }
+        \`\`\`
+
+        En este ejemplo, \`--color-principal\` y \`--tamanno-letra\` son los nombres de las variables, y \`#3498db\` y \`16px\` son sus respectivos valores.
+
+        ### Uso de Variables:
+
+        Una vez que has declarado una variable, puedes usarla en toda tu hoja de estilo haciendo referencia a su nombre. Para usar una variable, se utiliza la función \`var()\`:
+
+        \`\`\`css
+        body {
+          background-color: var(--color-principal);
+          font-size: var(--tamanno-letra);
+        }
+        \`\`\`
+
+        ### Ámbito de Variables:
+
+        Las variables declaradas dentro del selector \`:root\` tienen un ámbito global, lo que significa que se pueden usar en cualquier lugar de la hoja de estilo. También puedes declarar variables dentro de selectores específicos, limitando su ámbito a ese selector y sus descendientes:
+
+        \`\`\`css
+        .header {
+          --fondo-header: #333;
+          background-color: var(--fondo-header);
+        }
+
+        .footer {
+          background-color: var(--fondo-header); /* Esto utilizará la variable --fondo-header */
+        }
+        \`\`\`
+
+        ### Interpolación de Variables:
+
+        Las variables se pueden utilizar en varios valores de propiedades, como en expresiones \`calc()\`:
+
+        \`\`\`css
+        :root {
+          --espaciado: 10px;
+        }
+
+        .elemento {
+          padding: var(--espaciado) 20px;
+        }
+        \`\`\`
+
+        ### Modificación de Variables con JavaScript:
+
+        También puedes modificar dinámicamente los valores de las variables CSS con JavaScript:
+
+        \`\`\`javascript
+        document.documentElement.style.setProperty('--color-principal', 'rojo');
+        \`\`\`
+
+        ### Compatibilidad del Navegador:
+
+        Las variables CSS son compatibles con la mayoría de los navegadores modernos, incluyendo Chrome, Firefox, Safari, Edge y otros. Sin embargo, es una buena práctica verificar la compatibilidad del navegador más reciente en sitios web como MDN Web Docs.
+
+        ### Resumen:
+
+        Las variables CSS proporcionan una forma de almacenar y reutilizar valores en una hoja de estilo, promoviendo la reutilización y mantenimiento del código. Se declaran utilizando el prefijo \`--\` y se pueden usar con la función \`var()\`. Las variables pueden tener un ámbito global o limitarse a selectores específicos, y sus valores se pueden modificar dinámicamente con JavaScript.
+      `
+    }
   },
   // {
   //   id: 22,
