@@ -2114,11 +2114,127 @@ export const classes = [
   {
     id: 23,
     courseId: 2,
-    showSubscription: true,
     title: {
       es: "Flexbox",
       en: "Flexbox",
     },
+    video: {
+      es: "https://www.youtube.com/embed/JjlL-Vt7XqE?si=utm_source=comoprogramar.dev",
+    },
+    content: {
+      es: 
+      `
+        ¡Por supuesto! Flexbox, o el Modelo de Caja Flexible, es un modelo de diseño en CSS que te permite diseñar diseños complejos de manera más eficiente y con menos código que los modelos tradicionales. Es particularmente adecuado para distribuir espacio a lo largo de un solo eje o dos ejes perpendiculares. Aquí tienes una descripción completa de Flexbox:
+
+        ### Conceptos básicos:
+
+        1. **Contenedor e ítems:**
+          - Flexbox implica un contenedor flexible y sus ítems flexibles.
+          - Aplica \`display: flex;\` al contenedor para habilitar el diseño de caja flexible.
+
+            \`\`\`css
+            .container {
+              display: flex;
+            }
+            \`\`\`
+
+        2. **Eje principal y eje cruzado:**
+          - Flexbox trabaja a lo largo de dos ejes: el eje principal y el eje cruzado.
+          - La propiedad \`flex-direction\` determina el eje principal (fila, fila-inversa, columna, columna-inversa).
+
+            \`\`\`css
+            .container {
+              flex-direction: row; /* o column, row-reverse, column-reverse */
+            }
+            \`\`\`
+
+        3. **Alineación principal:**
+          - \`justify-content\` alinea los ítems flexibles a lo largo del eje principal.
+          - Opciones: \`flex-start\`, \`flex-end\`, \`center\`, \`space-between\`, \`space-around\`, \`space-evenly\`.
+
+            \`\`\`css
+            .container {
+              justify-content: space-between; /* u otras valores */
+            }
+            \`\`\`
+
+        4. **Alineación de ítems y alineación propia:**
+          - \`align-items\` alinea los ítems flexibles a lo largo del eje cruzado.
+          - \`align-self\` ajusta la alineación para un ítem específico.
+
+            \`\`\`css
+            .container {
+              align-items: center; /* u otras valores */
+            }
+
+            .item {
+              align-self: flex-end; /* u otras valores */
+            }
+            \`\`\`
+
+        ### Ítems flexibles:
+
+        5. **Orden:**
+          - La propiedad \`order\` cambia el orden de los ítems flexibles.
+
+            \`\`\`css
+            .item {
+              order: 2; /* u otros valores enteros */
+            }
+            \`\`\`
+
+        6. **Crecimiento flexible, decrecimiento flexible y base flexible:**
+          - \`flex\` es una propiedad abreviada para \`flex-grow\`, \`flex-shrink\` y \`flex-basis\`.
+          - \`flex-grow\` controla la capacidad de un ítem flexible para crecer.
+          - \`flex-shrink\` controla la capacidad de un ítem flexible para decrecer.
+          - \`flex-basis\` establece el tamaño inicial de un ítem flexible.
+
+            \`\`\`css
+            .item {
+              flex: 1 0 auto; /* flex-grow, flex-shrink, flex-basis */
+            }
+            \`\`\`
+
+        ### Contenedores flexibles anidados:
+
+        7. **Contenedores flexibles anidados:**
+          - Puedes tener contenedores flexibles dentro de otros contenedores flexibles.
+
+            \`\`\`css
+            .outer-container {
+              display: flex;
+            }
+
+            .inner-container {
+              display: flex;
+            }
+            \`\`\`
+
+        ### Diseño responsivo:
+
+        8. **Envoltura flexible:**
+          - \`flex-wrap\` controla si los ítems flexibles se fuerzan en una sola línea o pueden envolverse en varias líneas.
+
+            \`\`\`css
+            .container {
+              flex-wrap: wrap; /* o nowrap, wrap-reverse */
+            }
+            \`\`\`
+
+        ### Compatibilidad con navegadores:
+
+        9. **Compatibilidad con navegadores:**
+          - Flexbox está bien soportado en navegadores modernos, pero siempre es bueno verificar características específicas y versiones del navegador.
+
+        ### Recursos:
+
+        10. **Recursos adicionales:**
+            - [MDN Web Docs - Flexbox (en inglés)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+            - [CSS Tricks - Una guía completa de Flexbox (en inglés)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+        Flexbox es una herramienta poderosa para crear diseños flexibles y responsivos. Se utiliza ampliamente en el desarrollo web moderno para simplificar la creación de diseños complejos y mejorar la capacidad de respuesta general de las páginas web.
+      `
+    }
   },
   {
     id: 24,
