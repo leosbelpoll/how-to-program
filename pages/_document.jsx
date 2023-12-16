@@ -47,7 +47,7 @@ export default function Document() {
           name="twitter:description"
           content="Recursos y tutoriales de programación para programadores. Aprende a programar en diversos lenguajes y tecnologías."
         />
-        <meta name="twitter:image" content="/ogp.png" />
+        <meta name="twitter:image" content="/ogp.jpg" />
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
         <link rel="stylesheet" href="/styles/globals.css" />
@@ -55,9 +55,9 @@ export default function Document() {
         <link rel="icon" type="image/x-icon" href="/icon.png" />
         <title>Como Programar?</title>
 
-        <meta property="og:image" content="/ogp.png" />
-        <meta property="og:image:secure_url" content="/ogp.png" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image" content="/ogp.jpg" />
+        <meta property="og:image:secure_url" content="/ogp.jpg" />
+        <meta property="og:image:type" content="image/jpg" />
         <meta
           property="og:image:alt"
           content="Recursos y tutoriales de programación para programadores. Aprende a programar en diversos lenguajes y tecnologías."
