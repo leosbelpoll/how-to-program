@@ -2239,11 +2239,69 @@ export const classes = [
   {
     id: 24,
     courseId: 2,
-    showSubscription: true,
     title: {
       es: "Diseño Responsivo",
       en: "Responsive Design",
     },
+    video: {
+      es: "https://www.youtube.com/embed/3c3eTcHCULk?si=utm_source=comoprogramar.dev",
+    },
+    content: {
+      es: `
+        El diseño web responsivo es un enfoque de diseño y desarrollo que asegura que un sitio web o aplicación ofrezca una experiencia de visualización óptima en una amplia variedad de dispositivos y tamaños de pantalla. Esto se logra mediante una combinación de diseños de cuadrícula flexibles, imágenes flexibles y consultas de medios.
+
+        ## Diseño Responsivo vs. Diseño Adaptativo
+
+        - **Diseño Responsivo:**
+          - Utiliza cuadrículas fluidas y diseños flexibles.
+          - Se adapta a diferentes tamaños de pantalla usando unidades relativas como porcentajes.
+          - Una base de código para todos los dispositivos.
+
+        - **Diseño Adaptativo:**
+          - Utiliza tamaños de diseño predefinidos para dispositivos específicos o puntos de quiebre.
+          - Se adapta a diferentes tamaños de pantalla con bases de código separadas para diferentes dispositivos.
+          - Puede ofrecer una experiencia más personalizada para cada tipo de dispositivo.
+
+        ## Etiqueta Meta Viewport
+
+        La etiqueta \`meta\` viewport es un elemento crucial en el diseño responsivo. Se incluye en el encabezado HTML y establece las propiedades del viewport para el escalado y ajuste del diseño en diferentes dispositivos. El atributo \`width=device-width\` asegura que el ancho del viewport coincida con el ancho de pantalla del dispositivo.
+
+        \`\`\`html
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        \`\`\`
+
+        ## Mobile First
+
+        El concepto de mobile-first es una estrategia de diseño en la que el enfoque inicial es diseñar y desarrollar para dispositivos móviles antes de escalar a pantallas más grandes. Esto asegura que la funcionalidad y contenido principal se prioricen para pantallas más pequeñas y luego se mejoren para las más grandes.
+
+        ## Media Queries
+
+        Las media queries son técnicas de CSS utilizadas para aplicar estilos basados en las características del dispositivo, como su tamaño de pantalla, resolución u orientación. Juegan un papel crucial en hacer que un diseño sea responsivo.
+
+        ### Breakpoints
+
+        Se han definido algunos puntos de corte para las diferentes pantallas que normalmente se tienen en cuenta para los diseños.
+
+        - Mobile (No media query)
+        - Tablet
+          \`\`\`css
+            @media only screen and (max-width: 600px) {
+                /* Incluir estilos aquí */
+            }
+          \`\`\`
+        - Escritorio (Desktop)
+          \`\`\`css
+            @media only screen and (max-width: 992px) {
+                /* Incluir estilos aquí */
+            }
+          \`\`\`
+
+        ### Recursos utilizados en la clase
+
+        - <a href="https://gist.github.com/leosbelpoll/c30842fc105882bc57b1c239b4a7ded4#file-index-html" target="_blank">Fichero HTML</a>
+        - <a href="https://gist.github.com/leosbelpoll/c30842fc105882bc57b1c239b4a7ded4#file-index-css" target="_blank">Fichero CSS</a>
+      `
+    }
   },
   {
     id: 25,
