@@ -17,6 +17,10 @@
   - Create ResourceDetails component: when a subcategory is selected will display a list of titles and urls.
  
 - Search link resources for: (Just some ideas, but let your mind fly)
+  - Languages in general
+    - Official doc
+    - Playgrounds
+    - Examples
   - Frontend
     - Free templates
     - Color palettes
