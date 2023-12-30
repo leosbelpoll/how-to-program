@@ -1,13 +1,10 @@
 > !NOTE
-> There isn't a board for now like trello, jira, GH, etc because there aren't as many people yet working on the project. But we can decide when is more confortable for us to start using a board tool.
-
-> !NOTE
 > These are just some ideas, but they are not fixed. Feel free to recommend your own ideas, and if you want to implement them also, it would be great!
 
 ### To DO:
 
-
 - Resources menu with categories
+
   - Add menu resources
   - Add routing /resources
   - In data.js add resources list
@@ -15,8 +12,9 @@
   - Create ResourceList component: this is only for category and subcategories
     - Filter by search context
   - Create ResourceDetails component: when a subcategory is selected will display a list of titles and urls.
- 
+
 - Search link resources for: (Just some ideas, but let your mind fly)
+
   - Frontend
     - Free templates
     - Color palettes
@@ -40,6 +38,7 @@
     - ...
 
 - Landing page with global filter: paths, courses, classes, resources, etc
+
   - Add index component in pages (landing)
   - Add huge search bar (search engine style)
   - Filter any path, course, class, resource that match with the search value

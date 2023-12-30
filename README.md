@@ -6,9 +6,9 @@
 - Install dependencies `npm i` or `yarn`
 - Run locally `npm run dev` or `yarn dev`
 
-### What can I do?
+## How can I contribute?
 
-In this [TODO file](TODO.md) we're setting the things we want to do. In near future when more people join we can switch to some board tool.
+Refer to our [contributing guide](CONTRIBUTING.md) to get started.
 
 ### What technologies are used?
 
@@ -29,6 +29,7 @@ In the file `/data/data.js` you will find the list `learningPaths`, each one has
 #### How to manage **Courses**?
 
 In the file `/data/data.js` you will find the list `courses`, each of them contains:
+
 - id
 - title (i18n)
 - thumbnail: used like `/images/${thumbnail}-thumbnail.jpg`
@@ -39,6 +40,7 @@ In the file `/data/data.js` you will find the list `courses`, each of them conta
 #### How to manage **Classes**?
 
 In the file `/data/data.js` you will find the list `classes`, each of them contains:
+
 - id
 - courseId
 - title (i18n): Serving also as `slug` (for the url), probably at some point a **slug** attribute will be added
@@ -64,6 +66,7 @@ In the file `/data/data.js` you will find the list `classes`, each of them conta
 This repo is being listening to for a Vercel project, every time something is pushed to the `main` branch, it will be automatically deployed in Vercel. I haven't created a Vercel **team** since I'm not paying for now. And I don't think it's necessary for the moment either.
 
 I have two domains associated to the vercel project
+
 - https://comoprogramar.dev
 - https://howtoprogram.dev
 
