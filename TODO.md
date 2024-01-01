@@ -49,6 +49,8 @@
   - Render different sections for the above concepts
   - If any concept is clicked it will redirect to the proper place
 
+- Add the quiz to test the knowledge section and add the link to my quiz youtube shorts
+
 - Create index page to explain what is Software Development and add links that will redirect to the different Paths, Courses, etc
 - Create Path component and route, it will render an explaination and at the end the courses in order to take
 - Fix multilanguage URLs: When it's refreshed is OK, but if you're in an english URL and the language is changed it errors because the slugs are in english but the language is in spanish
