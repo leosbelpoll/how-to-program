@@ -216,3 +216,7 @@ input.bg-dark::placeholder {
 .card:hover {
   background: rgba(159, 159, 159, 0.2) !important;
 }
+
+.active  a {
+  background: rgba(78, 26, 175, 1) !important;
+}

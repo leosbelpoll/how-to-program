@@ -40,6 +40,19 @@ export const learningPaths = [
     courses: [],
     showSubscription: true,
   },
+  {
+    id: 4,
+    title: {
+      es: "Recursos",
+      en: "Resources",
+    },
+    content: {
+      es: "Descubre una fuente invaluable de recursos diseñados para simplificar tu vida diaria. Desde herramientas digitales hasta consejos prácticos, esta sección está repleta de recursos útiles cuidadosamente seleccionados para optimizar tu tiempo, mejorar la productividad y facilitar tus tareas cotidianas. Explora, aprende y haz tu vida más sencilla con esta colección de herramientas y consejos expertos.",
+      en: "Discover an invaluable source of resources designed to streamline your daily life. From digital tools to practical tips, this section is packed with useful resources carefully selected to optimize your time, enhance productivity, and simplify your everyday tasks. Explore, learn, and make your life easier with this collection of tools and expert advice.",
+    },
+    thumbnail: "devops",
+    categories: [1, 2],
+  },
 ];
 
 export const classes = [
@@ -2105,5 +2118,84 @@ export const courses = [
     },
     tags: ["nodejs", "runtime", "javascript", "js", "backend"],
     showSubscription: true,
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    title: {
+      es: "Frontend",
+      en: "Frontend",
+    },
+  },
+  {
+    id: 2,
+    title: {
+      es: "CSS",
+      en: "CSS",
+    },
+    parentId: 1,
+  },
+  {
+    id: 3,
+    title: {
+      es: "Gradients",
+      en: "Gradients",
+    },
+    parentId: 2,
+  },
+  {
+    id: 6,
+    title: {
+      es: "Flexbox",
+      en: "Flexbox",
+    },
+    parentId: 2,
+  },
+  {
+    id: 7,
+    title: {
+      es: "Bootstrap",
+      en: "Bootstrap",
+    },
+    parentId: 2,
+  },
+  {
+    id: 4,
+    title: {
+      es: "Javascript",
+      en: "Javascript",
+    },
+    parentId: 1,
+  },
+  {
+    id: 5,
+    title: {
+      es: "API",
+      en: "API",
+    },
+    parentId: 4,
+  },
+];
+
+export const resources = [
+  {
+    id: 1,
+    title: {
+      es: "JSON Placeholder",
+      en: "JSON Placeholder",
+    },
+    url: "https://jsonplaceholder.typicode.com/",
+    categoryId: 5,
+  },
+  {
+    id: 2,
+    title: {
+      es: "UI Gradients",
+      en: "UI Gradients",
+    },
+    url: "https://uigradients.com/#Shifty",
+    categoryId: 3,
   },
 ];

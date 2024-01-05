@@ -9,7 +9,7 @@ export function SelectConcept({ text }) {
     <>
       <img
         src="/images/select.png"
-        alt="Seleccione runta"
+        alt={text}
         width={"30%"}
         className="mb-5 opacity-25"
         style={
