@@ -99,6 +99,17 @@ function Nav() {
                 {getTranslation("MENU_COURSES", language)}
               </li>
             </Link>
+            <Link className="nav-item" href="/resources">
+              <li
+                className={classNames("nav-link", {
+                  "list-group-item-dark": theme === DARK_THEME,
+                  active: router.pathname.startsWith("/resources"),
+                })}
+              >
+                <i className="bi bi-rocket-takeoff-fill me-1"></i>
+                {getTranslation("MENU_RESOURCES", language)}
+              </li>
+            </Link>
             <a
               className="nav-item"
               href="#"
