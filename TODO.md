@@ -43,7 +43,7 @@
 
 - Landing page with global filter: paths, courses, classes, resources, etc
 
-  - Add index component in pages (landing)
+  - Add index component in pages (search / landing) (similar to search engines i.e. google)
   - Add huge search bar (search engine style)
   - Filter any path, course, class, resource that match with the search value
   - Render different sections for the above concepts
