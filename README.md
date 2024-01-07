@@ -70,6 +70,10 @@ I have two domains associated to the vercel project
 - https://comoprogramar.dev
 - https://howtoprogram.dev
 
+#### Previews
+
+After you push your now branch, Vercel will create a deployment in the next URL: `https://how-to-program-git-<BRANCH NAME>-lpoll.vercel.app/`. There you can review your work in the cloud
+
 ### [Firebase](https://console.firebase.google.com/)
 
 Kind of similar situation with the payment, I'm using the free layer. I'm just using for now `Firestore` service to store people's `feedback` and `subscriptions`.
